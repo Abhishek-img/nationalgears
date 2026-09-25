@@ -292,231 +292,547 @@
         </div>
     </div>
 
-    <main class="pt-20 md:pt-24">
-        <section class="relative py-6 lg:py-8 overflow-hidden">
-            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div
-                    class="inline-flex items-center gap-3 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-600 text-[0.625rem] font-black uppercase tracking-[0.3em] md:mb-8 mb-4">
-                    Core Transmission
+        <main class="w-full relative py-8 sm:py-12">
+        <!-- Modern User-Friendly Split Hero Section -->
+        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-200/80 shadow-xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Left Column: Copy & Interactive Quick Nav -->
+                    <div class="lg:col-span-7">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 text-xs font-bold tracking-wider uppercase mb-5">
+                            <i data-lucide="layers" class="w-4 h-4 text-amber-500"></i>
+                            <span>DIN 3-5 Precision Gear Portfolio</span>
+                        </div>
+                        
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+                            Precision Industrial Gear <span class="text-amber-500">Classification</span> & Specifications
+                        </h1>
+                        
+                        <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed mb-6">
+                            Explore National Gears' complete spectrum of custom spur gears, helical shafts, bevel pairs, internal splines, and heavy bull gear assemblies engineered for sub-micron accuracy and zero-defect power transmission.
+                        </p>
+
+                        <!-- Quick Category Jump Chips -->
+                        <div class="flex flex-wrap items-center gap-2 mb-8">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mr-1">Quick Select:</span>
+                            <a href="#catalog-grid" class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-amber-500 hover:text-slate-950 text-slate-700 text-xs font-bold transition-all border border-slate-200/80">Spur Gears</a>
+                            <a href="#catalog-grid" class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-amber-500 hover:text-slate-950 text-slate-700 text-xs font-bold transition-all border border-slate-200/80">Helical Shafts</a>
+                            <a href="#catalog-grid" class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-amber-500 hover:text-slate-950 text-slate-700 text-xs font-bold transition-all border border-slate-200/80">Bevel Gears</a>
+                            <a href="#catalog-grid" class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-amber-500 hover:text-slate-950 text-slate-700 text-xs font-bold transition-all border border-slate-200/80">Internal Splines</a>
+                            <a href="#catalog-grid" class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-amber-500 hover:text-slate-950 text-slate-700 text-xs font-bold transition-all border border-slate-200/80">Bull Gears</a>
+                        </div>
+
+                        <!-- CTA Actions -->
+                        <div class="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-100">
+                            <button onclick="toggleContactModal(true)" class="inline-flex items-center gap-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-7 py-3.5 rounded-2xl text-xs sm:text-sm uppercase tracking-wider shadow-lg transition-all hover:scale-105 active:scale-95 cursor-pointer">
+                                <i data-lucide="file-text" class="w-4 h-4"></i>
+                                <span>Get Product Quote</span>
+                            </button>
+                            <a href="#matrix-table" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold px-6 py-3.5 rounded-2xl text-xs sm:text-sm tracking-wider uppercase border border-slate-200 transition-all">
+                                <i data-lucide="table" class="w-4 h-4 text-amber-600"></i>
+                                <span>View Selection Matrix</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Visual Showcase & Floating Metrics Cards -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative rounded-3xl overflow-hidden border border-slate-200 bg-slate-900 shadow-xl group">
+                            <div class="aspect-[4/3] w-full overflow-hidden relative">
+                                <img src="./public/images/allGears.webp" alt="Precision Gear Range Portfolio"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-slate-950/40"></div>
+                            </div>
+                            
+                            <!-- Floating Metric Badges Overlay -->
+                            <div class="absolute inset-0 p-4 flex flex-col justify-between pointer-events-none">
+                                <div class="flex justify-between items-start">
+                                    <span class="px-3 py-1 rounded-xl bg-slate-950/90 text-white text-xs font-bold border border-white/10 backdrop-blur-md">
+                                        DIN Class 3-5
+                                    </span>
+                                    <span class="px-3 py-1 rounded-xl bg-amber-500 text-slate-950 text-xs font-black uppercase">
+                                        ISO 9001:2015
+                                    </span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 bg-slate-950/90 p-3.5 rounded-2xl border border-white/10 backdrop-blur-md">
+                                    <div class="text-center border-r border-white/10 pr-2">
+                                        <div class="text-[10px] text-slate-400 font-medium">Module Range</div>
+                                        <div class="text-sm font-black text-amber-400">0.5 to 14.0</div>
+                                    </div>
+                                    <div class="text-center pl-2">
+                                        <div class="text-[10px] text-slate-400 font-medium">Pitch Diameter</div>
+                                        <div class="text-sm font-black text-white">15mm - 900mm</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <h1
-                    class="xl:text-7xl lg:text-6xl md:text-5xl text-3xl font-black text-slate-900 md:mb-8 mb-4 tracking-tighter leading-none uppercase">
-                    GEAR <span class="text-slate-300 italic">TYPES.</span></h1>
-                <p
-                    class="max-w-3xl mx-auto text-slate-500 lg:text-base md:text-base text-sm font-light leading-relaxed">
-                    Trusted manufacturer, supplier & exporter of a broad range of high-performance gears, precisely
-                    machined using state-of-the-art CNC technology.
-                </p>
             </div>
         </section>
 
-        <!-- Product Grid -->
-        <section class="pb-10 lg:pb-16">
-            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-6">
-                    <!-- Spur Gears -->
-                    <div
-                        class="group bg-white rounded-[3rem] p-4 shadow-sm lg:hover:shadow-2xl transition-all duration-700">
+        <!-- Main Gear Types Product Grid -->
+        <section id="catalog-grid" class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-200">
+                <div>
+                    <span class="text-xs font-bold text-amber-600 uppercase tracking-widest">Catalog Overview</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">Precision Manufactured Gear Portfolio</h2>
+                </div>
+                <span class="hidden sm:inline-block px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold">
+                    6 Primary Classifications
+                </span>
+            </div>
 
-                        <div class="aspect-square relative rounded-[2.5rem] overflow-hidden mb-8 bg-slate-900">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. Spur Gears -->
+                <div class="bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-2xl hover:border-amber-500/50 transition-all duration-500 group overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-900">
                             <img src="./public/images/spurGears3.webp" alt="Spur Gears"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-xl text-xs font-bold border border-white/10">
+                                NG-SP01
+                            </span>
+                            <span class="absolute bottom-4 right-4 bg-amber-500 text-slate-950 px-3 py-1 rounded-xl text-xs font-black uppercase">
+                                Straight Cut
+                            </span>
                         </div>
-                        <div class="px-6 pb-6">
-                            <div class="flex items-center gap-2 mb-4">
-                                <span
-                                    class="px-3 py-1 bg-primary/5 text-primary text-[0.625rem] font-bold rounded-full tracking-widest">NG-SP01</span>
-                            </div>
-                            <h3 class="text-3xl font-black text-slate-900 mb-4 tracking-tight">Spur Gears</h3>
-                            <div class="space-y-3 mb-8">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-black text-slate-900 mb-2 tracking-tight">Spur Gears</h3>
+                            <p class="text-slate-600 text-xs font-normal mb-6 leading-relaxed">
+                                High-efficiency straight-cut parallel shaft gears for industrial gearboxes, pumps, and automation machinery.
+                            </p>
+                            <div class="space-y-2.5 bg-slate-50 p-4 rounded-2xl border border-slate-100 mb-6">
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Size Range</span>
+                                    <span class="text-slate-500 font-medium">Diameter Range:</span>
                                     <span class="text-slate-900 font-bold">15mm - 900mm</span>
                                 </div>
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Module</span>
-                                    <span class="text-slate-900 font-bold">0.5 to 8.00</span>
+                                    <span class="text-slate-500 font-medium">Module Capacity:</span>
+                                    <span class="text-slate-900 font-bold">0.5 to 14.0 Module</span>
                                 </div>
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Materials</span>
-                                    <span class="text-slate-900 font-bold">AISI 1045, EN24, SAE 8620</span>
+                                    <span class="text-slate-500 font-medium">Materials:</span>
+                                    <span class="text-slate-900 font-bold">SAE 8620, EN24, 20MnCr5</span>
                                 </div>
                             </div>
-                            <a href="spur-gears.html"
-                                class="w-full py-4 border lg:border-slate-100 lg:bg-white bg-primary lg:text-slate-900 text-white rounded-2xl flex items-center justify-center text-xs font-black tracking-widest lg:hover:bg-primary lg:hover:text-white transition-all">Technical
-                                Specs</a>
-
                         </div>
                     </div>
+                    <div class="px-6 pb-6 pt-0 flex gap-3">
+                        <a href="spur-gears.html" class="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 rounded-xl text-xs font-bold transition-all text-center">
+                            Specs Sheet
+                        </a>
+                        <button onclick="toggleContactModal(true)" class="flex-1 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-black transition-all">
+                            Get Quote
+                        </button>
+                    </div>
+                </div>
 
-                    <!-- Helical Gears -->
-                    <div
-                        class="group bg-white rounded-[3rem] p-4 shadow-sm lg:hover:shadow-2xl transition-all duration-700">
-                        <div class="aspect-square relative rounded-[2.5rem] overflow-hidden mb-8 bg-slate-900">
+                <!-- 2. Helical Shaft & Gears -->
+                <div class="bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-2xl hover:border-amber-500/50 transition-all duration-500 group overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-900">
                             <img src="./public/images/helicalGearsShaft.webp" alt="Helical Shaft and Gears"
-                                class="w-full h-full object-cover lg:group-hover:scale-110 transition-transform duration-1000">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-xl text-xs font-bold border border-white/10">
+                                NG-HL02
+                            </span>
+                            <span class="absolute bottom-4 right-4 bg-amber-500 text-slate-950 px-3 py-1 rounded-xl text-xs font-black uppercase">
+                                Low Noise Mesh
+                            </span>
                         </div>
-                        <div class="px-6 pb-6">
-                            <div class="flex items-center gap-2 mb-4">
-                                <span
-                                    class="px-3 py-1 bg-primary/5 text-primary text-[0.625rem] font-bold rounded-full tracking-widest">NG-HL02</span>
-                            </div>
-                            <h3 class="text-3xl font-black text-slate-900 mb-4 tracking-tight">Helical Shaft & Gears
-                            </h3>
-                            <div class="space-y-3 mb-8">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-black text-slate-900 mb-2 tracking-tight">Helical Shaft & Gears</h3>
+                            <p class="text-slate-600 text-xs font-normal mb-6 leading-relaxed">
+                                Angled teeth gear profile offering smooth, quiet power transmission and high load-bearing capability.
+                            </p>
+                            <div class="space-y-2.5 bg-slate-50 p-4 rounded-2xl border border-slate-100 mb-6">
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Size Range</span>
-                                    <span class="text-slate-900 font-bold">5mm - 300mm, W: 20-100mm</span>
+                                    <span class="text-slate-500 font-medium">Diameter Range:</span>
+                                    <span class="text-slate-900 font-bold">15mm - 600mm</span>
                                 </div>
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Module</span>
-                                    <span class="text-slate-900 font-bold">0.5 to 8.00</span>
+                                    <span class="text-slate-500 font-medium">Module Capacity:</span>
+                                    <span class="text-slate-900 font-bold">0.5 to 10.0 Module</span>
                                 </div>
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Features</span>
-                                    <span class="text-slate-900 font-bold">Noise Free, Extra Load</span>
+                                    <span class="text-slate-500 font-medium">Key Advantage:</span>
+                                    <span class="text-slate-900 font-bold">Silent Operation</span>
                                 </div>
                             </div>
-                            <a href="gears-and-shafts.html#helical"
-                                class="w-full py-4 border lg:border-slate-100 lg:bg-white bg-primary lg:text-slate-900 text-white rounded-2xl flex items-center justify-center text-xs font-black tracking-widest lg:hover:bg-primary lg:hover:text-white transition-all">Technical
-                                Specs</a>
                         </div>
                     </div>
+                    <div class="px-6 pb-6 pt-0 flex gap-3">
+                        <a href="gears-and-shafts.html" class="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 rounded-xl text-xs font-bold transition-all text-center">
+                            Specs Sheet
+                        </a>
+                        <button onclick="toggleContactModal(true)" class="flex-1 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-black transition-all">
+                            Get Quote
+                        </button>
+                    </div>
+                </div>
 
-                    <!-- Bevel Gears -->
-                    <div
-                        class="group bg-white rounded-[3rem] p-4 shadow-sm lg:hover:shadow-2xl transition-all duration-700">
-                        <div class="aspect-square relative rounded-[2.5rem] overflow-hidden mb-8 bg-slate-900">
+                <!-- 3. Bevel Gears -->
+                <div class="bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-2xl hover:border-amber-500/50 transition-all duration-500 group overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-900">
                             <img src="./public/images/bevelGearAssembly.webp" alt="Bevel Gears"
-                                class="w-full h-full object-cover lg:group-hover:scale-110 transition-transform duration-1000">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-xl text-xs font-bold border border-white/10">
+                                NG-BV03
+                            </span>
+                            <span class="absolute bottom-4 right-4 bg-amber-500 text-slate-950 px-3 py-1 rounded-xl text-xs font-black uppercase">
+                                90° Axis Transfer
+                            </span>
                         </div>
-                        <div class="px-6 pb-6">
-                            <div class="flex items-center gap-2 mb-4">
-                                <span
-                                    class="px-3 py-1 bg-primary/5 text-primary text-[0.625rem] font-bold rounded-full tracking-widest">NG-BV03</span>
-                            </div>
-                            <h3 class="text-3xl font-black text-slate-900 mb-4 tracking-tight">Bevel Gears</h3>
-                            <div class="space-y-3 mb-8">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-black text-slate-900 mb-2 tracking-tight">Bevel Gears</h3>
+                            <p class="text-slate-600 text-xs font-normal mb-6 leading-relaxed">
+                                Conical gear pairs engineered for 90-degree angular motion transfer in differentials and heavy drives.
+                            </p>
+                            <div class="space-y-2.5 bg-slate-50 p-4 rounded-2xl border border-slate-100 mb-6">
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Diameter</span>
+                                    <span class="text-slate-500 font-medium">Diameter Range:</span>
                                     <span class="text-slate-900 font-bold">20mm - 500mm</span>
                                 </div>
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Module Capacity</span>
-                                    <span class="text-slate-900 font-bold">1 to 12 Module</span>
+                                    <span class="text-slate-500 font-medium">Module Capacity:</span>
+                                    <span class="text-slate-900 font-bold">1.0 to 12.0 Module</span>
                                 </div>
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Precision</span>
-                                    <span class="text-slate-900 font-bold">WMW 500 Machined</span>
+                                    <span class="text-slate-500 font-medium">Machining:</span>
+                                    <span class="text-slate-900 font-bold">Gleason & WMW CNC</span>
                                 </div>
                             </div>
-                            <button onclick="toggleContactModal(true)"
-                                class="w-full py-4 border lg:border-slate-100 lg:bg-white bg-primary lg:text-slate-900 text-white rounded-2xl flex items-center justify-center text-xs font-black tracking-widest lg:hover:bg-primary lg:hover:text-white transition-all">Request
-                                Quote</button>
                         </div>
                     </div>
+                    <div class="px-6 pb-6 pt-0 flex gap-3">
+                        <button onclick="toggleContactModal(true)" class="w-full py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-black transition-all">
+                            Get Quote
+                        </button>
+                    </div>
+                </div>
 
-                    <!-- Internal Gears -->
-                    <div
-                        class="group bg-white rounded-[3rem] p-4 shadow-sm lg:hover:shadow-2xl transition-all duration-700">
-                        <div class="aspect-square relative rounded-[2.5rem] overflow-hidden mb-8 bg-slate-900">
+                <!-- 4. Internal Spline Gears -->
+                <div class="bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-2xl hover:border-amber-500/50 transition-all duration-500 group overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-900">
                             <img src="./public/images/InternalSplineGear.webp" alt="Internal Spline Gears"
-                                class="w-full h-full object-cover lg:group-hover:scale-110 transition-transform duration-1000">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-xl text-xs font-bold border border-white/10">
+                                NG-IN04
+                            </span>
+                            <span class="absolute bottom-4 right-4 bg-amber-500 text-slate-950 px-3 py-1 rounded-xl text-xs font-black uppercase">
+                                Planetary Duty
+                            </span>
                         </div>
-                        <div class="px-6 pb-6">
-                            <div class="flex items-center gap-2 mb-4">
-                                <span
-                                    class="px-3 py-1 bg-primary/5 text-primary text-[0.625rem] font-bold rounded-full tracking-widest">NG-IN04</span>
-                            </div>
-                            <h3 class="text-3xl font-black text-slate-900 mb-4 tracking-tight">Internal Gears</h3>
-                            <div class="space-y-3 mb-8">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-black text-slate-900 mb-2 tracking-tight">Internal Gears</h3>
+                            <p class="text-slate-600 text-xs font-normal mb-6 leading-relaxed">
+                                Precision internal ring gears and internal spline profiles for planetary gearboxes and reduction drives.
+                            </p>
+                            <div class="space-y-2.5 bg-slate-50 p-4 rounded-2xl border border-slate-100 mb-6">
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Diameter</span>
+                                    <span class="text-slate-500 font-medium">Diameter Range:</span>
                                     <span class="text-slate-900 font-bold">12mm - 500mm</span>
                                 </div>
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Module Capacity</span>
-                                    <span class="text-slate-900 font-bold">0.5 to 12 Module</span>
+                                    <span class="text-slate-500 font-medium">Module Capacity:</span>
+                                    <span class="text-slate-900 font-bold">0.5 to 12.0 Module</span>
                                 </div>
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Type</span>
-                                    <span class="text-slate-900 font-bold">Planetary & Spline Ring</span>
+                                    <span class="text-slate-500 font-medium">Type:</span>
+                                    <span class="text-slate-900 font-bold">Planetary Ring & Hub</span>
                                 </div>
                             </div>
-                            <button onclick="toggleContactModal(true)"
-                                class="w-full py-4 border lg:border-slate-100 lg:bg-white bg-primary lg:text-slate-900 text-white rounded-2xl flex items-center justify-center text-xs font-black tracking-widest lg:hover:bg-primary lg:hover:text-white transition-all">Request
-                                Quote</button>
                         </div>
                     </div>
+                    <div class="px-6 pb-6 pt-0 flex gap-3">
+                        <button onclick="toggleContactModal(true)" class="w-full py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-black transition-all">
+                            Get Quote
+                        </button>
+                    </div>
+                </div>
 
-                    <!-- Splined Sleeves & Rings -->
-                    <div
-                        class="group bg-white rounded-[3rem] p-4 shadow-sm lg:hover:shadow-2xl transition-all duration-700">
-                        <div class="aspect-square relative rounded-[2.5rem] overflow-hidden mb-8 bg-slate-900">
+                <!-- 5. Spline Sleeves -->
+                <div class="bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-2xl hover:border-amber-500/50 transition-all duration-500 group overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-900">
                             <img src="./public/images/internalSplineSleeve.webp" alt="Spline Sleeves"
-                                class="w-full h-full object-cover lg:group-hover:scale-110 transition-transform duration-1000">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-xl text-xs font-bold border border-white/10">
+                                NG-SL05
+                            </span>
+                            <span class="absolute bottom-4 right-4 bg-amber-500 text-slate-950 px-3 py-1 rounded-xl text-xs font-black uppercase">
+                                Sub-Micron Fit
+                            </span>
                         </div>
-                        <div class="px-6 pb-6">
-                            <div class="flex items-center gap-2 mb-4">
-                                <span
-                                    class="px-3 py-1 bg-primary/5 text-primary text-[0.625rem] font-bold rounded-full tracking-widest">NG-SL05</span>
-                            </div>
-                            <h3 class="text-3xl font-black text-slate-900 mb-4 tracking-tight">Spline Sleeves</h3>
-                            <div class="space-y-3 mb-8">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-black text-slate-900 mb-2 tracking-tight">Spline Sleeves & Rings</h3>
+                            <p class="text-slate-600 text-xs font-normal mb-6 leading-relaxed">
+                                Custom splined sleeves, coupling hubs, and internal/external spline adapters with case-hardened durability.
+                            </p>
+                            <div class="space-y-2.5 bg-slate-50 p-4 rounded-2xl border border-slate-100 mb-6">
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Size Range</span>
+                                    <span class="text-slate-500 font-medium">Size Range:</span>
                                     <span class="text-slate-900 font-bold">20mm - 300mm</span>
                                 </div>
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Tolerance</span>
+                                    <span class="text-slate-500 font-medium">Tolerance:</span>
                                     <span class="text-slate-900 font-bold">Sub-Micron DIN 6-7</span>
                                 </div>
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Material</span>
-                                    <span class="text-slate-900 font-bold">Alloy Steel / Case Hardened</span>
+                                    <span class="text-slate-500 font-medium">Material:</span>
+                                    <span class="text-slate-900 font-bold">20MnCr5 / EN353</span>
                                 </div>
                             </div>
-                            <button onclick="toggleContactModal(true)"
-                                class="w-full py-4 border lg:border-slate-100 lg:bg-white bg-primary lg:text-slate-900 text-white rounded-2xl flex items-center justify-center text-xs font-black tracking-widest lg:hover:bg-primary lg:hover:text-white transition-all">Request
-                                Quote</button>
                         </div>
                     </div>
+                    <div class="px-6 pb-6 pt-0 flex gap-3">
+                        <button onclick="toggleContactModal(true)" class="w-full py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-black transition-all">
+                            Get Quote
+                        </button>
+                    </div>
+                </div>
 
-                    <!-- Bull Gears -->
-                    <div
-                        class="group bg-white rounded-[3rem] p-4 shadow-sm lg:hover:shadow-2xl transition-all duration-700">
-                        <div class="aspect-square relative rounded-[2.5rem] overflow-hidden mb-8 bg-slate-900">
+                <!-- 6. Bull & Ring Gears -->
+                <div class="bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-2xl hover:border-amber-500/50 transition-all duration-500 group overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden bg-slate-900">
                             <img src="./public/images/bullGears.webp" alt="Bull Gears"
-                                class="w-full h-full object-cover lg:group-hover:scale-110 transition-transform duration-1000">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-xl text-xs font-bold border border-white/10">
+                                NG-BL06
+                            </span>
+                            <span class="absolute bottom-4 right-4 bg-amber-500 text-slate-950 px-3 py-1 rounded-xl text-xs font-black uppercase">
+                                Heavy Duty
+                            </span>
                         </div>
-                        <div class="px-6 pb-6">
-                            <div class="flex items-center gap-2 mb-4">
-                                <span
-                                    class="px-3 py-1 bg-primary/5 text-primary text-[0.625rem] font-bold rounded-full tracking-widest">NG-BL06</span>
-                            </div>
-                            <h3 class="text-3xl font-black text-slate-900 mb-4 tracking-tight">Bull & Ring</h3>
-                            <div class="space-y-3 mb-8">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-black text-slate-900 mb-2 tracking-tight">Bull & Ring Gears</h3>
+                            <p class="text-slate-600 text-xs font-normal mb-6 leading-relaxed">
+                                Large diameter heavy-duty bull gears and drive rings for mining, crushers, and industrial heavy machinery.
+                            </p>
+                            <div class="space-y-2.5 bg-slate-50 p-4 rounded-2xl border border-slate-100 mb-6">
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Size Range</span>
+                                    <span class="text-slate-500 font-medium">Diameter Range:</span>
                                     <span class="text-slate-900 font-bold">25mm - 900mm</span>
                                 </div>
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Module Range</span>
-                                    <span class="text-slate-900 font-bold">0.5 to 8.00</span>
+                                    <span class="text-slate-500 font-medium">Module Range:</span>
+                                    <span class="text-slate-900 font-bold">0.5 to 14.0 Module</span>
                                 </div>
                                 <div class="flex justify-between text-xs">
-                                    <span class="text-slate-400">Processing</span>
-                                    <span class="text-slate-900 font-bold">VMC & Shaving</span>
+                                    <span class="text-slate-500 font-medium">Processing:</span>
+                                    <span class="text-slate-900 font-bold">VMC Hobbing & Shaving</span>
                                 </div>
                             </div>
-                            <button onclick="toggleContactModal(true)"
-                                class="w-full py-4 border lg:border-slate-100 lg:bg-white bg-primary lg:text-slate-900 text-white rounded-2xl flex items-center justify-center text-xs font-black tracking-widest lg:hover:bg-primary lg:hover:text-white transition-all">Request
-                                Quote</button>
                         </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex gap-3">
+                        <button onclick="toggleContactModal(true)" class="w-full py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-black transition-all">
+                            Get Quote
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Engineering Comparison Table Matrix -->
+        <section id="matrix-table" class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-lg overflow-hidden">
+                <div class="mb-8">
+                    <span class="text-xs font-bold text-amber-600 uppercase tracking-widest">Engineering Reference</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">Gear Type Selection & Specifications Matrix</h2>
+                    <p class="text-slate-500 text-sm font-light mt-1">Comparative technical analysis to guide your design and purchasing requirements.</p>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[700px]">
+                        <thead>
+                            <tr class="bg-slate-900 text-white text-xs font-bold uppercase tracking-wider">
+                                <th class="p-4 rounded-l-2xl">Gear Category</th>
+                                <th class="p-4">Axis Alignment</th>
+                                <th class="p-4">Efficiency</th>
+                                <th class="p-4">Noise Level</th>
+                                <th class="p-4">Load Capacity</th>
+                                <th class="p-4 rounded-r-2xl">Primary Application</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-xs text-slate-700">
+                            <tr class="hover:bg-amber-50/50 transition-colors">
+                                <td class="p-4 font-bold text-slate-900 flex items-center gap-2">
+                                    <i data-lucide="disc" class="w-4 h-4 text-amber-500"></i> Spur Gears
+                                </td>
+                                <td class="p-4 font-medium">Parallel Shafts</td>
+                                <td class="p-4"><span class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 font-bold">98% - 99%</span></td>
+                                <td class="p-4">Moderate</td>
+                                <td class="p-4 font-medium">High Radial</td>
+                                <td class="p-4 font-medium">Industrial Gearboxes & Pumps</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50/50 transition-colors">
+                                <td class="p-4 font-bold text-slate-900 flex items-center gap-2">
+                                    <i data-lucide="rotate-cw" class="w-4 h-4 text-amber-500"></i> Helical Gears
+                                </td>
+                                <td class="p-4 font-medium">Parallel / Crossed</td>
+                                <td class="p-4"><span class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 font-bold">96% - 98%</span></td>
+                                <td class="p-4"><span class="px-2.5 py-1 rounded-md bg-blue-100 text-blue-800 font-bold">Very Low</span></td>
+                                <td class="p-4 font-medium">Very High Axial/Radial</td>
+                                <td class="p-4 font-medium">High Speed Automotive & Turbines</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50/50 transition-colors">
+                                <td class="p-4 font-bold text-slate-900 flex items-center gap-2">
+                                    <i data-lucide="corner-down-right" class="w-4 h-4 text-amber-500"></i> Bevel Gears
+                                </td>
+                                <td class="p-4 font-medium">90° Intersecting</td>
+                                <td class="p-4"><span class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 font-bold">95% - 97%</span></td>
+                                <td class="p-4">Low - Moderate</td>
+                                <td class="p-4 font-medium">High Angular Torque</td>
+                                <td class="p-4 font-medium">Differential Drives & Right Angle Reducers</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50/50 transition-colors">
+                                <td class="p-4 font-bold text-slate-900 flex items-center gap-2">
+                                    <i data-lucide="circle-dot" class="w-4 h-4 text-amber-500"></i> Internal Gears
+                                </td>
+                                <td class="p-4 font-medium">Concentric Parallel</td>
+                                <td class="p-4"><span class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 font-bold">97% - 99%</span></td>
+                                <td class="p-4"><span class="px-2.5 py-1 rounded-md bg-blue-100 text-blue-800 font-bold">Very Low</span></td>
+                                <td class="p-4 font-medium">Extreme Compact Torque</td>
+                                <td class="p-4 font-medium">Planetary Gearboxes & Robotics</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50/50 transition-colors">
+                                <td class="p-4 font-bold text-slate-900 flex items-center gap-2">
+                                    <i data-lucide="link" class="w-4 h-4 text-amber-500"></i> Spline Sleeves
+                                </td>
+                                <td class="p-4 font-medium">Co-Axial Shafts</td>
+                                <td class="p-4"><span class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 font-bold">99%</span></td>
+                                <td class="p-4">Zero Backlash Fit</td>
+                                <td class="p-4 font-medium">Maximum Shear Strength</td>
+                                <td class="p-4 font-medium">Hydraulic Pump Couplings & Drives</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metallurgy & Processing Capabilities Section -->
+        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold text-amber-600 uppercase tracking-widest">Quality Metallurgy</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">Material & Heat Treatment Excellence</h2>
+                <p class="text-slate-500 text-sm font-light mt-1">Raw material batch certification with controlled thermal treatment for zero failure duty.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 bg-white border border-slate-200/80 rounded-3xl shadow-sm hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 mb-4">
+                        <i data-lucide="shield" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-black text-slate-900 text-base mb-2">Case-Hardened Alloys</h4>
+                    <p class="text-slate-500 text-xs font-light leading-relaxed">
+                        SAE 8620, 20MnCr5, and EN353 providing surface hardness up to HRC 58-62 with resilient shock-absorbing core.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white border border-slate-200/80 rounded-3xl shadow-sm hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 mb-4">
+                        <i data-lucide="flame" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-black text-slate-900 text-base mb-2">Controlled Heat Treatment</h4>
+                    <p class="text-slate-500 text-xs font-light leading-relaxed">
+                        In-house gas carburizing, liquid nitriding, and high-frequency induction hardening ensuring precise case depth.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white border border-slate-200/80 rounded-3xl shadow-sm hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 mb-4">
+                        <i data-lucide="cpu" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-black text-slate-900 text-base mb-2">CNC Gear Finishing</h4>
+                    <p class="text-slate-500 text-xs font-light leading-relaxed">
+                        Automated CNC hobbing, gear shaping, and sub-micron shaving to achieve DIN Class 3–5 accuracy tolerances.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white border border-slate-200/80 rounded-3xl shadow-sm hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 mb-4">
+                        <i data-lucide="check-circle" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-black text-slate-900 text-base mb-2">Surface Polish & Inspection</h4>
+                    <p class="text-slate-500 text-xs font-light leading-relaxed">
+                        Ra 0.4 µm micro-finish tooth grinding inspected via lead/profile lead error gear testing equipment.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Creative Standardized Subpage CTA Section -->
+        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 my-14">
+            <div class="relative bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl overflow-hidden">
+                <!-- Solid Amber Accent Left Bar -->
+                <div class="absolute left-0 top-0 bottom-0 w-2 bg-amber-500 rounded-l-3xl"></div>
+                
+                <!-- Background Decorative Tech Pattern (Solid Lines, No Gradient) -->
+                <div class="absolute right-0 top-0 bottom-0 w-1/3 opacity-10 pointer-events-none hidden lg:block">
+                    <svg class="w-full h-full text-slate-400" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6"/>
+                        <circle cx="100" cy="100" r="50" stroke="currentColor" stroke-width="2"/>
+                        <path d="M100 0V200M0 100H200" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </div>
+
+                <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 pl-2 sm:pl-4">
+                    <!-- Left Content -->
+                    <div class="max-w-3xl">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-black uppercase tracking-widest mb-4">
+                            <i data-lucide="cog" class="w-3.5 h-3.5 text-amber-400 animate-spin-slow"></i>
+                            <span>Custom Gear Manufacturing</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight mb-3">
+                            Need Custom Hydraulic Pump & Precision Gear Manufacturing?
+                        </h3>
+                        <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed mb-6">
+                            Send us your technical drawings, 3D CAD files, or OEM part numbers for a fast commercial quotation and engineering consultation.
+                        </p>
+                        
+                        <!-- Trust Indicators -->
+                        <div class="flex flex-wrap items-center gap-4 sm:gap-6 pt-4 border-t border-slate-800">
+                            <span class="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                                <span>ISO 9001:2015 Certified</span>
+                            </span>
+                            <span class="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                                <span>100% Quality Inspected</span>
+                            </span>
+                            <span class="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                                <i data-lucide="clock" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                                <span>24-Hour Quote Turnaround</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Right Buttons Stack -->
+                    <div class="flex flex-col sm:flex-row lg:flex-col gap-4 shrink-0 w-full sm:w-auto">
+                        <button onclick="toggleContactModal(true)"
+                            class="inline-flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-4 rounded-2xl text-xs sm:text-sm tracking-wider uppercase shadow-xl transition-all hover:scale-105 active:scale-95 cursor-pointer">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            <span>Get Custom Quote</span>
+                        </button>
+                        <a href="tel:+919887661666"
+                            class="inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-bold px-6 py-4 rounded-2xl text-xs sm:text-sm tracking-wider uppercase border border-slate-700 transition-all hover:border-amber-500/50">
+                            <i data-lucide="phone" class="w-4 h-4 text-amber-400"></i>
+                            <span>Call Sales: +91 9887661666</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="bg-primary relative overflow-hidden border-t border-slate-800 pt-20 pb-10">
