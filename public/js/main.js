@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Render Contact Popup
     renderContactPopup();
 
+    // Initialize Global Image Zoom Lightbox
+    initImageZoomListeners();
+
     // Initialize Swipers
     initSwipers();
 
@@ -480,3 +483,164 @@ function toggleMobileSubmenu(button) {
         if (icon) icon.style.transform = 'rotate(0deg)';
     }
 }
+
+/* ==========================================
+   Global Image Zoom Lightbox Modal
+   ========================================== */
+
+function renderImageZoomModal() {
+    if (document.getElementById('image-zoom-root')) return;
+    const root = document.createElement('div');
+    root.id = 'image-zoom-root';
+    document.body.appendChild(root);
+
+    root.innerHTML = `
+    <div id="image-zoom-modal" class="fixed inset-0 z-[120] flex items-center justify-center p-3 sm:p-6 opacity-0 pointer-events-none transition-all duration-300">
+        <!-- Dark Blur Backdrop -->
+        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-xl" onclick="closeImageZoom()"></div>
+        
+        <!-- Modal Container -->
+        <div class="relative max-w-5xl max-h-[92vh] w-full bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden flex flex-col transform scale-95 transition-all duration-300 z-10">
+            
+            <!-- Top Header Bar -->
+            <div class="px-5 py-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center border border-amber-500/30">
+                        <i data-lucide="zoom-in" class="w-4.5 h-4.5"></i>
+                    </div>
+                    <div>
+                        <h3 id="image-zoom-title" class="text-sm sm:text-base font-black text-white tracking-tight">Product Preview</h3>
+                        <p id="image-zoom-subtitle" class="text-xs text-slate-400 font-medium">National Gears Precision Metrology</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-2">
+                    <a id="image-zoom-external" href="#" target="_blank" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-slate-300 flex items-center justify-center transition-all cursor-pointer" title="Open Full Size Image">
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                    <button onclick="closeImageZoom()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-rose-600 hover:text-white text-slate-300 flex items-center justify-center transition-all cursor-pointer" title="Close (ESC)">
+                        <i data-lucide="x" class="w-4.5 h-4.5"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Image Viewing Area -->
+            <div class="relative flex-1 bg-slate-950 flex items-center justify-center p-4 sm:p-8 overflow-hidden min-h-[250px] sm:min-h-[350px]">
+                <img id="image-zoom-img" src="" alt="Zoomed View" class="max-h-[70vh] max-w-full object-contain rounded-2xl shadow-2xl border border-slate-800 transition-all duration-300">
+            </div>
+
+            <!-- Footer Caption Bar -->
+            <div class="px-6 py-3.5 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 shrink-0">
+                <span id="image-zoom-caption" class="font-bold text-slate-200 truncate max-w-md"></span>
+                <span class="hidden sm:inline-flex items-center gap-1.5 text-[11px] text-slate-500 font-medium bg-slate-800 px-3 py-1 rounded-full">
+                    <i data-lucide="info" class="w-3 h-3 text-amber-500"></i> Click outside or press ESC to exit
+                </span>
+            </div>
+        </div>
+    </div>
+    `;
+
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+}
+
+function openImageZoom(src, title, subtitle) {
+    renderImageZoomModal();
+    const modal = document.getElementById('image-zoom-modal');
+    const img = document.getElementById('image-zoom-img');
+    const titleEl = document.getElementById('image-zoom-title');
+    const subTitleEl = document.getElementById('image-zoom-subtitle');
+    const captionEl = document.getElementById('image-zoom-caption');
+    const externalBtn = document.getElementById('image-zoom-external');
+
+    if (!modal || !img) return;
+
+    img.src = src;
+    if (externalBtn) externalBtn.href = src;
+    
+    if (titleEl) titleEl.innerText = title || 'Product Detail View';
+    if (subTitleEl) subTitleEl.innerText = subtitle || 'National Gears Precision Product';
+    if (captionEl) captionEl.innerText = title || 'High Resolution Gear Image';
+
+    const content = modal.querySelector('.relative');
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    if (content) {
+        content.classList.remove('scale-95');
+        content.classList.add('scale-100');
+    }
+    document.body.style.overflow = 'hidden';
+}
+
+function closeImageZoom() {
+    const modal = document.getElementById('image-zoom-modal');
+    if (!modal) return;
+    const content = modal.querySelector('.relative');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    if (content) {
+        content.classList.remove('scale-100');
+        content.classList.add('scale-95');
+    }
+    document.body.style.overflow = 'auto';
+}
+
+function initImageZoomListeners() {
+    renderImageZoomModal();
+
+    // Attach click handlers to all main content images
+    document.addEventListener('click', (e) => {
+        const targetImg = e.target.closest('img');
+        if (!targetImg) return;
+
+        // Skip header logos, footer logos, or tiny icons
+        if (targetImg.closest('header') || targetImg.closest('footer') || targetImg.closest('#top-bar') || targetImg.getAttribute('alt')?.toLowerCase().includes('logo') || targetImg.src.includes('Logo') || targetImg.classList.contains('no-zoom')) {
+            return;
+        }
+
+        // Only zoom if inside main content, product cards, gallery, plant photos, etc.
+        if (targetImg.closest('main') || targetImg.closest('.product-card') || targetImg.closest('.gallery-item') || targetImg.closest('section')) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const src = targetImg.getAttribute('src');
+            let title = targetImg.getAttribute('alt') || targetImg.getAttribute('title');
+
+            // If alt is generic or empty, look for parent headings
+            const card = targetImg.closest('.bg-white, .bg-slate-900, .group, div');
+            if (card && (!title || title.length < 3)) {
+                const heading = card.querySelector('h1, h2, h3, h4');
+                if (heading) title = heading.innerText.trim();
+            }
+
+            if (!title) title = 'Precision Gear Component';
+
+            openImageZoom(src, title, 'National Gears High-Precision Manufacturing');
+        }
+    });
+
+    // Add cursor pointer and zoom hover hints to zoomable images in main content
+    const updateZoomableStyles = () => {
+        const contentImages = document.querySelectorAll('main img:not(.no-zoom)');
+        contentImages.forEach(img => {
+            if (!img.closest('header') && !img.closest('footer') && !img.getAttribute('alt')?.toLowerCase().includes('logo')) {
+                img.classList.add('cursor-pointer');
+                if (!img.getAttribute('title')) {
+                    img.setAttribute('title', 'Click to zoom image');
+                }
+            }
+        });
+    };
+
+    updateZoomableStyles();
+    // Re-check after 500ms in case DOM rendered dynamically
+    setTimeout(updateZoomableStyles, 500);
+
+    // ESC Key listener
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeImageZoom();
+            toggleContactModal(false);
+        }
+    });
+}
+
