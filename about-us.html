@@ -40,7 +40,7 @@
         rel="stylesheet">
 
     <!-- Tailwind CSS -->
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
@@ -79,109 +79,396 @@
     <div class="custom-cursor-dot hidden md:block"></div>
     <div class="custom-cursor-outline hidden md:block"></div>
 
-    <div id="header-root"></div>
+    <header
+        class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-sm transition-all">
+        <!-- Primary Brand Top Bar -->
+        <div id="top-bar" class="hidden md:block bg-primary border-b border-white/10 relative overflow-hidden">
+            <!-- Blueprint Grid Overlay -->
+            <div
+                class="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSAyMCAwIEwgMCAwIDAgMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMC41Ii8+PC9zdmc+')]">
+            </div>
 
-    <main class="md:pt-[5.5rem]">
-        <section
-            class="heroSection w-full relative min-h-[100dvh] overflow-hidden bg-slate-950 flex items-center py-12">
-            <div class="absolute inset-0 z-0">
-                <div class="absolute inset-0 bg-gradient-to-br from-primary via-slate-950 to-slate-900"></div>
-                <!-- Dynamic Grid Pattern -->
-                <div
-                    class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA0MCAwIEwgMCAwIDAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-20">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between relative z-10">
+                <div class="flex items-center gap-8">
+                    <a href="tel:+919887661666"
+                        class="flex items-center gap-2.5 text-xs font-black text-white/90 hover:text-amber-400 transition-all tracking-wider group">
+                        <div
+                            class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center border border-white/10 group-hover:border-amber-400/50 group-hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] transition-all">
+                            <i data-lucide="phone"
+                                class="w-3.5 h-3.5 text-amber-400 group-hover:rotate-12 transition-transform"></i>
+                        </div>
+                        <span>+91 9887661666</span>
+                    </a>
+                    <a href="mailto:vivekgupta@nationalgears.in"
+                        class="flex items-center gap-2.5 text-xs font-black text-white/90 hover:text-amber-400 transition-all tracking-wider group">
+                        <div
+                            class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center border border-white/10 group-hover:border-amber-400/50 group-hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] transition-all">
+                            <i data-lucide="mail"
+                                class="w-3.5 h-3.5 text-amber-400 group-hover:-translate-y-0.5 transition-transform"></i>
+                        </div>
+                        <span>vivekgupta@nationalgears.in</span>
+                    </a>
                 </div>
 
-                <!-- Ambient Glows -->
-                <div
-                    class="absolute -top-1/4 -right-1/4 w-[60rem] h-[60rem] bg-amber-500/10 rounded-full blur-[10rem] animate-pulse-slow">
+                <!-- Sleek Pixel-Perfect Search Bar -->
+                <div class="flex-1 max-w-md px-8">
+                    <div
+                        class="relative flex items-center bg-white/10 border border-white/15 rounded-full p-1 focus-within:border-amber-400/80 focus-within:bg-white/[0.15] focus-within:ring-2 focus-within:ring-amber-400/20 transition-all shadow-inner">
+                        <i data-lucide="search" class="w-4 h-4 text-amber-400 ml-3.5 shrink-0"></i>
+                        <input type="text" placeholder="Search technical specs..."
+                            class="w-full bg-transparent border-none py-1.5 px-3 text-xs font-medium text-white focus:outline-none placeholder:text-white/40">
+                        <button
+                            class="bg-amber-500 hover:bg-amber-400 text-primary px-4 py-1.5 rounded-full font-bold text-xs transition-all hover:scale-105 active:scale-95 shadow-md shadow-amber-500/20 shrink-0">
+                            Search
+                        </button>
+                    </div>
                 </div>
-                <div
-                    class="absolute -bottom-1/4 -left-1/4 w-[50rem] h-[50rem] bg-blue-600/10 rounded-full blur-[10rem] animate-pulse-slow">
+
+                <!-- Social Connect Icons -->
+                <div class="flex items-center gap-2">
+                    <a href="#"
+                        class="size-8 rounded-lg flex items-center justify-center bg-white/5 text-slate-300 hover:lg:bg-amber-500 hover:lg:text-white transition-all border border-white/10"><svg
+                            class="size-3.5" fill="currentColor" viewBox="0 0 320 512">
+                            <path
+                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                            </path>
+                        </svg></a>
+                    <a href="#"
+                        class="size-8 rounded-lg flex items-center justify-center bg-white/5 text-slate-300 hover:lg:bg-amber-500 hover:lg:text-white transition-all border border-white/10"><svg
+                            class="size-3.5" fill="currentColor" viewBox="0 0 448 512">
+                            <path
+                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
+                            </path>
+                        </svg></a>
+                    <a href="#"
+                        class="size-8 rounded-lg flex items-center justify-center bg-white/5 text-slate-300 hover:lg:bg-amber-500 hover:lg:text-white transition-all border border-white/10"><svg
+                            class="size-3.5" stroke="currentColor" fill="currentColor" stroke-width="0"
+                            viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                            </path>
+                        </svg></a>
                 </div>
             </div>
-            <div class="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
-                <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-16 gap-8 items-center">
-                    <!-- Left: Content Stack -->
-                    <div class="flex flex-col items-start text-left space-y-8">
-                        <div class="space-y-4">
+        </div>
+
+        <!-- Main Navigation Bar -->
+        <div class="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-24 sm:h-28 py-3">
+            <!-- Brand Logo (BIGGER SIZE) -->
+            <a href="index.html" class="flex items-center cursor-pointer group shrink-0 py-1">
+                <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo" title="National Gears"
+                    class="h-16 sm:h-20 md:h-22 lg:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105 filter drop-shadow-sm">
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-2">
+                <a class="px-4 py-2.5 rounded-xl bg-primary text-white font-bold text-sm shadow-md shadow-primary/20 transition-all flex items-center gap-1.5"
+                    href="index.html">Home</a>
+
+                <!-- About Us Dropdown (NO ICONS) -->
+                <div class="relative group">
+                    <a href="about-us.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-700 font-semibold text-sm hover:bg-slate-100 hover:text-primary transition-all duration-300 flex items-center gap-1.5">
+                        About Us
+                        <i data-lucide="chevron-down"
+                            class="size-4 group-hover:rotate-180 transition-transform duration-300"></i>
+                    </a>
+                    <div
+                        class="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-slate-100 opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50 overflow-hidden p-1.5">
+                        <a href="about-us.html"
+                            class="block px-4 py-2.5 rounded-xl font-bold text-sm text-slate-700 hover:bg-primary/5 hover:text-primary transition-all">
+                            Company Overview
+                        </a>
+                        <a href="management-desk.html"
+                            class="block px-4 py-2.5 rounded-xl font-bold text-sm text-slate-700 hover:bg-primary/5 hover:text-primary transition-all">
+                            Management Desk
+                        </a>
+                        <a href="team.html"
+                            class="block px-4 py-2.5 rounded-xl font-bold text-sm text-slate-700 hover:bg-primary/5 hover:text-primary transition-all">
+                            Our Leadership
+                        </a>
+                        <a href="certification.html"
+                            class="block px-4 py-2.5 rounded-xl font-bold text-sm text-slate-700 hover:bg-primary/5 hover:text-primary transition-all">
+                            ISO Certifications
+                        </a>
+                        <a href="expertise.html"
+                            class="block px-4 py-2.5 rounded-xl font-bold text-sm text-slate-700 hover:bg-primary/5 hover:text-primary transition-all">
+                            Technical Expertise
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Products Dropdown (NO ICONS) -->
+                <div class="relative group">
+                    <a href="products.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-700 font-semibold text-sm hover:bg-slate-100 hover:text-primary transition-all duration-300 flex items-center gap-1.5">
+                        Products
+                        <i data-lucide="chevron-down"
+                            class="size-4 group-hover:rotate-180 transition-transform duration-300"></i>
+                    </a>
+
+                    <div
+                        class="absolute top-full left-0 mt-2 w-60 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-slate-100 opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50 overflow-hidden p-1.5">
+                        <a href="products.html"
+                            class="block px-4 py-2.5 rounded-xl font-bold text-sm text-slate-700 hover:bg-primary/5 hover:text-primary transition-all">
+                            All Gear Range
+                        </a>
+                        <a href="spur-gears.html"
+                            class="block px-4 py-2.5 rounded-xl font-bold text-sm text-slate-700 hover:bg-primary/5 hover:text-primary transition-all">
+                            Spur Gears
+                        </a>
+                        <a href="gear-types.html"
+                            class="block px-4 py-2.5 rounded-xl font-bold text-sm text-slate-700 hover:bg-primary/5 hover:text-primary transition-all">
+                            Helical & Bevel Gears
+                        </a>
+                        <a href="hydraulic-gears.html"
+                            class="block px-4 py-2.5 rounded-xl font-bold text-sm text-slate-700 hover:bg-primary/5 hover:text-primary transition-all">
+                            Hydraulic Pump Gears
+                        </a>
+                        <a href="gears-and-shafts.html"
+                            class="block px-4 py-2.5 rounded-xl font-bold text-sm text-slate-700 hover:bg-primary/5 hover:text-primary transition-all">
+                            Gears & Shafts
+                        </a>
+                    </div>
+                </div>
+
+                <a class="px-4 py-2.5 rounded-xl text-slate-700 font-semibold text-sm hover:bg-slate-100 hover:text-primary transition-all duration-300 flex items-center gap-1.5"
+                    href="manufacturing.html">Manufacturing</a>
+                <a class="px-4 py-2.5 rounded-xl text-slate-700 font-semibold text-sm hover:bg-slate-100 hover:text-primary transition-all duration-300 flex items-center gap-1.5"
+                    href="quality.html">Quality</a>
+                <a class="px-4 py-2.5 rounded-xl text-slate-700 font-semibold text-sm hover:bg-slate-100 hover:text-primary transition-all duration-300 flex items-center gap-1.5"
+                    href="gallery.html">Gallery</a>
+
+                <a class="px-4 py-2.5 rounded-xl text-slate-700 font-semibold text-sm hover:bg-slate-100 hover:text-primary transition-all duration-300 flex items-center gap-1.5"
+                    href="contact.html">Contact</a>
+            </nav>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <button onclick="toggleContactModal(true)"
+                    class="hidden sm:flex bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-white px-7 py-3 h-12 items-center justify-center rounded-xl font-bold text-xs tracking-wider shadow-lg shadow-amber-500/25 transition-all hover:-translate-y-0.5 active:scale-95 gap-2">
+                    <i data-lucide="download" class="w-4.5 h-4.5"></i>Brochure
+                </button>
+
+                <button onclick="toggleMobileMenu(true)"
+                    class="lg:hidden p-2.5 text-slate-700 hover:text-primary hover:bg-slate-100 rounded-xl transition-all cursor-pointer">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay Backdrop -->
+    <div id="mobile-backdrop" onclick="toggleMobileMenu(false)"
+        class="fixed inset-0 z-[80] bg-slate-900/60 backdrop-blur-sm lg:hidden opacity-0 pointer-events-none transition-all duration-500">
+    </div>
+
+    <!-- Mobile Drawer Sidebar (NO SUBMENU ICONS) -->
+    <div id="mobile-drawer"
+        class="fixed top-0 right-0 bottom-0 z-[90] w-[85%] max-sm:w-[80%] max-w-sm bg-white shadow-2xl flex flex-col px-6 py-6 overflow-y-auto translate-x-full transition-transform duration-500 ease-in-out lg:hidden">
+        <div class="flex items-center justify-between py-4 border-b border-slate-100 mb-4">
+            <a href="index.html" class="flex items-center">
+                <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo" title="National Gears"
+                    class="h-12 w-auto object-contain">
+            </a>
+            <button onclick="toggleMobileMenu(false)"
+                class="p-2 text-slate-400 hover:text-primary bg-slate-100 rounded-full cursor-pointer transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <nav class="flex flex-col gap-1">
+            <a href="index.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Home</a>
+
+            <div class="flex flex-col border-y border-slate-100 py-1">
+                <button onclick="toggleMobileSubmenu(this)"
+                    class="w-full px-4 py-3.5 text-slate-900 font-black text-base tracking-tight flex items-center justify-between group">
+                    <span>About Us</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-300"></i>
+                </button>
+                <div class="mobile-submenu hidden flex flex-col gap-1 pl-4 pb-2 overflow-hidden">
+                    <a href="about-us.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Company
+                        Overview</a>
+                    <a href="management-desk.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Management
+                        Desk</a>
+                    <a href="team.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Our
+                        Leadership</a>
+                    <a href="certification.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">ISO
+                        Certifications</a>
+                    <a href="expertise.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Technical
+                        Expertise</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col border-b border-slate-100 py-1">
+                <button onclick="toggleMobileSubmenu(this)"
+                    class="w-full px-4 py-3.5 text-slate-900 font-black text-base tracking-tight flex items-center justify-between group">
+                    <span>Products</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-300"></i>
+                </button>
+                <div class="mobile-submenu hidden flex flex-col gap-1 pl-4 pb-2 overflow-hidden">
+                    <a href="products.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">All
+                        Gear Range</a>
+                    <a href="spur-gears.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Spur
+                        Gears</a>
+                    <a href="gear-types.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Helical
+                        & Bevel Gears</a>
+                    <a href="hydraulic-gears.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Hydraulic
+                        Pump Gears</a>
+                    <a href="gears-and-shafts.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Special
+                        Gear Shafts</a>
+                </div>
+            </div>
+
+            <a href="manufacturing.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Manufacturing</a>
+            <a href="quality.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Quality</a>
+            <a href="gallery.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Gallery</a>
+
+            <a href="contact.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Contact</a>
+        </nav>
+
+        <div class="mt-auto pt-6 border-t border-slate-100">
+            <button onclick="toggleContactModal(true)"
+                class="w-full bg-primary text-white py-4 rounded-xl font-bold text-sm tracking-wider flex items-center justify-center gap-2.5 shadow-lg shadow-primary/20 hover:bg-blue-900 transition-colors">
+                <i data-lucide="phone" class="w-4 h-4"></i> Contact Us
+            </button>
+        </div>
+    </div>
+
+    <main>
+        <section
+            class="heroSection w-full relative pt-12 pb-12 bg-slate-50 border-b border-slate-200/80 overflow-hidden">
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <div class="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-slate-200/40 to-transparent">
+                </div>
+                <div class="absolute -top-24 -right-24 w-[35rem] h-[35rem] bg-primary/5 rounded-full blur-3xl"></div>
+                <div
+                    class="absolute inset-0 bg-[linear-gradient(to_right,#002045_1px,transparent_1px),linear-gradient(to_bottom,#002045_1px,transparent_1px)] bg-[size:60px_60px] opacity-[0.03]">
+                </div>
+            </div>
+
+            <div class="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+                    <!-- Left Column: Informative Content & Pills -->
+                    <div class="lg:col-span-7 flex flex-col items-start text-left space-y-6">
+                        <div
+                            class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-black tracking-widest uppercase shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                            Est. 1997 • ISO 9001:2015 Certified
+                        </div>
+
+                        <h1
+                            class="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+                            Heritage of <span class="text-primary">Precision Engineering</span>
+                        </h1>
+
+                        <p class="text-slate-600 text-base md:text-lg font-light leading-relaxed max-w-2xl">
+                            Founded by Late Mr. Ramesh Chand Gupta, National Gears is a premier manufacturer of
+                            high-transmission custom gears, splined shafts, and power assemblies engineered for
+                            zero-backlash reliability.
+                        </p>
+
+                        <!-- Key Pillars (Compact 2x2 Grid) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full pt-2">
                             <div
-                                class="inline-flex items-center gap-2 py-2 px-5 bg-white/5 backdrop-blur-md border border-white/10 text-amber-400 rounded-full font-bold tracking-[0.3em] text-xs shadow-lg animate-float">
-                                <i data-lucide="history" class="w-4 h-4"></i>
-                                ESTABLISHED 1997
+                                class="bg-white border border-slate-200/80 p-4 rounded-2xl shadow-sm flex items-start gap-3.5 hover:border-amber-400/80 transition-colors">
+                                <div
+                                    class="w-9 h-9 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Sub-Micron Tolerance</h4>
+                                    <p class="text-slate-500 text-xs font-light mt-0.5">DIN Class 1-5 precision gear
+                                        grinding.</p>
+                                </div>
                             </div>
-                            <h1
-                                class="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tighter leading-tight">
-                                Heritage of
+
+                            <div
+                                class="bg-white border border-slate-200/80 p-4 rounded-2xl shadow-sm flex items-start gap-3.5 hover:border-primary/50 transition-colors">
+                                <div
+                                    class="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="factory" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">50,000 SQ FT Facility</h4>
+                                    <p class="text-slate-500 text-xs font-light mt-0.5">3 production wings in Alwar,
+                                        Rajasthan.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white border border-slate-200/80 p-4 rounded-2xl shadow-sm flex items-start gap-3.5 hover:border-blue-500/50 transition-colors">
+                                <div
+                                    class="w-9 h-9 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="globe" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Global OEM Export</h4>
+                                    <p class="text-slate-500 text-xs font-light mt-0.5">Trusted by Tata, Mahindra &
+                                        Metso.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white border border-slate-200/80 p-4 rounded-2xl shadow-sm flex items-start gap-3.5 hover:border-emerald-500/50 transition-colors">
+                                <div
+                                    class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="award" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">200+ Gear Specs</h4>
+                                    <p class="text-slate-500 text-xs font-light mt-0.5">Spur, Helical, Bevel & Hydraulic
+                                        sets.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Visual Showcase -->
+                    <div class="lg:col-span-5 relative">
+                        <div
+                            class="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 aspect-[4/3]">
+                            <img src="./public/images/about_hero.png" alt="National Gears Manufacturing"
+                                class="w-full h-full object-cover">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent">
+                            </div>
+
+                            <!-- Floating Badge Overlay -->
+                            <div
+                                class="absolute bottom-6 left-6 right-6 bg-slate-950/80 backdrop-blur-md border border-white/10 p-4 rounded-2xl flex items-center justify-between text-white">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center font-black text-xs">
+                                        NG
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-bold">National Gears Plant</p>
+                                        <p class="text-[10px] text-slate-400">Daudpur & MIA Units, Alwar</p>
+                                    </div>
+                                </div>
                                 <span
-                                    class="md:block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-amber-600">Absolute
-                                    Precision</span>
-                            </h1>
-                            <p
-                                class="text-blue-100/70 lg:text-xl md:text-lg text-base font-light max-w-xl leading-relaxed">
-                                National Gears leads the industry in high-performance mechanical solutions, combining
-                                decades of heritage with tomorrow's technology.
-                            </p>
-                        </div>
-
-                        <!-- Floating Info Cards -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                            <div
-                                class="glass-panel p-6 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl group hover:lg:border-amber-500/50 transition-all duration-500">
-                                <div
-                                    class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                    <i data-lucide="shield-check" class="w-6 h-6"></i>
-                                </div>
-                                <h3 class="text-white font-bold text-lg mb-2">Quality First</h3>
-                                <p class="text-slate-400 text-sm font-light">Sub-micron accuracy in every component we
-                                    deliver.</p>
-                            </div>
-                            <div
-                                class="glass-panel p-6 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl group hover:lg:border-blue-500/50 transition-all duration-500">
-                                <div
-                                    class="w-12 h-12 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                    <i data-lucide="cpu" class="w-6 h-6"></i>
-                                </div>
-                                <h3 class="text-white font-bold text-lg mb-2">Modern Tech</h3>
-                                <p class="text-slate-400 text-sm font-light">State-of-the-art CNC and metrology labs.
-                                </p>
+                                    class="px-2.5 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 text-[10px] font-black uppercase">Active</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right: Visual Composition -->
-                    <div class="relative group">
-                        <!-- Main Image Frame -->
-                        <div
-                            class="relative rounded-[4rem] overflow-hidden border-8 border-white/5 shadow-2xl aspect-[4/5] lg:aspect-square group-hover:lg:rotate-1 transition-transform duration-700">
-                            <img src="./public/images/about_hero.png" alt="Engineering Excellence"
-                                class="w-full h-full object-cover scale-105 group-hover:lg:scale-100 transition-transform duration-1000">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent">
-                            </div>
-                        </div>
-
-                        <!-- Decorative Elements -->
-                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-amber-500/20 blur-[5rem] rounded-full">
-                        </div>
-                        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-500/20 blur-[5rem] rounded-full">
-                        </div>
-
-                        <!-- Floating HUD Label -->
-                        <div
-                            class="absolute bottom-10 right-10 p-5 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl hidden md:block animate-float animation-delay-1000">
-                            <div class="flex items-center gap-3">
-                                <div
-                                    class="w-10 h-10 bg-amber-500 rounded-xl flex items-center justify-center text-primary">
-                                    <i data-lucide="award" class="w-6 h-6"></i>
-                                </div>
-                                <div class="text-left">
-                                    <p class="text-[0.625rem] font-black text-amber-500 tracking-[0.2em]">ISO CERTIFIED
-                                    </p>
-                                    <p class="text-white font-bold text-sm">9001:2015</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -195,23 +482,22 @@
 
             <div class="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                    <div class="lg:col-span-6 grid grid-rows-2 gap-6 h-full min-h-[31.25rem]">
-                        <div class="relative h-full rounded-[2rem] overflow-hidden group shadow-lg min-h-[15rem]">
-                            <img alt="Engineering Precision"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:lg:scale-105"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMs_cP46NiTIxPu_N_YPRfh9_rstj2GqoM97y2Sg7y2Q97NkXqLSkb5OeH9aoPuZ39LHPMbKQyXWUXCH1KQ6YNm-W5Pj_uJ5DO3Hd2qMpIwbNV0W3-JoSCgsquslsX67SR61RAkXBzbam_OYv_adfe6fsvvP-Aii9EYdIE2zbB8ev2DMDSMs2UsoMgdvuh0hVPILuxVhNSx_GK8Lj7UBu2om5FPrmgo7be2S3IvXFqY6s2QGPrXmz_gWM6vXpPmyiNoDrfnvcHKQUn" />
+                    <div class="lg:col-span-6 grid grid-rows-2 gap-6 h-full min-h-[22rem]">
+                        <div class="relative h-full rounded-[2rem] overflow-hidden group shadow-lg min-h-[12rem]">
+                            <img src="./public/images/working2.webp" alt="National Gears Workshop Operations"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-105" />
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-60 group-hover:lg:opacity-40 transition-opacity duration-500">
+                                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-60 lg:group-hover:opacity-40 transition-opacity duration-500">
                             </div>
                         </div>
                         <div
-                            class="bg-primary p-10 rounded-[2rem] flex flex-col justify-center relative overflow-hidden group shadow-lg">
+                            class="bg-primary p-6 md:p-8 rounded-2xl flex flex-col justify-center relative overflow-hidden group shadow-lg">
                             <div
-                                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSAyMCAwIEwgMCAwIDAgMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMC41Ii8+PC9zdmc+')] opacity-[0.05] group-hover:lg:scale-110 transition-transform duration-700">
+                                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSAyMCAwIEwgMCAwIDAgMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMC41Ii8+PC9zdmc+')] opacity-[0.05] lg:group-hover:scale-110 transition-transform duration-700">
                             </div>
 
                             <div
-                                class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center mb-6 relative z-10 shadow-inner group-hover:lg:bg-amber-500 group-hover:lg:text-white transition-colors duration-300">
+                                class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center mb-6 relative z-10 shadow-inner lg:group-hover:bg-amber-500 lg:group-hover:text-white transition-colors duration-300">
                                 <i data-lucide="shield-check" class="w-7 h-7"></i>
                             </div>
                             <h3 class="font-bold lg:text-3xl md:text-2xl text-xl text-white mb-4 relative z-10">
@@ -229,10 +515,9 @@
                             <i data-lucide="building-2" class="w-4 h-4"></i> Company Overview
                         </div>
                         <h2
-                            class="font-bold text-3xl md:text-4xl lg:text-5xl text-slate-900 leading-[1.1] mb-6 tracking-tight">
+                            class="font-bold text-2xl md:text-3xl lg:text-4xl text-slate-900 leading-[1.1] mb-6 tracking-tight">
                             We Engineer
-                            <span
-                                class="md:block text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Reliability</span>
+                            <span class="md:block text-primary">Reliability</span>
                         </h2>
                         <p class="text-slate-600 lg:text-base md:text-base text-sm font-light leading-relaxed mb-6">
                             Welcome to National Gears! Founded by Late Mr. Ramesh Chand Gupta in the year of 1997 with a
@@ -248,14 +533,14 @@
                         <div class="grid grid-cols-2 gap-8 border-t border-slate-200 pt-10">
                             <div class="group">
                                 <span
-                                    class="font-bold lg:text-5xl md:text-4xl text-3xl text-primary block mb-1 hover:lg:text-amber-500 transition-colors">10k<span
+                                    class="font-bold lg:text-4xl md:text-3xl text-2xl text-primary block mb-1 lg:hover:text-amber-500 transition-colors">10k<span
                                         class="text-amber-500">+</span></span>
                                 <span class="text-xs font-bold text-slate-400 tracking-widest">Units Produced
                                     Annually</span>
                             </div>
                             <div class="group">
                                 <span
-                                    class="font-bold lg:text-5xl md:text-4xl text-3xl text-primary block mb-1 group-hover:lg:text-amber-500 transition-colors">ISO</span>
+                                    class="font-bold lg:text-4xl md:text-3xl text-2xl text-primary block mb-1 lg:group-hover:text-amber-500 transition-colors">ISO</span>
                                 <span class="text-xs font-bold text-slate-400 tracking-widest">9001:2015
                                     Certified</span>
                             </div>
@@ -265,285 +550,802 @@
             </div>
         </section>
 
-        <section class="infrastructureSection py-10 lg:py-16 bg-slate-900 relative overflow-hidden group/infra">
+        <section class="infrastructureSection py-10 lg:py-14 bg-slate-900 relative overflow-hidden group/infra">
             <div
                 class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
             </div>
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+
             <div class="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-16 gap-6 items-center">
-                    <div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="lg:col-span-7">
                         <div
-                            class="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-500/10 text-amber-500 rounded-lg text-xs font-bold tracking-widest mb-6 border border-amber-500/10">
-                            <i data-lucide="cog" class="w-4 h-4"></i> Infrastructure
+                            class="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 text-amber-400 rounded-full text-xs font-semibold tracking-wider mb-4 border border-amber-500/20">
+                            Infrastructure & Machinery
                         </div>
-                        <h2 class="font-bold text-2xl md:text-3xl lg:text-4xl text-white mb-8 tracking-tight">
-                            World-Class <span class="text-amber-500">Manufacturing</span> Facility</h2>
-                        <p class="text-blue-100/70 lg:text-base md:text-base text-sm font-light leading-relaxed mb-8">
-                            National Gear is equipped with a robust infrastructure that supports its manufacturing
-                            capabilities. Our facility includes advanced machinery such as CNC machines, VMC machines,
-                            CNC gear hobbing, Gear shaving, milling machines, cylindrical grinders, and more.
+                        <h2 class="font-bold text-xl md:text-2xl lg:text-3xl text-white mb-4 tracking-tight">
+                            World-Class <span class="text-amber-500">Manufacturing</span> Facility
+                        </h2>
+                        <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6 font-light">
+                            National Gear is equipped with a robust infrastructure supporting advanced manufacturing
+                            capabilities. Our state-of-the-art facility features high-precision CNC & VMC machinery, CNC
+                            gear hobbing, gear shaving, milling machines, and cylindrical grinders.
                         </p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div
-                                class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:lg:bg-white/10 transition-all">
-                                <h4 class="text-white font-bold mb-3 flex items-center gap-2">
-                                    <i data-lucide="shield-check" class="w-5 h-5 text-amber-500"></i>
-                                    Quality Assurance
-                                </h4>
-                                <p class="text-blue-100/50 text-sm font-light">Hardness testers, 2D height masters, and
-                                    Gear roll testers for absolute precision.</p>
+                                class="bg-white/5 backdrop-blur-sm p-5 rounded-xl border border-white/10 hover:border-amber-500/30 transition-all duration-300 group/card">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div
+                                        class="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
+                                        <i data-lucide="shield-check" class="w-5 h-5 text-amber-500"></i>
+                                    </div>
+                                    <h4
+                                        class="text-white font-semibold text-base group-hover/card:text-amber-400 transition-colors">
+                                        Quality Assurance
+                                    </h4>
+                                </div>
+                                <p class="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+                                    Hardness testers, 2D height masters, and Gear roll testers ensuring zero-defect
+                                    precision.
+                                </p>
                             </div>
+
                             <div
-                                class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:lg:bg-white/10 transition-all">
-                                <h4 class="text-white font-bold mb-3 flex items-center gap-2">
-                                    <i data-lucide="microscope" class="w-5 h-5 text-amber-500"></i>
-                                    Metrology Lab
-                                </h4>
-                                <p class="text-blue-100/50 text-sm font-light">Lead profile tester, roughness tester,
-                                    and CMM Mitutoyo for sub-micron verification.</p>
+                                class="bg-white/5 backdrop-blur-sm p-5 rounded-xl border border-white/10 hover:border-amber-500/30 transition-all duration-300 group/card">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div
+                                        class="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
+                                        <i data-lucide="microscope" class="w-5 h-5 text-amber-500"></i>
+                                    </div>
+                                    <h4
+                                        class="text-white font-semibold text-base group-hover/card:text-amber-400 transition-colors">
+                                        Metrology Lab
+                                    </h4>
+                                </div>
+                                <p class="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+                                    Lead profile tester, surface roughness tester, and Mitutoyo CMM for sub-micron
+                                    verification.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="relative">
-                        <div class="aspect-square rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800"
-                                alt="Industrial Machinery"
-                                class="w-full h-full object-cover grayscale group-hover/infra:grayscale-0 transition-all duration-700 group-hover/infra:scale-105">
-                        </div>
-                        <div class="absolute -bottom-8 -left-8 bg-amber-500 p-8 rounded-3xl shadow-2xl hidden md:block">
-                            <i data-lucide="activity" class="w-10 h-10 text-primary animate-pulse"></i>
+
+                    <!-- Compact Image Wrapper -->
+                    <div class="lg:col-span-5 relative">
+                        <div
+                            class="relative mx-auto max-w-md lg:max-w-none rounded-2xl overflow-hidden border border-white/15 shadow-xl bg-slate-800/50 group/imgContainer">
+                            <div class="aspect-[4/3] w-full overflow-hidden relative">
+                                <img src="./public/images/gearCuttingMachine.webp"
+                                    alt="Gear Cutting Machine & Industrial Infrastructure"
+                                    class="w-full h-full object-cover grayscale transition-all duration-700 group-hover/infra:grayscale-0 group-hover/imgContainer:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent">
+                                </div>
+                            </div>
+                            <!-- Compact Overlay Badge -->
+                            <div
+                                class="absolute bottom-3 left-3 right-3 bg-slate-900/85 backdrop-blur-md p-3 rounded-xl border border-white/10 flex items-center justify-between">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+                                    <span class="text-xs font-medium text-white tracking-wide">High-Precision CNC
+                                        Hub</span>
+                                </div>
+                                <span
+                                    class="text-[10px] font-bold tracking-wider text-amber-400 uppercase bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">Active</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="missionVisionSection py-10 lg:py-16 relative overflow-hidden bg-[#00142D] group/section">
-            <div class="absolute inset-0 pointer-events-none z-0">
+
+
+        <!-- Future Expansion Plan Section (Light Theme Timeline Track - Non-Card) -->
+        <section
+            class="py-14 lg:py-20 bg-gradient-to-b from-slate-50 via-blue-50/20 to-white text-slate-800 relative overflow-hidden border-t border-slate-200">
+            <!-- Subtle Grid & Soft Glows -->
+            <div
+                class="absolute inset-0 bg-[linear-gradient(to_right,#00000006_1px,transparent_1px),linear-gradient(to_bottom,#00000006_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none">
+            </div>
+            <div class="absolute top-1/4 -left-32 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-10 -right-32 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+
+            <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
+                        <i data-lucide="trending-up" class="w-3.5 h-3.5 text-amber-600"></i>
+                        Strategic Roadmap
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+                        Future <span class="text-amber-600">Expansion</span> Plan
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base font-normal max-w-2xl mx-auto leading-relaxed">
+                        Continuous technological upgrades & infrastructure investments empowering next-generation
+                        high-precision gear manufacturing.
+                    </p>
+                </div>
+
+                <!-- Vertical Timeline Flow (Light Theme - Non-Card) -->
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Central Vertical Connecting Line (Hidden on small, visible on md+) -->
+                    <div
+                        class="hidden md:block absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-0.5 bg-gradient-to-b from-amber-500 via-blue-500 to-emerald-500 opacity-40">
+                    </div>
+
+                    <!-- Milestone 1 -->
+                    <div class="relative mb-12 md:mb-16 group/timeline">
+                        <div class="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-0">
+                            <!-- Left Content (On Desktop: Left side) -->
+                            <div class="w-full md:w-1/2 md:pr-12 md:text-right">
+                                <div
+                                    class="inline-flex items-center gap-2 text-xs font-mono font-bold text-amber-700 tracking-wider mb-1 uppercase">
+                                    <span>Phase 01</span>
+                                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                                </div>
+                                <h3
+                                    class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 group-hover/timeline:text-amber-600 transition-colors">
+                                    Induction Heat Treatment Plant
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed font-normal mb-3">
+                                    Establishment of an advanced Induction Heat Treatment Plant to bring complete
+                                    in-house hardening capabilities and superior metallurgical quality control.
+                                </p>
+                                <span
+                                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200 shadow-sm">
+                                    <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-600"></i> In-House Hardening
+                                </span>
+                            </div>
+
+                            <!-- Center Node Icon -->
+                            <div
+                                class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border-2 border-amber-500 text-amber-600 items-center justify-center shadow-md shadow-amber-500/10 group-hover/timeline:scale-110 transition-transform duration-300 z-10">
+                                <i data-lucide="flame" class="w-5 h-5"></i>
+                            </div>
+
+                            <!-- Right Empty Space for Desktop symmetry -->
+                            <div class="hidden md:block w-1/2 md:pl-12"></div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="relative mb-12 md:mb-16 group/timeline">
+                        <div class="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-0">
+                            <!-- Left Empty Space for Desktop symmetry -->
+                            <div class="hidden md:block w-1/2 md:pr-12"></div>
+
+                            <!-- Center Node Icon -->
+                            <div
+                                class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border-2 border-blue-500 text-blue-600 items-center justify-center shadow-md shadow-blue-500/10 group-hover/timeline:scale-110 transition-transform duration-300 z-10">
+                                <i data-lucide="disc" class="w-5 h-5"></i>
+                            </div>
+
+                            <!-- Right Content (On Desktop: Right side) -->
+                            <div class="w-full md:w-1/2 md:pl-12">
+                                <div
+                                    class="inline-flex items-center gap-2 text-xs font-mono font-bold text-blue-700 tracking-wider mb-1 uppercase">
+                                    <span>Phase 02</span>
+                                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                                </div>
+                                <h3
+                                    class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 group-hover/timeline:text-blue-600 transition-colors">
+                                    Tooth Grinding Facility
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed font-normal mb-3">
+                                    Deploying high-precision Tooth Grinding machinery capable of achieving strict
+                                    <strong class="text-slate-900 font-bold">DIN Class 5</strong> accuracy standards for
+                                    heavy-duty gears.
+                                </p>
+                                <span
+                                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-800 bg-blue-50 px-3 py-1 rounded-full border border-blue-200 shadow-sm">
+                                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-600"></i> DIN Class 5
+                                    Accuracy
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="relative mb-12 md:mb-16 group/timeline">
+                        <div class="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-0">
+                            <!-- Left Content (On Desktop: Left side) -->
+                            <div class="w-full md:w-1/2 md:pr-12 md:text-right">
+                                <div
+                                    class="inline-flex items-center gap-2 text-xs font-mono font-bold text-indigo-700 tracking-wider mb-1 uppercase">
+                                    <span>Phase 03</span>
+                                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                                </div>
+                                <h3
+                                    class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 group-hover/timeline:text-indigo-600 transition-colors">
+                                    CNC Cylindrical Grinding Expansion
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed font-normal mb-3">
+                                    Expanding automated CNC Cylindrical Grinding capacity tailored specifically to meet
+                                    Metso technical specifications and future volume demands.
+                                </p>
+                                <span
+                                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-800 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200 shadow-sm">
+                                    <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-600"></i> Metso Standards &
+                                    Volume
+                                </span>
+                            </div>
+
+                            <!-- Center Node Icon -->
+                            <div
+                                class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border-2 border-indigo-500 text-indigo-600 items-center justify-center shadow-md shadow-indigo-500/10 group-hover/timeline:scale-110 transition-transform duration-300 z-10">
+                                <i data-lucide="cpu" class="w-5 h-5"></i>
+                            </div>
+
+                            <!-- Right Empty Space for Desktop symmetry -->
+                            <div class="hidden md:block w-1/2 md:pl-12"></div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="relative group/timeline">
+                        <div class="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-0">
+                            <!-- Left Empty Space for Desktop symmetry -->
+                            <div class="hidden md:block w-1/2 md:pr-12"></div>
+
+                            <!-- Center Node Icon -->
+                            <div
+                                class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border-2 border-emerald-500 text-emerald-600 items-center justify-center shadow-md shadow-emerald-500/10 group-hover/timeline:scale-110 transition-transform duration-300 z-10">
+                                <i data-lucide="globe" class="w-5 h-5"></i>
+                            </div>
+
+                            <!-- Right Content (On Desktop: Right side) -->
+                            <div class="w-full md:w-1/2 md:pl-12">
+                                <div
+                                    class="inline-flex items-center gap-2 text-xs font-mono font-bold text-emerald-700 tracking-wider mb-1 uppercase">
+                                    <span>Phase 04</span>
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                </div>
+                                <h3
+                                    class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 group-hover/timeline:text-emerald-600 transition-colors">
+                                    Capacity Enhancement
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed font-normal mb-3">
+                                    Systematic facility expansion to scale production throughput while maintaining
+                                    global OEM quality compliance and serving international export markets.
+                                </p>
+                                <span
+                                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 shadow-sm">
+                                    <i data-lucide="trending-up" class="w-3.5 h-3.5 text-emerald-600"></i> Global OEM
+                                    Standards
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="missionVisionSection py-12 lg:py-16 relative overflow-hidden bg-[#00142D] group/section">
+            <!-- Background Grids & Glows -->
+            <div class="absolute inset-0 pointer-events-none z-0 opacity-40">
                 <div
-                    class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:3.75rem_3.75rem]">
+                    class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:3rem_3rem]">
                 </div>
                 <div
-                    class="absolute top-0 left-1/4 w-[25rem] h-[25rem] bg-blue-600/20 rounded-full blur-[6.25rem] mix-blend-screen opacity-60 group-hover:lg/section:opacity-90 transition-opacity duration-1000">
+                    class="absolute -top-20 left-1/4 w-[28rem] h-[28rem] bg-blue-600/20 rounded-full blur-[7rem] mix-blend-screen pointer-events-none">
                 </div>
                 <div
-                    class="absolute bottom-0 right-1/4 w-[25rem] h-[25rem] bg-amber-500/10 rounded-full blur-[6.25rem] mix-blend-screen opacity-60 group-hover:lg/section:opacity-90 transition-opacity duration-1000">
+                    class="absolute -bottom-20 right-1/4 w-[28rem] h-[28rem] bg-amber-500/15 rounded-full blur-[7rem] mix-blend-screen pointer-events-none">
                 </div>
             </div>
 
-
             <div class="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto mb-10 lg:mb-12">
                     <div
-                        class="relative bg-white/[0.02] backdrop-blur-3xl border border-white/10 rounded-[2.5rem] p-10 md:p-14 hover:lg:bg-white/[0.04] transition-all duration-700 group overflow-hidden hover:lg:-translate-y-2 hover:lg:shadow-[0_30px_60px_-15px_rgba(59,130,246,0.2)]">
-                        <div
-                            class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500/60 to-transparent lg:opacity-0 opacity-100 group-hover:lg:opacity-100 transition-opacity duration-500">
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-transparent lg:opacity-0 opacity-100 group-hover:lg:opacity-100 transition-opacity duration-700 pointer-events-none">
-                        </div>
-
-                        <div
-                            class="relative w-20 h-20 bg-gradient-to-br from-blue-500/20 to-blue-600/5 border border-blue-500/30 text-blue-400 rounded-[1.5rem] flex items-center justify-center mb-10 group-hover:lg:scale-110 group-hover:lg:-rotate-3 transition-transform duration-500 shadow-[0_0_30px_rgba(59,130,246,0.2)]">
-                            <i data-lucide="eye" class="w-10 h-10 relative z-10"></i>
-                        </div>
-
-                        <h3 class="lg:text-4xl md:text-3xl text-2xl font-bold text-white mb-6 tracking-tight">Our Vision
-                        </h3>
-                        <p
-                            class="lg:text-lg md:text-base text-sm text-blue-100/70 font-light leading-relaxed italic relative">
-                            <span class="absolute -top-4 -left-4 text-4xl text-blue-500/20 font-serif">"</span>
-                            To be the global benchmark for mechanical transmission systems, where our engineering is so
-                            precise it becomes silent.
-                        </p>
+                        class="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-xs font-semibold tracking-wider mb-3 border border-blue-500/20">
+                        Strategic Direction
                     </div>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tight">
+                        Our <span class="text-amber-500">Vision</span> & <span class="text-blue-400">Mission</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                    <!-- Vision Card -->
                     <div
-                        class="relative bg-white/[0.02] backdrop-blur-3xl border border-white/10 rounded-[2.5rem] p-10 md:p-14 hover:lg:bg-white/[0.04] transition-all duration-700 group overflow-hidden hover:lg:-translate-y-2 hover:lg:shadow-[0_30px_60px_-15px_rgba(245,158,11,0.2)]">
+                        class="lg:col-span-5 relative bg-slate-900/60 backdrop-blur-2xl border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-blue-500/40 transition-all duration-500 group/vision shadow-xl">
                         <div
-                            class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-amber-500/60 to-transparent lg:opacity-0 opacity-100 group-hover:lg:opacity-100 transition-opacity duration-500">
+                            class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-blue-500 via-cyan-400 to-transparent rounded-t-2xl">
                         </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-b from-amber-500/10 to-transparent lg:opacity-0 opacity-100 group-hover:lg:opacity-100 transition-opacity duration-700 pointer-events-none">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 group-hover/vision:scale-110 group-hover/vision:rotate-3 transition-transform duration-300">
+                                    <i data-lucide="eye" class="w-6 h-6"></i>
+                                </div>
+                                <span
+                                    class="text-[10px] font-bold tracking-widest text-blue-400 uppercase bg-blue-500/10 px-2.5 py-1 rounded-full border border-blue-500/20">Core
+                                    Vision</span>
+                            </div>
+
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-4 tracking-tight">
+                                Our Vision
+                            </h3>
+                            <div class="relative bg-white/5 border border-white/5 rounded-xl p-5 mb-6">
+                                <i data-lucide="quote"
+                                    class="w-8 h-8 text-blue-400/20 absolute -top-3 -left-2 rotate-180"></i>
+                                <p
+                                    class="text-blue-100/90 text-sm md:text-base font-light leading-relaxed italic relative z-10 pl-2">
+                                    "To be the global benchmark for mechanical transmission systems, where our
+                                    engineering is so precise it becomes silent."
+                                </p>
+                            </div>
                         </div>
 
-                        <div
-                            class="relative w-20 h-20 bg-gradient-to-br from-amber-500/20 to-amber-600/5 border border-amber-500/30 text-amber-400 rounded-[1.5rem] flex items-center justify-center mb-10 group-hover:lg:scale-110 group-hover:lg:rotate-3 transition-transform duration-500 shadow-[0_0_30px_rgba(245,158,11,0.2)]">
-                            <i data-lucide="target" class="w-10 h-10 relative z-10"></i>
+                        <div class="pt-4 border-t border-white/10 flex flex-wrap gap-2">
+                            <span
+                                class="text-xs font-medium text-slate-300 bg-white/5 px-2.5 py-1 rounded-md border border-white/5">Global
+                                Benchmark</span>
+                            <span
+                                class="text-xs font-medium text-slate-300 bg-white/5 px-2.5 py-1 rounded-md border border-white/5">Silent
+                                Precision</span>
+                            <span
+                                class="text-xs font-medium text-slate-300 bg-white/5 px-2.5 py-1 rounded-md border border-white/5">Engineering
+                                Excellence</span>
                         </div>
+                    </div>
 
-                        <h3 class="lg:text-4xl md:text-3xl text-2xl font-bold text-white mb-6 tracking-tight">Our
-                            Mission</h3>
-                        <ul class="space-y-6">
-                            <li class="flex items-start gap-4">
+                    <!-- Mission Card -->
+                    <div
+                        class="lg:col-span-7 relative bg-slate-900/60 backdrop-blur-2xl border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-500/40 transition-all duration-500 group/mission shadow-xl">
+                        <div
+                            class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-amber-500 via-yellow-400 to-transparent rounded-t-2xl">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
                                 <div
-                                    class="mt-1 w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center border border-amber-500/30 shrink-0">
-                                    <i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i>
+                                    class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover/mission:scale-110 group-hover/mission:-rotate-3 transition-transform duration-300">
+                                    <i data-lucide="target" class="w-6 h-6"></i>
                                 </div>
-                                <span class="text-blue-100/80 text-lg font-light leading-relaxed">Deliver zero-defect
-                                    mechanical solutions that exceed international safety standards.</span>
+                                <span
+                                    class="text-[10px] font-bold tracking-widest text-amber-400 uppercase bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">Action
+                                    Roadmap</span>
+                            </div>
+
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-6 tracking-tight">
+                                Our Mission
+                            </h3>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div
+                                    class="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 hover:border-amber-500/30 transition-all duration-300 flex items-start gap-3">
+                                    <div
+                                        class="mt-0.5 w-6 h-6 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center shrink-0">
+                                        <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i>
+                                    </div>
+                                    <span class="text-slate-200 text-xs sm:text-sm font-medium leading-relaxed">
+                                        Deliver precision gear components with micron accuracy
+                                    </span>
+                                </div>
+
+                                <div
+                                    class="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 hover:border-amber-500/30 transition-all duration-300 flex items-start gap-3">
+                                    <div
+                                        class="mt-0.5 w-6 h-6 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center shrink-0">
+                                        <i data-lucide="cpu" class="w-4 h-4 text-amber-400"></i>
+                                    </div>
+                                    <span class="text-slate-200 text-xs sm:text-sm font-medium leading-relaxed">
+                                        Continuous investment in modern CNC technology
+                                    </span>
+                                </div>
+
+                                <div
+                                    class="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 hover:border-amber-500/30 transition-all duration-300 flex items-start gap-3">
+                                    <div
+                                        class="mt-0.5 w-6 h-6 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center shrink-0">
+                                        <i data-lucide="handshake" class="w-4 h-4 text-amber-400"></i>
+                                    </div>
+                                    <span class="text-slate-200 text-xs sm:text-sm font-medium leading-relaxed">
+                                        Reliable partner for OEM supply chains
+                                    </span>
+                                </div>
+
+                                <div
+                                    class="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 hover:border-amber-500/30 transition-all duration-300 flex items-start gap-3">
+                                    <div
+                                        class="mt-0.5 w-6 h-6 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center shrink-0">
+                                        <i data-lucide="shield-check" class="w-4 h-4 text-amber-400"></i>
+                                    </div>
+                                    <span class="text-slate-200 text-xs sm:text-sm font-medium leading-relaxed">
+                                        Focus on quality and long-term partnerships
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global OEM Alliances & Partner Showcase Section -->
+        <section class="w-full overflow-hidden bg-slate-50/60 border-y border-slate-200/80 py-16 lg:py-20 relative">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase mb-4">
+                        Global OEM Partnerships
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
+                        Trusted Partner to World-Class Industry Leaders
+                    </h2>
+                    <p
+                        class="text-slate-600 text-sm sm:text-base md:text-lg font-normal max-w-2xl mx-auto leading-relaxed">
+                        Supplying high-precision gear components and power transmission solutions to top-tier
+                        Automotive, Defence, Aerospace, and Industrial OEMs globally.
+                    </p>
+
+                    <!-- Key Strategic Highlights -->
+                    <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-6 mt-8">
+                        <div
+                            class="px-4 py-2 rounded-xl bg-white border border-slate-200/80 shadow-sm flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                            <span class="text-xs sm:text-sm font-bold text-slate-800">30+ Tier-1 &amp; OEM
+                                Partners</span>
+                        </div>
+                        <div
+                            class="px-4 py-2 rounded-xl bg-white border border-slate-200/80 shadow-sm flex items-center gap-2">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                            <span class="text-xs sm:text-sm font-bold text-slate-800">100% On-Time OEM Delivery</span>
+                        </div>
+                        <div
+                            class="px-4 py-2 rounded-xl bg-white border border-slate-200/80 shadow-sm flex items-center gap-2">
+                            <i data-lucide="globe-2" class="w-4 h-4 text-blue-600 shrink-0"></i>
+                            <span class="text-xs sm:text-sm font-bold text-slate-800">Global Export Reach</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OEM Partner Logo Grid Wall (Light theme, Pure White Cards, Seamless Blending) -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
+                    <!-- Partner Card 1 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/tataAdvanceLogo.webp" alt="Tata Advanced Systems"
+                            title="Tata Advanced Systems"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 2 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/mahindraDefenceLogo.webp" alt="Mahindra Defence"
+                            title="Mahindra Defence"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 3 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/metsoLogo.webp" alt="Metso" title="Metso"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 4 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/claasHarvestLogo.webp" alt="Claas Harvest"
+                            title="Claas Harvest"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 5 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/tafeLogo.webp" alt="TAFE" title="TAFE"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 6 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/terexLogo.webp" alt="Terex" title="Terex"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 7 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/havellsLogo.webp" alt="Havells" title="Havells"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 8 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/isgecHeavyEngineeringLogo.webp"
+                            alt="ISGEC Heavy Engineering" title="ISGEC Heavy Engineering"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 9 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/KnorrBremseLogo.webp" alt="Knorr Bremse"
+                            title="Knorr Bremse"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 10 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/sonaLogo.webp" alt="Sona" title="Sona"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 11 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/victoraAutoLogo.webp" alt="Victora Auto"
+                            title="Victora Auto"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 12 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/emmforceLogo.webp" alt="Emmforce" title="Emmforce"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 13 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/agnieLogo.webp" alt="Agnie" title="Agnie"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 14 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/bBossLogo.webp" alt="B-Boss" title="B-Boss"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 15 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/emmbrosLogo.webp" alt="Emmbros" title="Emmbros"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 16 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/jsPumpLogo.webp" alt="JS Pump" title="JS Pump"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 17 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/merbokLogo.webp" alt="Merbok" title="Merbok"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 18 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/moveTheWorldLogo.webp" alt="Move The World"
+                            title="Move The World"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 19 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/novLogo.webp" alt="NOV" title="NOV"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 20 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/padminiLogo.webp" alt="Padmini" title="Padmini"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 21 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/padminiVnaLogo.webp" alt="Padmini VNA"
+                            title="Padmini VNA"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 22 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/shivayLogo.webp" alt="Shivay" title="Shivay"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 23 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/sonicoLogo.webp" alt="Sonico" title="Sonico"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 24 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/speedLogo.webp" alt="Speed" title="Speed"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 25 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/storkRubberLogo.webp" alt="Stork Rubber"
+                            title="Stork Rubber"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 26 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/synergySteelsLogo.webp" alt="Synergy Steels"
+                            title="Synergy Steels"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 27 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/tasLogo.webp" alt="TAS" title="TAS"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 28 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/tierTwoLogo.webp" alt="Tier Two" title="Tier Two"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 29 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/u&tLogo.webp" alt="U&amp;T" title="U&amp;T"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 30 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/unpiartsLogo.webp" alt="Uniparts" title="Uniparts"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 31 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/vertEquipmentLogo.webp" alt="Vert Equipment"
+                            title="Vert Equipment"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 32 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/winsolusiKonsultanLogo.webp" alt="Winsolusi Konsultan"
+                            title="Winsolusi Konsultan"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                    <!-- Partner Card 33 -->
+                    <div
+                        class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 shadow-sm lg:hover:shadow-lg lg:hover:border-primary/30 lg:hover:-translate-y-1 transition-all duration-300">
+                        <img src="./public/images/companyLogos/xlHydraulicGearLogo.webp" alt="XL Hydraulic Gear"
+                            title="XL Hydraulic Gear"
+                            class="max-h-12 sm:max-h-14 w-auto max-w-[140px] sm:max-w-[170px] object-contain mix-blend-multiply opacity-85 lg:group-hover:opacity-100 lg:group-hover:scale-105 transition-all duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="bg-primary relative overflow-hidden border-t border-slate-800 pt-20 pb-10">
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-[50rem] h-[25rem] bg-blue-500/10 blur-[7.5rem] rounded-full pointer-events-none">
+            </div>
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 mb-16">
+                    <div class="md:col-span-12 lg:col-span-4">
+                        <a href="index.html" class="flex items-center gap-3 mb-6 group cursor-pointer w-fit">
+                            <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo"
+                                title="National Gears"
+                                class="h-14 sm:h-16 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105">
+                        </a>
+                        <p class="font-light text-slate-400 mb-8 leading-relaxed max-w-sm">
+                            Setting the standard in high-precision gear manufacturing since 1989. Engineered for
+                            durability, delivered with integrity.
+                        </p>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 rounded-lg bg-amber-500 text-white lg:bg-white/5 lg:border lg:border-white/10 flex items-center justify-center lg:text-slate-400 hover:lg:bg-amber-500 hover:lg:text-white hover:lg:border-amber-500 transition-all duration-300 hover:lg:-translate-y-1"
+                                href="#">
+                                <svg class="size-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            <a class="w-10 h-10 rounded-lg bg-[#0A66C2] text-white lg:bg-white/5 lg:border lg:border-white/10 flex items-center justify-center lg:text-slate-400 hover:lg:bg-[#0A66C2] hover:lg:text-white hover:lg:border-[#0A66C2] transition-all duration-300 hover:lg:-translate-y-1"
+                                href="#">
+                                <svg class="size-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.205 24 24 23.227 24 22.271V1.729C24 .774 23.205 0 22.225 0z" />
+                                </svg>
+                            </a>
+                            <a class="w-10 h-10 rounded-lg bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white lg:bg-none lg:bg-white/5 lg:border lg:border-white/10 flex items-center justify-center lg:text-slate-400 hover:lg:bg-gradient-to-tr hover:lg:from-[#f9ce34] hover:lg:via-[#ee2a7b] hover:lg:to-[#6228d7] hover:lg:text-white transition-all duration-300 hover:lg:-translate-y-1"
+                                href="#">
+                                <svg class="size-5" fill="currentColor" viewBox="0 0 448 512">
+                                    <path
+                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-6 lg:col-span-2">
+                        <h4 class="font-bold text-white mb-6 tracking-widest text-base">Quick Links</h4>
+                        <ul class="space-y-4">
+                            <li><a class="text-slate-400 font-light hover:text-amber-400 transition-all"
+                                    href="about-us.html">About Us</a></li>
+                            <li><a class="text-slate-400 font-light hover:text-amber-400 transition-all"
+                                    href="products.html">Products</a></li>
+                            <li><a class="text-slate-400 font-light hover:text-amber-400 transition-all"
+                                    href="manufacturing.html">Manufacturing</a></li>
+                            <li><a class="text-slate-400 font-light hover:text-amber-400 transition-all"
+                                    href="gallery.html">Gallery</a></li>
+                            <li><a class="text-slate-400 font-light hover:text-amber-400 transition-all"
+                                    href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="md:col-span-6 lg:col-span-3">
+                        <h4 class="font-bold text-white mb-6 tracking-widest text-base">Contact Engineering</h4>
+                        <ul class="space-y-4">
+                            <li class="flex gap-4">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-amber-500 shrink-0"></i>
+                                <div class="text-slate-400 font-light text-sm leading-relaxed">
+                                    <span class="block font-bold text-white mb-1">Manufacturing Plants:</span>
+                                    Plant 1: Daudpur, Alwar, RJ<br>
+                                    Plant 2: G1 477, MIA, Alwar, RJ
+                                </div>
                             </li>
-                            <li class="flex items-start gap-4">
-                                <div
-                                    class="mt-1 w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center border border-amber-500/30 shrink-0">
-                                    <i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i>
+                            <li class="flex items-center gap-4">
+                                <i data-lucide="phone" class="w-5 h-5 text-amber-500 shrink-0"></i>
+                                <div class="text-slate-400 font-light text-sm">
+                                    +91 9887661666<br>+91 9414855278
                                 </div>
-                                <span class="text-blue-100/80 text-lg font-light leading-relaxed">Foster a culture of
-                                    continuous technical improvement and industrial innovation.</span>
                             </li>
-                            <li class="flex items-start gap-4">
-                                <div
-                                    class="mt-1 w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center border border-amber-500/30 shrink-0">
-                                    <i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i>
+                            <li class="flex items-center gap-4">
+                                <i data-lucide="mail" class="w-5 h-5 text-amber-500 shrink-0"></i>
+                                <div class="text-slate-400 font-light text-sm break-all">
+                                    vivekgupta@nationalgears.in<br>nationalgears@gmail.com
                                 </div>
-                                <span class="text-blue-100/80 text-lg font-light leading-relaxed">Minimize environmental
-                                    impact through lean manufacturing and efficient material use.</span>
                             </li>
                         </ul>
                     </div>
 
+                    <div class="md:col-span-12 lg:col-span-3">
+                        <h4 class="font-bold text-white mb-4 tracking-widest text-base flex items-center gap-2">
+                            <span class="text-amber-500 font-extrabold">Like</span> Us
+                        </h4>
+                        <div class="w-full rounded-2xl overflow-hidden bg-white/5 border border-white/10 p-1 shadow-lg" style="max-width: 340px;">
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FG8ucRU8y%2F&tabs=timeline&width=340&height=260&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" 
+                                width="100%" height="260" style="border:none;overflow:hidden;background:#ffffff;border-radius:12px" scrolling="no" frameborder="0" allowfullscreen="true" 
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-        </section>
-
-        <div class="relative w-full bg-white py-12 z-20 border-b border-slate-200">
-            <div class="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="relative overflow-hidden rounded-3xl bg-slate-50 border border-slate-200 py-6 shadow-sm">
-                    <!-- Subtle Edge Gradients -->
-                    <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-50 to-transparent z-10">
+                <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex flex-col gap-2">
+                        <p class="font-light text-base text-slate-500 text-center md:text-left">
+                            &copy; 2024 National Gears Manufacturing. Precision Engineered.
+                        </p>
+                        <p class="text-xs text-slate-600 font-bold tracking-widest uppercase text-center md:text-left">
+                            ISO 9001:2015 Certified Company</p>
                     </div>
-                    <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-50 to-transparent z-10">
-                    </div>
-
-                    <div class="flex whitespace-nowrap animate-marquee">
-                        <!-- Set 1 -->
-                        <div class="flex items-center gap-16 px-8">
-                            <div class="flex items-center gap-4 group">
-                                <div
-                                    class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-primary/10 group-hover:lg:bg-primary/10 transition-all duration-300">
-                                    <i data-lucide="award" class="w-6 h-6 text-primary"></i>
-                                </div>
-                                <span class="text-sm md:text-lg font-bold text-slate-800 tracking-widest">ISO
-                                    9001:2015</span>
-                                <span class="text-slate-300 font-light mx-2">•</span>
-                            </div>
-                            <div class="flex items-center gap-4 group">
-                                <div
-                                    class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-primary/10 group-hover:lg:bg-primary/10 transition-all duration-300">
-                                    <i data-lucide="settings-2" class="w-6 h-6 text-primary"></i>
-                                </div>
-                                <span class="text-sm md:text-lg font-bold text-slate-800 tracking-widest">AGMA
-                                    Q14 Capacity</span>
-                                <span class="text-slate-300 font-light mx-2">•</span>
-                            </div>
-                            <div class="flex items-center gap-4 group">
-                                <div
-                                    class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-primary/10 group-hover:lg:bg-primary/10 transition-all duration-300">
-                                    <i data-lucide="shield" class="w-6 h-6 text-primary"></i>
-                                </div>
-                                <span class="text-sm md:text-lg font-bold text-slate-800 tracking-widest">ITAR
-                                    Registered</span>
-                                <span class="text-slate-300 font-light mx-2">•</span>
-                            </div>
-                            <div class="flex items-center gap-4 group">
-                                <div
-                                    class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-primary/10 group-hover:lg:bg-primary/10 transition-all duration-300">
-                                    <i data-lucide="leaf" class="w-6 h-6 text-primary"></i>
-                                </div>
-                                <span class="text-sm md:text-lg font-bold text-slate-800 tracking-widest">LEED
-                                    Silver Facility</span>
-                                <span class="text-slate-300 font-light mx-2">•</span>
-                            </div>
-                        </div>
-                        <!-- Set 2 -->
-                        <div class="flex items-center gap-16 px-8">
-                            <div class="flex items-center gap-4 group">
-                                <div
-                                    class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-primary/10 group-hover:lg:bg-primary/10 transition-all duration-300">
-                                    <i data-lucide="award" class="w-6 h-6 text-primary"></i>
-                                </div>
-                                <span class="text-sm md:text-lg font-bold text-slate-800 tracking-widest">ISO
-                                    9001:2015</span>
-                                <span class="text-slate-300 font-light mx-2">•</span>
-                            </div>
-                            <div class="flex items-center gap-4 group">
-                                <div
-                                    class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-primary/10 group-hover:lg:bg-primary/10 transition-all duration-300">
-                                    <i data-lucide="settings-2" class="w-6 h-6 text-primary"></i>
-                                </div>
-                                <span class="text-sm md:text-lg font-bold text-slate-800 tracking-widest">AGMA
-                                    Q14 Capacity</span>
-                                <span class="text-slate-300 font-light mx-2">•</span>
-                            </div>
-                            <div class="flex items-center gap-4 group">
-                                <div
-                                    class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-primary/10 group-hover:lg:bg-primary/10 transition-all duration-300">
-                                    <i data-lucide="shield" class="w-6 h-6 text-primary"></i>
-                                </div>
-                                <span class="text-sm md:text-lg font-bold text-slate-800 tracking-widest">ITAR
-                                    Registered</span>
-                                <span class="text-slate-300 font-light mx-2">•</span>
-                            </div>
-                            <div class="flex items-center gap-4 group">
-                                <div
-                                    class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-primary/10 group-hover:lg:bg-primary/10 transition-all duration-300">
-                                    <i data-lucide="leaf" class="w-6 h-6 text-primary"></i>
-                                </div>
-                                <span class="text-sm md:text-lg font-bold text-slate-800 tracking-widest">LEED
-                                    Silver Facility</span>
-                                <span class="text-slate-300 font-light mx-2">•</span>
-                            </div>
-                        </div>
+                    <div class="flex items-center gap-6">
+                        <a href="privacy-policy.html"
+                            class="text-base text-slate-500 hover:text-amber-500 transition-colors">Privacy Policy</a>
+                        <a href="terms-and-conditions.html"
+                            class="text-base text-slate-500 hover:text-amber-500 transition-colors">Terms</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="footer-root"></div>
+        </footer>
 
 
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script>
-            // Initialize Lucide icons
-            lucide.createIcons();
 
-            // Initialize Swiper only if elements exist
-            if (document.querySelector(".clientLogosSwiper")) {
-                var swiper = new Swiper(".clientLogosSwiper", {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                    loop: true,
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    },
-                    breakpoints: {
-                        320: { slidesPerView: 2 },
-                        640: { slidesPerView: 3 },
-                        768: { slidesPerView: 4 },
-                        1024: { slidesPerView: 5 },
-                    },
-                });
-            }
-
-            if (document.querySelector(".capabilitiesSwiper")) {
-                var capabilitiesSwiper = new Swiper(".capabilitiesSwiper", {
-                    slidesPerView: 1,
-                    spaceBetween: 24,
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: ".capabilities-next",
-                        prevEl: ".capabilities-prev",
-                    },
-                    breakpoints: {
-                        640: { slidesPerView: 2 },
-                        1024: { slidesPerView: 3 },
-                    },
-                });
-            }
-        </script>
 
         <!-- Global Scripts -->
         <script src="./public/js/main.js"></script>
