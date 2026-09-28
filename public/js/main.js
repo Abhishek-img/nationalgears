@@ -668,3 +668,106 @@ function initImageZoomListeners() {
     });
 }
 
+
+
+/* ==========================================================================
+   Specialized Product Spotlight Showcase Interactive Logic (Image Only Right)
+   ========================================================================== */
+window.specProductsData = [
+    {
+        num: "#01",
+        tag: "High Pressure",
+        title: "Hydraulic Pump Gears",
+        img: "./public/images/industrialPumpGear.webp"
+    },
+    {
+        num: "#02",
+        tag: "Precision Ground",
+        title: "Spur Gears",
+        img: "./public/images/spurGears.webp"
+    },
+    {
+        num: "#03",
+        tag: "Low Noise",
+        title: "Helical Gears",
+        img: "./public/images/healicalGears.webp"
+    },
+    {
+        num: "#04",
+        tag: "Planetary Internal",
+        title: "Ring Gears",
+        img: "./public/images/ringGear.webp"
+    },
+    {
+        num: "#05",
+        tag: "Involute & Straight",
+        title: "Spline Shafts",
+        img: "./public/images/splineShaft.webp"
+    },
+    {
+        num: "#06",
+        tag: "Spiral & Straight",
+        title: "Bevel Gears",
+        img: "./public/images/bevelGearAssembly.webp"
+    },
+    {
+        num: "#07",
+        tag: "Bronze Alloy",
+        title: "Worm Wheels",
+        img: "./public/images/wormShaft.webp"
+    },
+    {
+        num: "#08",
+        tag: "Heavy Duty",
+        title: "Bull Gears",
+        img: "./public/images/bullGears.webp"
+    },
+    {
+        num: "#09",
+        tag: "Thread Ground",
+        title: "Worm Shafts",
+        img: "./public/images/pinionShaft.webp"
+    }
+];
+
+window.selectSpecProduct = function(idx) {
+    const data = window.specProductsData[idx];
+    if (!data) return;
+
+    const tagEl = document.getElementById('spec-tag');
+    const titleBadgeEl = document.getElementById('spec-title-badge');
+    const imgEl = document.getElementById('spec-img');
+
+    if (tagEl) tagEl.innerText = data.tag;
+    if (titleBadgeEl) titleBadgeEl.innerText = data.title;
+    if (imgEl) {
+        imgEl.src = data.img;
+        imgEl.alt = data.title;
+    }
+
+    const btns = document.querySelectorAll('.spec-tab-btn');
+    btns.forEach((btn, i) => {
+        if (i === idx) {
+            btn.className = 'spec-tab-btn active cursor-pointer p-4 rounded-2xl border border-amber-500 bg-amber-50/60 transition-all flex items-center justify-between group shadow-sm';
+            const numSpan = btn.querySelector('.w-8.h-8');
+            if (numSpan) numSpan.className = 'w-8 h-8 rounded-xl bg-amber-500 text-white flex items-center justify-center font-black text-xs shrink-0';
+            const icon = btn.querySelector('i');
+            if (icon) icon.className = 'w-5 h-5 text-amber-600';
+        } else {
+            btn.className = 'spec-tab-btn cursor-pointer p-4 rounded-2xl border border-slate-200/80 bg-white hover:border-amber-400 hover:bg-slate-50 transition-all flex items-center justify-between group';
+            const numSpan = btn.querySelector('.w-8.h-8');
+            if (numSpan) numSpan.className = 'w-8 h-8 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center font-black text-xs shrink-0 group-hover:bg-amber-500 group-hover:text-white transition-colors';
+            const icon = btn.querySelector('i');
+            if (icon) icon.className = 'w-5 h-5 text-slate-400 group-hover:text-amber-600 transition-colors';
+        }
+    });
+};
+
+window.zoomActiveSpecImage = function() {
+    const img = document.getElementById('spec-img');
+    const titleBadge = document.getElementById('spec-title-badge');
+    if (img && typeof openImageZoom === 'function') {
+        const title = titleBadge ? titleBadge.innerText : 'Product Showcase';
+        openImageZoom(img.src, title, 'National Gears Specialized Line');
+    }
+};
