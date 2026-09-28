@@ -206,6 +206,30 @@ function initSwipers() {
         });
     }
 
+    if (document.querySelector(".qualityWorkflowSwiper")) {
+        new Swiper(".qualityWorkflowSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".quality-workflow-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".quality-workflow-next",
+                prevEl: ".quality-workflow-prev",
+            },
+            breakpoints: {
+                640: { slidesPerView: 2, spaceBetween: 24 },
+                1024: { slidesPerView: 3, spaceBetween: 24 },
+                1280: { slidesPerView: 4, spaceBetween: 24 },
+            },
+        });
+    }
+
     if (document.querySelector(".historySwiper")) {
         window.historySwiper = new Swiper(".historySwiper", {
             slidesPerView: 1,
