@@ -231,110 +231,103 @@
                     <i data-lucide="download" class="w-4.5 h-4.5"></i>Brochure
                 </button>
 
-                <!-- Mobile Menu Toggle -->
-                <label for="mobile-menu-toggle"
-                    class="md:hidden p-2 text-slate-600 hover:text-primary transition-colors cursor-pointer">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </label>
-            </div>
-    </header>
-
-    <!-- Mobile Menu Toggle Checkbox -->
-    <input type="checkbox" id="mobile-menu-toggle" class="peer hidden">
-
-    <!-- Mobile Sidebar Backdrop -->
-    <label for="mobile-menu-toggle"
-        class="fixed inset-0 z-[60] bg-slate-900/50 backdrop-blur-sm md:hidden opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto transition-opacity duration-500 cursor-pointer"></label>
-
-    <!-- Mobile Sidebar Content -->
-    <div
-        class="fixed top-0 right-0 bottom-0 z-[70] w-[85%] max-w-sm bg-white shadow-2xl flex flex-col pt-12 px-6 pb-6 overflow-y-auto translate-x-full peer-checked:translate-x-0 transition-transform duration-500 ease-in-out md:hidden">
-        <!-- Close button -->
-        <label for="mobile-menu-toggle"
-            class="absolute top-6 right-6 p-2 text-slate-400 hover:text-primary bg-slate-100 rounded-full cursor-pointer transition-colors">
-            <i data-lucide="x" class="w-5 h-5"></i>
-        </label>
-
-        <!-- Brand/Logo in Sidebar -->
-        <div class="flex items-center gap-3 mb-10 pb-6 border-b border-slate-100 mt-2">
-            <div
-                class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
-                <i data-lucide="settings" class="w-5 h-5 animate-[spin_8s_linear_infinite]"></i>
-            </div>
-            <div class="flex flex-col">
-                <span class="font-black text-lg tracking-tight text-slate-900 leading-none">NATIONAL</span>
-                <span class="font-bold text-[9px] tracking-[0.3em] text-amber-500 leading-none mt-1">GEARS</span>
+                <button onclick="toggleMobileMenu(true)"
+                    class="lg:hidden p-2.5 text-slate-700 hover:text-primary hover:bg-slate-100 rounded-xl transition-all cursor-pointer">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
             </div>
         </div>
+    </header>
 
-        <!-- Mobile Links -->
-        <nav class="flex flex-col gap-6">
-            <a class="text-lg font-bold text-slate-800 hover:text-primary transition-colors flex items-center gap-3"
-                href="#">
-                <i data-lucide="home" class="w-5 h-5 text-amber-500"></i> Home
+    <!-- Mobile Drawer Overlay Backdrop -->
+    <div id="mobile-backdrop" onclick="toggleMobileMenu(false)"
+        class="fixed inset-0 z-[80] bg-slate-900/60 backdrop-blur-sm lg:hidden opacity-0 pointer-events-none transition-all duration-500">
+    </div>
+
+    <!-- Mobile Drawer Sidebar (NO SUBMENU ICONS) -->
+    <div id="mobile-drawer"
+        class="fixed top-0 right-0 bottom-0 z-[90] w-[85%] max-sm:w-[80%] max-w-sm bg-white shadow-2xl flex flex-col px-6 py-6 overflow-y-auto translate-x-full transition-transform duration-500 ease-in-out lg:hidden">
+        <div class="flex items-center justify-between py-4 border-b border-slate-100 mb-4">
+            <a href="index.html" class="flex items-center">
+                <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo" title="National Gears"
+                    class="h-12 w-auto object-contain">
             </a>
+            <button onclick="toggleMobileMenu(false)"
+                class="p-2 text-slate-400 hover:text-primary bg-slate-100 rounded-full cursor-pointer transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
 
-            <div class="flex flex-col gap-3">
-                <span class="text-lg font-bold text-slate-800 flex items-center gap-3">
-                    <i data-lucide="info" class="w-5 h-5 text-amber-500"></i> About Us
-                </span>
-                <div class="flex flex-col gap-3 pl-8 border-l-2 border-slate-100 mt-1">
-                    <a href="#"
-                        class="text-slate-600 hover:text-primary transition-colors py-1 flex items-center gap-2"><i
-                            data-lucide="briefcase" class="w-4 h-4 text-slate-400"></i> Management Desk</a>
-                    <a href="#"
-                        class="text-slate-600 hover:text-primary transition-colors py-1 flex items-center gap-2"><i
-                            data-lucide="users" class="w-4 h-4 text-slate-400"></i> Our Team</a>
-                    <a href="#"
-                        class="text-slate-600 hover:text-primary transition-colors py-1 flex items-center gap-2"><i
-                            data-lucide="award" class="w-4 h-4 text-slate-400"></i> Certifications</a>
+        <nav class="flex flex-col gap-1">
+            <a href="index.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Home</a>
+
+            <div class="flex flex-col border-y border-slate-100 py-1">
+                <button onclick="toggleMobileSubmenu(this)"
+                    class="w-full px-4 py-3.5 text-slate-900 font-black text-base tracking-tight flex items-center justify-between group">
+                    <span>About Us</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-300"></i>
+                </button>
+                <div class="mobile-submenu hidden flex flex-col gap-1 pl-4 pb-2 overflow-hidden">
+                    <a href="about-us.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Company
+                        Overview</a>
+                    <a href="management-desk.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Management
+                        Desk</a>
+                    <a href="team.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Our
+                        Leadership</a>
+                    <a href="certification.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">ISO
+                        Certifications</a>
+                    <a href="expertise.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Technical
+                        Expertise</a>
                 </div>
             </div>
 
-            <a class="text-lg font-bold text-slate-800 hover:text-primary transition-colors flex items-center gap-3"
-                href="#">
-                <i data-lucide="box" class="w-5 h-5 text-amber-500"></i> Products
-            </a>
-            <a class="text-lg font-bold text-slate-800 hover:text-primary transition-colors flex items-center gap-3"
-                href="#">
-                <i data-lucide="layers" class="w-5 h-5 text-amber-500"></i> Expertise
-            </a>
-            <a class="text-lg font-bold text-slate-800 hover:text-primary transition-colors flex items-center gap-3"
-                href="#">
-                <i data-lucide="image" class="w-5 h-5 text-amber-500"></i> Gallery
-            </a>
-            <a class="text-lg font-bold text-slate-800 hover:text-primary transition-colors flex items-center gap-3"
-                href="#">
-                <i data-lucide="help-circle" class="w-5 h-5 text-amber-500"></i> Faq
-            </a>
+            <div class="flex flex-col border-b border-slate-100 py-1">
+                <button onclick="toggleMobileSubmenu(this)"
+                    class="w-full px-4 py-3.5 text-slate-900 font-black text-base tracking-tight flex items-center justify-between group">
+                    <span>Products</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-300"></i>
+                </button>
+                <div class="mobile-submenu hidden flex flex-col gap-1 pl-4 pb-2 overflow-hidden">
+                    <a href="products.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">All
+                        Gear Range</a>
+                    <a href="spur-gears.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Spur
+                        Gears</a>
+                    <a href="gear-types.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Helical
+                        & Bevel Gears</a>
+                    <a href="hydraulic-gears.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Hydraulic
+                        Pump Gears</a>
+                    <a href="gears-and-shafts.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Special
+                        Gear Shafts</a>
+                </div>
+            </div>
+
+            <a href="manufacturing.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Manufacturing</a>
+            <a href="quality.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Quality</a>
+            <a href="gallery.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Gallery</a>
+
+            <a href="contact.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Contact</a>
         </nav>
 
-        <div class="mt-auto pt-10">
-            <a href="./assets/Brochure.pdf" target="_blank"
-                class="w-full flex justify-center bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-white px-6 py-4 rounded-xl font-bold text-sm uppercase tracking-widest shadow-[0_8px_20px_-6px_rgba(245,158,11,0.6)] transition-all items-center gap-2">
-                <i data-lucide="download" class="w-5 h-5"></i> Brochure
-            </a>
-
-            <div class="flex items-center justify-center gap-5 mt-8">
-                <a rel="noopener" target="_blank" href="https://www.facebook.com/share/1FG8ucRU8y/"
-                    class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-[#0A66C2] hover:text-white transition-all duration-300">
-                    <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0"
-                        viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-                        </path>
-                    </svg>
-                </a>
-                <a href="#"
-                    class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-[#1DA1F2] hover:text-white transition-all duration-300">
-                    <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0"
-                        viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-                        </path>
-                    </svg>
-                </a>
-            </div>
+        <div class="mt-auto pt-6 border-t border-slate-100">
+            <button onclick="toggleContactModal(true)"
+                class="w-full bg-primary text-white py-4 rounded-xl font-bold text-sm tracking-wider flex items-center justify-center gap-2.5 shadow-lg shadow-primary/20 hover:bg-blue-900 transition-colors">
+                <i data-lucide="phone" class="w-4 h-4"></i> Contact Us
+            </button>
         </div>
     </div>
 
@@ -873,183 +866,162 @@
 
 
 
-        <!-- Future Expansion Plan Section (Light Theme Timeline Track - Non-Card) -->
+        <!-- Future Expansion Plan Section (Creative Modern Non-Card & Non-Numbered Design) -->
         <section
-            class="py-14 lg:py-20 bg-gradient-to-b from-slate-50 via-blue-50/20 to-white text-slate-800 relative overflow-hidden border-t border-slate-200">
-            <!-- Subtle Grid & Soft Glows -->
+            class="py-16 lg:py-24 bg-gradient-to-b from-slate-50 via-blue-50/20 to-white text-slate-800 relative overflow-hidden border-t border-slate-200/80">
+            <!-- Subtle Ambient Backdrop Elements -->
             <div
-                class="absolute inset-0 bg-[linear-gradient(to_right,#00000006_1px,transparent_1px),linear-gradient(to_bottom,#00000006_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none">
-            </div>
-            <div class="absolute top-1/4 -left-32 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl pointer-events-none">
+                class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent pointer-events-none">
             </div>
             <div
-                class="absolute bottom-10 -right-32 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none">
+                class="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:2.5rem_2.5rem] pointer-events-none">
             </div>
 
-            <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <!-- Section Header -->
-                <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+                <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                     <div
-                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
-                        <i data-lucide="trending-up" class="w-3.5 h-3.5 text-amber-500"></i>
-                        Strategic Roadmap
+                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 text-xs font-black tracking-[0.2em] uppercase mb-4 shadow-sm">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-500"></i>
+                        Strategic Growth Vision
                     </div>
-                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-                        Future <span class="text-amber-500">Expansion</span> Plan
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight mb-4">
+                        Future Expansion <span class="text-amber-500">Plan</span>
                     </h2>
                     <p class="text-slate-600 text-sm sm:text-base font-normal max-w-2xl mx-auto leading-relaxed">
-                        Continuous technological upgrades & infrastructure investments empowering next-generation
+                        Continuous technological upgrades &amp; infrastructure investment empowering next-generation
                         high-precision gear manufacturing.
                     </p>
                 </div>
 
-                <!-- Vertical Timeline Flow (Light Theme - Non-Card) -->
-                <div class="relative max-w-4xl mx-auto">
-                    <!-- Central Vertical Connecting Line (Hidden on small, visible on md+) -->
+                <!-- Creative Vertical Fluid Track Flow (Non-Card & Non-Numbered) -->
+                <div class="relative max-w-4xl mx-auto pl-4 sm:pl-8 lg:pl-0">
+                    <!-- Central Dynamic Connecting Line -->
                     <div
-                        class="hidden md:block absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-0.5 bg-gradient-to-b from-amber-500 via-blue-500 to-emerald-500 opacity-40">
+                        class="hidden lg:block absolute left-1/2 top-6 bottom-6 -translate-x-1/2 w-1 bg-gradient-to-b from-amber-400 via-blue-500 via-indigo-500 to-emerald-500 rounded-full opacity-30">
+                    </div>
+                    <!-- Mobile/Tablet Left Line -->
+                    <div
+                        class="lg:hidden absolute left-4 sm:left-8 top-6 bottom-6 w-0.5 bg-gradient-to-b from-amber-400 via-blue-500 to-emerald-500 opacity-40">
                     </div>
 
-                    <!-- Milestone 1 -->
-                    <div class="relative mb-12 md:mb-16 group/timeline">
-                        <div class="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-0">
-                            <!-- Left Content (On Desktop: Left side) -->
-                            <div class="w-full md:w-1/2 md:pr-12 md:text-right">
+                    <!-- Item 1: Induction Heat Treatment Plant -->
+                    <div class="relative mb-14 lg:mb-20 group">
+                        <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-0">
+                            <!-- Left Column (Desktop Right-aligned) -->
+                            <div class="w-full lg:w-1/2 lg:pr-14 lg:text-right pl-10 lg:pl-0">
                                 <div
-                                    class="inline-flex items-center gap-2 text-xs font-mono font-bold text-amber-700 tracking-wider mb-1 uppercase">
-                                    <span>Phase 01</span>
-                                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                                    class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-200/80 mb-3 shadow-xs">
+                                    <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-500"></i> In-House Hardening
                                 </div>
                                 <h3
-                                    class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 group-hover/timeline:text-amber-500 transition-colors">
+                                    class="text-xl sm:text-2xl font-black text-slate-900 mb-2 group-hover:text-amber-500 transition-colors duration-300">
                                     Induction Heat Treatment Plant
                                 </h3>
-                                <p class="text-slate-600 text-sm leading-relaxed font-normal mb-3">
-                                    Establishment of an advanced Induction Heat Treatment Plant to bring complete
-                                    in-house hardening capabilities and superior metallurgical quality control.
+                                <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                                    <strong class="font-bold text-slate-900">Induction Heat Treatment Plant</strong> for
+                                    in-house hardening capability.
                                 </p>
-                                <span
-                                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200 shadow-sm">
-                                    <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-500"></i> In-House Hardening
-                                </span>
                             </div>
 
-                            <!-- Center Node Icon -->
+                            <!-- Glowing Center Icon Node -->
                             <div
-                                class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border-2 border-amber-500 text-amber-500 items-center justify-center shadow-md shadow-amber-500/10 group-hover/timeline:scale-110 transition-transform duration-300 z-10">
-                                <i data-lucide="flame" class="w-5 h-5"></i>
+                                class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-amber-500 text-amber-500 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 z-10">
+                                <i data-lucide="flame" class="w-6 h-6"></i>
                             </div>
 
-                            <!-- Right Empty Space for Desktop symmetry -->
-                            <div class="hidden md:block w-1/2 md:pl-12"></div>
+                            <!-- Right Empty Column for symmetry on desktop -->
+                            <div class="hidden lg:block w-1/2 lg:pl-14"></div>
                         </div>
                     </div>
 
-                    <!-- Milestone 2 -->
-                    <div class="relative mb-12 md:mb-16 group/timeline">
-                        <div class="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-0">
-                            <!-- Left Empty Space for Desktop symmetry -->
-                            <div class="hidden md:block w-1/2 md:pr-12"></div>
+                    <!-- Item 2: Tooth Grinding Facility -->
+                    <div class="relative mb-14 lg:mb-20 group">
+                        <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-0">
+                            <!-- Left Empty Column for symmetry on desktop -->
+                            <div class="hidden lg:block w-1/2 lg:pr-14"></div>
 
-                            <!-- Center Node Icon -->
+                            <!-- Glowing Center Icon Node -->
                             <div
-                                class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border-2 border-blue-500 text-blue-600 items-center justify-center shadow-md shadow-blue-500/10 group-hover/timeline:scale-110 transition-transform duration-300 z-10">
-                                <i data-lucide="disc" class="w-5 h-5"></i>
+                                class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-blue-500 text-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 z-10">
+                                <i data-lucide="cog" class="w-6 h-6"></i>
                             </div>
 
-                            <!-- Right Content (On Desktop: Right side) -->
-                            <div class="w-full md:w-1/2 md:pl-12">
+                            <!-- Right Column (Desktop Left-aligned) -->
+                            <div class="w-full lg:w-1/2 lg:pl-14 pl-10 lg:pl-0">
                                 <div
-                                    class="inline-flex items-center gap-2 text-xs font-mono font-bold text-blue-700 tracking-wider mb-1 uppercase">
-                                    <span>Phase 02</span>
-                                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                                    class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200/80 mb-3 shadow-xs">
+                                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-500"></i> High Precision Accuracy
                                 </div>
                                 <h3
-                                    class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 group-hover/timeline:text-blue-600 transition-colors">
+                                    class="text-xl sm:text-2xl font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
                                     Tooth Grinding Facility
                                 </h3>
-                                <p class="text-slate-600 text-sm leading-relaxed font-normal mb-3">
-                                    Deploying high-precision Tooth Grinding machinery capable of achieving strict
-                                    <strong class="text-slate-900 font-bold">DIN Class 5</strong> accuracy standards for
-                                    heavy-duty gears.
+                                <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                                    <strong class="font-bold text-slate-900">Tooth Grinding Facility</strong> up to
+                                    <strong class="text-amber-500 font-bold">DIN Class 5</strong> accuracy for
+                                    high-precision gears.
                                 </p>
-                                <span
-                                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-800 bg-blue-50 px-3 py-1 rounded-full border border-blue-200 shadow-sm">
-                                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-600"></i> DIN Class 5
-                                    Accuracy
-                                </span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Milestone 3 -->
-                    <div class="relative mb-12 md:mb-16 group/timeline">
-                        <div class="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-0">
-                            <!-- Left Content (On Desktop: Left side) -->
-                            <div class="w-full md:w-1/2 md:pr-12 md:text-right">
+                    <!-- Item 3: CNC Cylindrical Grinding Expansion -->
+                    <div class="relative mb-14 lg:mb-20 group">
+                        <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-0">
+                            <!-- Left Column (Desktop Right-aligned) -->
+                            <div class="w-full lg:w-1/2 lg:pr-14 lg:text-right pl-10 lg:pl-0">
                                 <div
-                                    class="inline-flex items-center gap-2 text-xs font-mono font-bold text-indigo-700 tracking-wider mb-1 uppercase">
-                                    <span>Phase 03</span>
-                                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                                    class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200/80 mb-3 shadow-xs">
+                                    <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-500"></i> Metso OEM Requirements
                                 </div>
                                 <h3
-                                    class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 group-hover/timeline:text-indigo-600 transition-colors">
+                                    class="text-xl sm:text-2xl font-black text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors duration-300">
                                     CNC Cylindrical Grinding Expansion
                                 </h3>
-                                <p class="text-slate-600 text-sm leading-relaxed font-normal mb-3">
-                                    Expanding automated CNC Cylindrical Grinding capacity tailored specifically to meet
-                                    Metso technical specifications and future volume demands.
+                                <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                                    <strong class="font-bold text-slate-900">CNC Cylindrical Grinding Expansion</strong>
+                                    as per Metso requirements and future volumes.
                                 </p>
-                                <span
-                                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-800 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200 shadow-sm">
-                                    <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-600"></i> Metso Standards &
-                                    Volume
-                                </span>
                             </div>
 
-                            <!-- Center Node Icon -->
+                            <!-- Glowing Center Icon Node -->
                             <div
-                                class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border-2 border-indigo-500 text-indigo-600 items-center justify-center shadow-md shadow-indigo-500/10 group-hover/timeline:scale-110 transition-transform duration-300 z-10">
-                                <i data-lucide="cpu" class="w-5 h-5"></i>
+                                class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-indigo-500 text-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 z-10">
+                                <i data-lucide="cpu" class="w-6 h-6"></i>
                             </div>
 
-                            <!-- Right Empty Space for Desktop symmetry -->
-                            <div class="hidden md:block w-1/2 md:pl-12"></div>
+                            <!-- Right Empty Column for symmetry on desktop -->
+                            <div class="hidden lg:block w-1/2 lg:pl-14"></div>
                         </div>
                     </div>
 
-                    <!-- Milestone 4 -->
-                    <div class="relative group/timeline">
-                        <div class="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-0">
-                            <!-- Left Empty Space for Desktop symmetry -->
-                            <div class="hidden md:block w-1/2 md:pr-12"></div>
+                    <!-- Item 4: Capacity Enhancement -->
+                    <div class="relative group">
+                        <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-0">
+                            <!-- Left Empty Column for symmetry on desktop -->
+                            <div class="hidden lg:block w-1/2 lg:pr-14"></div>
 
-                            <!-- Center Node Icon -->
+                            <!-- Glowing Center Icon Node -->
                             <div
-                                class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border-2 border-emerald-500 text-emerald-600 items-center justify-center shadow-md shadow-emerald-500/10 group-hover/timeline:scale-110 transition-transform duration-300 z-10">
-                                <i data-lucide="globe" class="w-5 h-5"></i>
+                                class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-emerald-500 text-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 z-10">
+                                <i data-lucide="globe" class="w-6 h-6"></i>
                             </div>
 
-                            <!-- Right Content (On Desktop: Right side) -->
-                            <div class="w-full md:w-1/2 md:pl-12">
+                            <!-- Right Column (Desktop Left-aligned) -->
+                            <div class="w-full lg:w-1/2 lg:pl-14 pl-10 lg:pl-0">
                                 <div
-                                    class="inline-flex items-center gap-2 text-xs font-mono font-bold text-emerald-700 tracking-wider mb-1 uppercase">
-                                    <span>Phase 04</span>
-                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                    class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/80 mb-3 shadow-xs">
+                                    <i data-lucide="trending-up" class="w-3.5 h-3.5 text-emerald-500"></i> Global Export Demand
                                 </div>
                                 <h3
-                                    class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 group-hover/timeline:text-emerald-600 transition-colors">
+                                    class="text-xl sm:text-2xl font-black text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors duration-300">
                                     Capacity Enhancement
                                 </h3>
-                                <p class="text-slate-600 text-sm leading-relaxed font-normal mb-3">
-                                    Systematic facility expansion to scale production throughput while maintaining
-                                    global OEM quality compliance and serving international export markets.
+                                <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                                    <strong class="font-bold text-slate-900">Capacity enhancement</strong> to support
+                                    global OEM quality standards and export demand.
                                 </p>
-                                <span
-                                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 shadow-sm">
-                                    <i data-lucide="trending-up" class="w-3.5 h-3.5 text-emerald-600"></i> Global OEM
-                                    Standards
-                                </span>
                             </div>
                         </div>
                     </div>
@@ -1458,35 +1430,40 @@
         </section>
 
         <!-- Section: Group Business Ventures (Creative Non-Card Timeline Track) -->
-        <section id="other-businesses" class="py-16 lg:py-24 bg-white border-t border-slate-200/80 relative overflow-hidden">
+        <section id="other-businesses"
+            class="py-16 lg:py-24 bg-white border-t border-slate-200/80 relative overflow-hidden">
             <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                
+
                 <!-- Section Header -->
                 <div class="flex flex-col mb-14 text-center items-center max-w-3xl mx-auto space-y-3">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-700 text-xs font-black tracking-widest uppercase border border-amber-500/20">
-                        <i data-lucide="layers" class="w-3.5 h-3.5 text-amber-500"></i>
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-700 text-xs font-black tracking-widest uppercase border border-amber-500/20">
                         <span>Group Business Ventures & Ecosystem</span>
                     </div>
                     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
                         Our Other <span class="text-amber-500">Businesses & Institutions</span>
                     </h2>
                     <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
-                        Expanding excellence beyond precision engineering into higher education, healthcare research, gear blank manufacturing, and advanced metallurgy in Alwar.
+                        Expanding excellence beyond precision engineering into higher education, healthcare research,
+                        gear blank manufacturing, and advanced metallurgy in Alwar.
                     </p>
                 </div>
 
                 <!-- Split Creative Non-Card Layout -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                    
+
                     <!-- Left Column: Group Vision & Category Badges -->
                     <div class="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
-                        <div class="p-8 bg-slate-900 text-white rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden">
-                            <div class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center mb-6">
+                        <div
+                            class="p-8 bg-slate-900 text-white rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center mb-6">
                                 <i data-lucide="building-2" class="w-6 h-6"></i>
                             </div>
                             <h3 class="text-2xl font-black tracking-tight mb-3">Diversified Group Strengths</h3>
                             <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-6">
-                                Founded in Alwar, Rajasthan, our group extends leadership across healthcare education, specialized hospital research, and manufacturing infrastructure.
+                                Founded in Alwar, Rajasthan, our group extends leadership across healthcare education,
+                                specialized hospital research, and manufacturing infrastructure.
                             </p>
 
                             <!-- Category Tags List -->
@@ -1508,11 +1485,13 @@
 
                         <!-- Quote Box -->
                         <div class="p-6 bg-amber-500/10 border border-amber-500/30 rounded-3xl text-slate-900">
-                            <div class="flex items-center gap-2 text-amber-700 font-black text-xs uppercase tracking-wider mb-1">
+                            <div
+                                class="flex items-center gap-2 text-amber-700 font-black text-xs uppercase tracking-wider mb-1">
                                 <i data-lucide="sparkles" class="w-4 h-4 text-amber-600"></i> Group Philosophy
                             </div>
                             <p class="text-slate-800 text-xs sm:text-sm font-semibold italic leading-relaxed">
-                                "We are here to improve your manufacturing imagination and serve society through quality education and healthcare."
+                                "We are here to improve your manufacturing imagination and serve society through quality
+                                education and healthcare."
                             </p>
                         </div>
                     </div>
@@ -1523,111 +1502,150 @@
                         <div class="absolute left-2.5 sm:left-6 top-4 bottom-4 w-0.5 bg-slate-200"></div>
 
                         <div class="space-y-8">
-                            
+
                             <!-- Entity 1: CNHH -->
                             <div class="relative pl-8 sm:pl-12 group">
-                                <div class="absolute left-0 sm:left-3.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-amber-500 text-amber-600 flex items-center justify-center text-[10px] font-black group-hover:bg-amber-500 group-hover:text-white transition-all shadow-md">
+                                <div
+                                    class="absolute -left-4.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-amber-500 text-amber-600 flex items-center justify-center text-[10px] font-black group-hover:bg-amber-500 group-hover:text-white transition-all shadow-md">
                                     1
                                 </div>
                                 <div class="pb-6 border-b border-slate-100 transition-all">
                                     <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
                                         <div class="flex items-center gap-2">
-                                            <span class="px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-700 font-black text-xs uppercase border border-amber-500/20">CNHH</span>
-                                            <h4 class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors">Nursing College, Alwar</h4>
+                                            <span
+                                                class="px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-700 font-black text-xs uppercase border border-amber-500/20">CNHH</span>
+                                            <h4
+                                                class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors">
+                                                Nursing College, Alwar</h4>
                                         </div>
-                                        <span class="text-[11px] font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Medical Education</span>
+                                        <span
+                                            class="text-[11px] font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Medical
+                                            Education</span>
                                     </div>
                                     <p class="text-slate-500 text-xs sm:text-sm font-light">
-                                        Premier Nursing College in Alwar providing advanced clinical training and professional healthcare degrees.
+                                        Premier Nursing College in Alwar providing advanced clinical training and
+                                        professional healthcare degrees.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Entity 2: SNHH -->
                             <div class="relative pl-8 sm:pl-12 group">
-                                <div class="absolute left-0 sm:left-3.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-amber-500 text-amber-600 flex items-center justify-center text-[10px] font-black group-hover:bg-amber-500 group-hover:text-white transition-all shadow-md">
+                                <div
+                                    class="absolute -left-4.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-amber-500 text-amber-600 flex items-center justify-center text-[10px] font-black group-hover:bg-amber-500 group-hover:text-white transition-all shadow-md">
                                     2
                                 </div>
                                 <div class="pb-6 border-b border-slate-100 transition-all">
                                     <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
                                         <div class="flex items-center gap-2">
-                                            <span class="px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-700 font-black text-xs uppercase border border-amber-500/20">SNHH</span>
-                                            <h4 class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors">Nursing School, Alwar</h4>
+                                            <span
+                                                class="px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-700 font-black text-xs uppercase border border-amber-500/20">SNHH</span>
+                                            <h4
+                                                class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors">
+                                                Nursing School, Alwar</h4>
                                         </div>
-                                        <span class="text-[11px] font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Healthcare Training</span>
+                                        <span
+                                            class="text-[11px] font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Healthcare
+                                            Training</span>
                                     </div>
                                     <p class="text-slate-500 text-xs sm:text-sm font-light">
-                                        Dedicated nursing school training certified healthcare professionals and clinical assistants.
+                                        Dedicated nursing school training certified healthcare professionals and
+                                        clinical assistants.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Entity 3: HPC -->
                             <div class="relative pl-8 sm:pl-12 group">
-                                <div class="absolute left-0 sm:left-3.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-amber-500 text-amber-600 flex items-center justify-center text-[10px] font-black group-hover:bg-amber-500 group-hover:text-white transition-all shadow-md">
+                                <div
+                                    class="absolute -left-4.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-amber-500 text-amber-600 flex items-center justify-center text-[10px] font-black group-hover:bg-amber-500 group-hover:text-white transition-all shadow-md">
                                     3
                                 </div>
                                 <div class="pb-6 border-b border-slate-100 transition-all">
                                     <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
                                         <div class="flex items-center gap-2">
-                                            <span class="px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-700 font-black text-xs uppercase border border-amber-500/20">HPC</span>
-                                            <h4 class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors">Hopewell Pharmacy College, Alwar</h4>
+                                            <span
+                                                class="px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-700 font-black text-xs uppercase border border-amber-500/20">HPC</span>
+                                            <h4
+                                                class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors">
+                                                Hopewell Pharmacy College, Alwar</h4>
                                         </div>
-                                        <span class="text-[11px] font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Pharmacy Academy</span>
+                                        <span
+                                            class="text-[11px] font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Pharmacy
+                                            Academy</span>
                                     </div>
                                     <p class="text-slate-500 text-xs sm:text-sm font-light">
-                                        State-approved pharmaceutical college developing skilled pharmacists and pharmaceutical researchers.
+                                        State-approved pharmaceutical college developing skilled pharmacists and
+                                        pharmaceutical researchers.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Entity 4: Hopewell Hospital -->
                             <div class="relative pl-8 sm:pl-12 group">
-                                <div class="absolute left-0 sm:left-3.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-blue-500 text-blue-600 flex items-center justify-center text-[10px] font-black group-hover:bg-blue-500 group-hover:text-white transition-all shadow-md">
+                                <div
+                                    class="absolute -left-4.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-blue-500 text-blue-600 flex items-center justify-center text-[10px] font-black group-hover:bg-blue-500 group-hover:text-white transition-all shadow-md">
                                     4
                                 </div>
                                 <div class="pb-6 border-b border-slate-100 transition-all">
                                     <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
-                                        <h4 class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-blue-600 transition-colors">Hopewell Hospital & Research Centre, Alwar</h4>
-                                        <span class="text-[11px] font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">Hospital & Research</span>
+                                        <h4
+                                            class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-blue-600 transition-colors">
+                                            Hopewell Hospital & Research Centre, Alwar</h4>
+                                        <span
+                                            class="text-[11px] font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">Hospital
+                                            & Research</span>
                                     </div>
                                     <p class="text-slate-500 text-xs sm:text-sm font-light">
-                                        Multi-specialty hospital and medical research center equipped with modern diagnostic & surgical facilities.
+                                        Multi-specialty hospital and medical research center equipped with modern
+                                        diagnostic & surgical facilities.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Entity 5: Perfect Solution -->
                             <div class="relative pl-8 sm:pl-12 group">
-                                <div class="absolute left-0 sm:left-3.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-emerald-500 text-emerald-600 flex items-center justify-center text-[10px] font-black group-hover:bg-emerald-500 group-hover:text-white transition-all shadow-md">
+                                <div
+                                    class="absolute -left-4.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-emerald-500 text-emerald-600 flex items-center justify-center text-[10px] font-black group-hover:bg-emerald-500 group-hover:text-white transition-all shadow-md">
                                     5
                                 </div>
                                 <div class="pb-6 border-b border-slate-100 transition-all">
                                     <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
-                                        <h4 class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors">Perfect Solution, Alwar</h4>
-                                        <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">Manufacturing Solutions</span>
+                                        <h4
+                                            class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors">
+                                            Perfect Solution, Alwar</h4>
+                                        <span
+                                            class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">Manufacturing
+                                            Solutions</span>
                                     </div>
                                     <p class="text-amber-600 text-xs font-bold italic mb-1">
                                         "We are here to improve your manufacturing imagination"
                                     </p>
                                     <p class="text-slate-500 text-xs sm:text-sm font-light">
-                                        Custom tooling, CAD engineering, and manufacturing process optimization consultancy.
+                                        Custom tooling, CAD engineering, and manufacturing process optimization
+                                        consultancy.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Entity 6: Gear Care India -->
                             <div class="relative pl-8 sm:pl-12 group">
-                                <div class="absolute left-0 sm:left-3.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-amber-500 text-amber-600 flex items-center justify-center text-[10px] font-black group-hover:bg-amber-500 group-hover:text-white transition-all shadow-md">
+                                <div
+                                    class="absolute -left-4.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-amber-500 text-amber-600 flex items-center justify-center text-[10px] font-black group-hover:bg-amber-500 group-hover:text-white transition-all shadow-md">
                                     6
                                 </div>
                                 <div class="pb-6 border-b border-slate-100 transition-all">
                                     <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
-                                        <h4 class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors">Gear Care India, Alwar</h4>
-                                        <span class="text-[11px] font-bold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">Gear Blank Manufacturing</span>
+                                        <h4
+                                            class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors">
+                                            Gear Care India, Alwar</h4>
+                                        <span
+                                            class="text-[11px] font-bold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">Gear
+                                            Blank Manufacturing</span>
                                     </div>
                                     <p class="text-slate-600 text-xs font-medium flex items-center gap-1.5 mb-1">
-                                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-500"></i> Manna Ka Road, Daudpur, Alwar
+                                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-500"></i> Manna Ka Road,
+                                        Daudpur, Alwar
                                     </p>
                                     <p class="text-slate-500 text-xs sm:text-sm font-light">
                                         Specialized manufacturing unit for precision forged and turned gear blanks.
@@ -1637,19 +1655,26 @@
 
                             <!-- Entity 7: Baldi Precision Industries -->
                             <div class="relative pl-8 sm:pl-12 group">
-                                <div class="absolute left-0 sm:left-3.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-slate-900 text-slate-900 flex items-center justify-center text-[10px] font-black group-hover:bg-slate-900 group-hover:text-white transition-all shadow-md">
+                                <div
+                                    class="absolute -left-4.5 top-1.5 w-6 h-6 rounded-full bg-white border-2 border-slate-900 text-slate-900 flex items-center justify-center text-[10px] font-black group-hover:bg-slate-900 group-hover:text-white transition-all shadow-md">
                                     7
                                 </div>
                                 <div class="transition-all">
                                     <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
-                                        <h4 class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors">Baldi Precision Industries</h4>
-                                        <span class="text-[11px] font-bold text-purple-700 bg-purple-50 px-3 py-1 rounded-full border border-purple-200">Future Heat Treatment Facility</span>
+                                        <h4
+                                            class="text-lg sm:text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors">
+                                            Baldi Precision Industries</h4>
+                                        <span
+                                            class="text-[11px] font-bold text-purple-700 bg-purple-50 px-3 py-1 rounded-full border border-purple-200">Future
+                                            Heat Treatment Facility</span>
                                     </div>
                                     <p class="text-slate-600 text-xs font-medium flex items-center gap-1.5 mb-1">
-                                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-500"></i> G1477, MIA, Alwar
+                                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-500"></i> G1477, MIA,
+                                        Alwar
                                     </p>
                                     <p class="text-slate-500 text-xs sm:text-sm font-light">
-                                        Upcoming state-of-the-art thermal processing & atmosphere controlled carburizing heat treatment facility.
+                                        Upcoming state-of-the-art thermal processing & atmosphere controlled carburizing
+                                        heat treatment facility.
                                     </p>
                                 </div>
                             </div>

@@ -231,110 +231,103 @@
                     <i data-lucide="download" class="w-4.5 h-4.5"></i>Brochure
                 </button>
 
-                <!-- Mobile Menu Toggle -->
-                <label for="mobile-menu-toggle"
-                    class="md:hidden p-2 text-slate-600 hover:text-primary transition-colors cursor-pointer">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </label>
-            </div>
-    </header>
-
-    <!-- Mobile Menu Toggle Checkbox -->
-    <input type="checkbox" id="mobile-menu-toggle" class="peer hidden">
-
-    <!-- Mobile Sidebar Backdrop -->
-    <label for="mobile-menu-toggle"
-        class="fixed inset-0 z-[60] bg-slate-900/50 backdrop-blur-sm md:hidden opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto transition-opacity duration-500 cursor-pointer"></label>
-
-    <!-- Mobile Sidebar Content -->
-    <div
-        class="fixed top-0 right-0 bottom-0 z-[70] w-[85%] max-w-sm bg-white shadow-2xl flex flex-col pt-12 px-6 pb-6 overflow-y-auto translate-x-full peer-checked:translate-x-0 transition-transform duration-500 ease-in-out md:hidden">
-        <!-- Close button -->
-        <label for="mobile-menu-toggle"
-            class="absolute top-6 right-6 p-2 text-slate-400 hover:text-primary bg-slate-100 rounded-full cursor-pointer transition-colors">
-            <i data-lucide="x" class="w-5 h-5"></i>
-        </label>
-
-        <!-- Brand/Logo in Sidebar -->
-        <div class="flex items-center gap-3 mb-10 pb-6 border-b border-slate-100 mt-2">
-            <div
-                class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
-                <i data-lucide="settings" class="w-5 h-5 animate-[spin_8s_linear_infinite]"></i>
-            </div>
-            <div class="flex flex-col">
-                <span class="font-black text-lg tracking-tight text-slate-900 leading-none">NATIONAL</span>
-                <span class="font-bold text-[9px] tracking-[0.3em] text-amber-500 leading-none mt-1">GEARS</span>
+                <button onclick="toggleMobileMenu(true)"
+                    class="lg:hidden p-2.5 text-slate-700 hover:text-primary hover:bg-slate-100 rounded-xl transition-all cursor-pointer">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
             </div>
         </div>
+    </header>
 
-        <!-- Mobile Links -->
-        <nav class="flex flex-col gap-6">
-            <a class="text-lg font-bold text-slate-800 hover:text-primary transition-colors flex items-center gap-3"
-                href="#">
-                <i data-lucide="home" class="w-5 h-5 text-amber-500"></i> Home
+    <!-- Mobile Drawer Overlay Backdrop -->
+    <div id="mobile-backdrop" onclick="toggleMobileMenu(false)"
+        class="fixed inset-0 z-[80] bg-slate-900/60 backdrop-blur-sm lg:hidden opacity-0 pointer-events-none transition-all duration-500">
+    </div>
+
+    <!-- Mobile Drawer Sidebar (NO SUBMENU ICONS) -->
+    <div id="mobile-drawer"
+        class="fixed top-0 right-0 bottom-0 z-[90] w-[85%] max-sm:w-[80%] max-w-sm bg-white shadow-2xl flex flex-col px-6 py-6 overflow-y-auto translate-x-full transition-transform duration-500 ease-in-out lg:hidden">
+        <div class="flex items-center justify-between py-4 border-b border-slate-100 mb-4">
+            <a href="index.html" class="flex items-center">
+                <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo" title="National Gears"
+                    class="h-12 w-auto object-contain">
             </a>
+            <button onclick="toggleMobileMenu(false)"
+                class="p-2 text-slate-400 hover:text-primary bg-slate-100 rounded-full cursor-pointer transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
 
-            <div class="flex flex-col gap-3">
-                <span class="text-lg font-bold text-slate-800 flex items-center gap-3">
-                    <i data-lucide="info" class="w-5 h-5 text-amber-500"></i> About Us
-                </span>
-                <div class="flex flex-col gap-3 pl-8 border-l-2 border-slate-100 mt-1">
-                    <a href="#"
-                        class="text-slate-600 hover:text-primary transition-colors py-1 flex items-center gap-2"><i
-                            data-lucide="briefcase" class="w-4 h-4 text-slate-400"></i> Management Desk</a>
-                    <a href="#"
-                        class="text-slate-600 hover:text-primary transition-colors py-1 flex items-center gap-2"><i
-                            data-lucide="users" class="w-4 h-4 text-slate-400"></i> Our Team</a>
-                    <a href="#"
-                        class="text-slate-600 hover:text-primary transition-colors py-1 flex items-center gap-2"><i
-                            data-lucide="award" class="w-4 h-4 text-slate-400"></i> Certifications</a>
+        <nav class="flex flex-col gap-1">
+            <a href="index.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Home</a>
+
+            <div class="flex flex-col border-y border-slate-100 py-1">
+                <button onclick="toggleMobileSubmenu(this)"
+                    class="w-full px-4 py-3.5 text-slate-900 font-black text-base tracking-tight flex items-center justify-between group">
+                    <span>About Us</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-300"></i>
+                </button>
+                <div class="mobile-submenu hidden flex flex-col gap-1 pl-4 pb-2 overflow-hidden">
+                    <a href="about-us.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Company
+                        Overview</a>
+                    <a href="management-desk.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Management
+                        Desk</a>
+                    <a href="team.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Our
+                        Leadership</a>
+                    <a href="certification.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">ISO
+                        Certifications</a>
+                    <a href="expertise.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Technical
+                        Expertise</a>
                 </div>
             </div>
 
-            <a class="text-lg font-bold text-slate-800 hover:text-primary transition-colors flex items-center gap-3"
-                href="#">
-                <i data-lucide="box" class="w-5 h-5 text-amber-500"></i> Products
-            </a>
-            <a class="text-lg font-bold text-slate-800 hover:text-primary transition-colors flex items-center gap-3"
-                href="#">
-                <i data-lucide="layers" class="w-5 h-5 text-amber-500"></i> Expertise
-            </a>
-            <a class="text-lg font-bold text-slate-800 hover:text-primary transition-colors flex items-center gap-3"
-                href="#">
-                <i data-lucide="image" class="w-5 h-5 text-amber-500"></i> Gallery
-            </a>
-            <a class="text-lg font-bold text-slate-800 hover:text-primary transition-colors flex items-center gap-3"
-                href="#">
-                <i data-lucide="help-circle" class="w-5 h-5 text-amber-500"></i> Faq
-            </a>
+            <div class="flex flex-col border-b border-slate-100 py-1">
+                <button onclick="toggleMobileSubmenu(this)"
+                    class="w-full px-4 py-3.5 text-slate-900 font-black text-base tracking-tight flex items-center justify-between group">
+                    <span>Products</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-300"></i>
+                </button>
+                <div class="mobile-submenu hidden flex flex-col gap-1 pl-4 pb-2 overflow-hidden">
+                    <a href="products.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">All
+                        Gear Range</a>
+                    <a href="spur-gears.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Spur
+                        Gears</a>
+                    <a href="gear-types.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Helical
+                        & Bevel Gears</a>
+                    <a href="hydraulic-gears.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Hydraulic
+                        Pump Gears</a>
+                    <a href="gears-and-shafts.html"
+                        class="px-4 py-2.5 rounded-xl text-slate-600 font-bold text-sm hover:text-primary block">Special
+                        Gear Shafts</a>
+                </div>
+            </div>
+
+            <a href="manufacturing.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Manufacturing</a>
+            <a href="quality.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Quality</a>
+            <a href="gallery.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Gallery</a>
+
+            <a href="contact.html"
+                class="px-4 py-3.5 rounded-xl font-black text-slate-900 text-base tracking-tight hover:bg-slate-50 hover:text-primary transition-all">Contact</a>
         </nav>
 
-        <div class="mt-auto pt-10">
-            <a href="./assets/Brochure.pdf" target="_blank"
-                class="w-full flex justify-center bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-white px-6 py-4 rounded-xl font-bold text-sm uppercase tracking-widest shadow-[0_8px_20px_-6px_rgba(245,158,11,0.6)] transition-all items-center gap-2">
-                <i data-lucide="download" class="w-5 h-5"></i> Brochure
-            </a>
-
-            <div class="flex items-center justify-center gap-5 mt-8">
-                <a rel="noopener" target="_blank" href="https://www.facebook.com/share/1FG8ucRU8y/"
-                    class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-[#0A66C2] hover:text-white transition-all duration-300">
-                    <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0"
-                        viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-                        </path>
-                    </svg>
-                </a>
-                <a href="#"
-                    class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-[#1DA1F2] hover:text-white transition-all duration-300">
-                    <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0"
-                        viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-                        </path>
-                    </svg>
-                </a>
-            </div>
+        <div class="mt-auto pt-6 border-t border-slate-100">
+            <button onclick="toggleContactModal(true)"
+                class="w-full bg-primary text-white py-4 rounded-xl font-bold text-sm tracking-wider flex items-center justify-center gap-2.5 shadow-lg shadow-primary/20 hover:bg-blue-900 transition-colors">
+                <i data-lucide="phone" class="w-4 h-4"></i> Contact Us
+            </button>
         </div>
     </div>
 
@@ -637,7 +630,6 @@
                     <div class="w-full text-center space-y-3">
                         <div
                             class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-700 text-xs font-black tracking-widest uppercase border border-amber-500/20">
-                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-500"></i>
                             <span>Established in 1996 in Alwar, Rajasthan</span>
                         </div>
                         <h2
@@ -874,7 +866,7 @@
                         </div>
                         <h2
                             class="font-bold text-3xl md:text-4xl lg:text-5xl text-slate-900 leading-[1.1] mb-4 tracking-tight">
-                            Our <span class="text-primary">Capabilities</span>
+                            Our <span class="text-amber-500">Capabilities</span>
                         </h2>
                         <p class="text-slate-600 lg:text-base md:text-base text-sm font-light leading-relaxed">
                             Custom manufacturing solutions tailored to extreme operational requirements, delivering
@@ -905,7 +897,7 @@
 
                 <div class="swiper capabilitiesSwiper !pb-16">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide h-auto">
+                        <div class="swiper-slide !h-auto">
                             <div
                                 class="group h-full flex flex-col rounded-[2rem] bg-white border border-slate-200 shadow-sm lg:hover:shadow-2xl transition-all duration-500 cursor-pointer lg:hover:-translate-y-2 overflow-hidden relative">
                                 <div class="h-64 overflow-hidden relative p-2 bg-slate-900">
@@ -943,7 +935,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide h-auto">
+                        <div class="swiper-slide !h-auto">
                             <div
                                 class="group h-full flex flex-col rounded-[2rem] bg-white border border-slate-200 shadow-sm lg:hover:shadow-2xl transition-all duration-500 cursor-pointer lg:hover:-translate-y-2 overflow-hidden relative">
                                 <div class="h-64 overflow-hidden relative p-2 bg-slate-900">
@@ -978,7 +970,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide h-auto">
+                        <div class="swiper-slide !h-auto">
                             <div
                                 class="group h-full flex flex-col rounded-[2rem] bg-white border border-slate-200 shadow-sm lg:hover:shadow-2xl transition-all duration-500 cursor-pointer lg:hover:-translate-y-2 overflow-hidden relative">
                                 <div class="h-64 overflow-hidden relative p-2 bg-slate-900">
@@ -1013,7 +1005,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide h-auto">
+                        <div class="swiper-slide !h-auto">
                             <div
                                 class="group h-full flex flex-col rounded-[2rem] bg-white border border-slate-200 shadow-sm lg:hover:shadow-2xl transition-all duration-500 cursor-pointer lg:hover:-translate-y-2 overflow-hidden relative">
                                 <div class="h-64 overflow-hidden relative p-2 bg-slate-900">
@@ -1825,26 +1817,26 @@
                     <div class="bg-[#002045] text-white rounded-2xl border border-amber-500/30 p-6 md:p-8 shadow-2xl">
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
                             <div
-                                class="flex items-center md:justify-center gap-3 p-2 rounded-xl bg-white/5 border border-white/10">
+                                class="flex items-center md:justify-center md:gap-3 gap-2 p-2 rounded-xl bg-white/5 border border-white/10">
                                 <i data-lucide="handshake" class="w-6 h-6 text-amber-400 shrink-0"></i>
                                 <span class="font-black text-xs md:text-base text-white tracking-wider uppercase">BUILT
                                     ON TRUST</span>
                             </div>
                             <div
-                                class="flex items-center md:justify-center gap-3 p-2 rounded-xl bg-white/5 border border-white/10">
+                                class="flex items-center md:justify-center md:gap-3 gap-2 p-2 rounded-xl bg-white/5 border border-white/10">
                                 <i data-lucide="lightbulb" class="w-6 h-6 text-amber-400 shrink-0"></i>
                                 <span class="font-black text-xs md:text-base text-white tracking-wider uppercase">DRIVEN
                                     BY INNOVATION</span>
                             </div>
                             <div
-                                class="flex items-center md:justify-center gap-3 p-2 rounded-xl bg-white/5 border border-white/10">
+                                class="flex items-center md:justify-center md:gap-3 gap-2 p-2 rounded-xl bg-white/5 border border-white/10">
                                 <i data-lucide="shield-check" class="w-6 h-6 text-amber-400 shrink-0"></i>
                                 <span
                                     class="font-black text-xs md:text-base text-white tracking-wider uppercase">COMMITTED
                                     TO QUALITY</span>
                             </div>
                             <div
-                                class="flex items-center md:justify-center gap-3 p-2 rounded-xl bg-white/5 border border-white/5">
+                                class="flex items-center md:justify-center md:gap-3 gap-2 p-2 rounded-xl bg-white/5 border border-white/5">
                                 <i data-lucide="trending-up" class="w-6 h-6 text-amber-400 shrink-0"></i>
                                 <span
                                     class="font-black text-xs md:text-base text-white tracking-wider uppercase">GEARING
@@ -1965,219 +1957,168 @@
                 </div>
             </section>
 
-            <!-- Future Expansion Plan Section (Light Theme) -->
+            <!-- Future Expansion Plan Section (Creative Modern Non-Card & Non-Numbered Design) -->
             <section
-                class="py-16 lg:py-24 bg-gradient-to-b from-slate-50 via-blue-50/30 to-white text-slate-800 relative overflow-hidden border-t border-slate-200">
-                <!-- Background Subtle Pattern & Soft Glow -->
+                class="py-16 lg:py-24 bg-gradient-to-b from-slate-50 via-blue-50/20 to-white text-slate-800 relative overflow-hidden border-t border-slate-200/80">
+                <!-- Subtle Ambient Backdrop Elements -->
                 <div
-                    class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100/50 via-slate-50/50 to-white pointer-events-none">
+                    class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent pointer-events-none">
                 </div>
                 <div
-                    class="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:2rem_2rem] pointer-events-none">
+                    class="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:2.5rem_2.5rem] pointer-events-none">
                 </div>
 
-                <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <!-- Section Header -->
-                    <div class="text-center max-w-3xl mx-auto mb-14 lg:mb-20">
+                    <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                         <div
-                            class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 text-xs font-black tracking-[0.25em] uppercase mb-5 shadow-sm">
-                            </span>
-                            Strategic Roadmap
+                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 text-xs font-black tracking-[0.2em] uppercase mb-4 shadow-sm">
+                            Strategic Growth Vision
                         </div>
-                        <h2
-                            class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight mb-4 drop-shadow-sm">
-                            Future Expansion <span class="text-amber-500"> Plan</span>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight mb-4">
+                            Future Expansion <span class="text-amber-500">Plan</span>
                         </h2>
                         <p class="text-slate-600 text-sm sm:text-base font-normal max-w-2xl mx-auto leading-relaxed">
-                            Continuous technological upgrade &amp; infrastructure investment to empower next-generation
+                            Continuous technological upgrades &amp; infrastructure investment empowering next-generation
                             high-precision gear manufacturing.
                         </p>
                     </div>
 
-                    <!-- Cards Grid (2x2 Light Theme Cards) -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 relative">
+                    <!-- Creative Vertical Fluid Track Flow (Non-Card & Non-Numbered) -->
+                    <div class="relative max-w-4xl mx-auto pl-4 sm:pl-8 lg:pl-0">
+                        <!-- Central Dynamic Connecting Line -->
+                        <div
+                            class="hidden lg:block absolute left-1/2 top-6 bottom-6 -translate-x-1/2 w-1 bg-gradient-to-b from-amber-400 via-blue-500 via-indigo-500 to-emerald-500 rounded-full opacity-30">
+                        </div>
+                        <!-- Mobile/Tablet Left Line -->
+                        <div
+                            class="lg:hidden absolute left-4 sm:left-8 top-6 bottom-6 w-0.5 bg-gradient-to-b from-amber-400 via-blue-500 to-emerald-500 opacity-40">
+                        </div>
 
                         <!-- Item 1: Induction Heat Treatment Plant -->
-                        <div
-                            class="group relative rounded-3xl bg-white border border-slate-200 p-8 sm:p-10 transition-all duration-500 shadow-sm lg:hover:border-amber-400 lg:hover:shadow-[0_20px_40px_-15px_rgba(245,158,11,0.15)] lg:hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between">
-                            <!-- Background Subtle Light Layer -->
-                            <div
-                                class="absolute -top-24 -right-24 w-48 h-48 bg-amber-500/5 rounded-full blur-3xl lg:group-hover:bg-amber-500/15 transition-all duration-700 pointer-events-none">
-                            </div>
-                            <div
-                                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500">
-                            </div>
-
-                            <div>
-                                <!-- Top Bar / Badge & Step -->
-                                <div class="flex items-center justify-between gap-4 mb-6">
+                        <div class="relative mb-14 lg:mb-20 group">
+                            <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-0">
+                                <!-- Left Column (Desktop Right-aligned) -->
+                                <div class="w-full lg:w-1/2 lg:pr-14 lg:text-right pl-10 lg:pl-0">
                                     <div
-                                        class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-500 flex items-center justify-center shrink-0 shadow-sm lg:group-hover:scale-110 lg:group-hover:rotate-3 transition-transform duration-500">
-                                        <i data-lucide="flame" class="w-7 h-7"></i>
+                                        class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-200/80 mb-3 shadow-xs">
+                                        <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-500"></i> In-House Hardening
                                     </div>
-                                    <span
-                                        class="text-xs font-mono font-bold text-amber-700 tracking-wider px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200/60">PHASE
-                                        01</span>
+                                    <h3
+                                        class="text-xl sm:text-2xl font-black text-slate-900 mb-2 group-hover:text-amber-500 transition-colors duration-300">
+                                        Induction Heat Treatment Plant
+                                    </h3>
+                                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                                        <strong class="font-bold text-slate-900">Induction Heat Treatment Plant</strong>
+                                        for
+                                        in-house hardening capability.
+                                    </p>
                                 </div>
 
-                                <!-- Text Content -->
-                                <h3
-                                    class="text-xl sm:text-2xl font-bold text-slate-900 mb-3 group-hover:text-amber-500 transition-colors">
-                                    Induction Heat Treatment Plant
-                                </h3>
-                                <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
-                                    <strong class="font-bold text-slate-900">Induction Heat Treatment Plant</strong> for
-                                    in-house hardening capability.
-                                </p>
-                            </div>
+                                <!-- Glowing Center Icon Node -->
+                                <div
+                                    class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-amber-500 text-amber-500 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 z-10">
+                                    <i data-lucide="flame" class="w-6 h-6"></i>
+                                </div>
 
-                            <!-- Bottom Feature Tag -->
-                            <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
-                                <span
-                                    class="text-xs font-bold uppercase tracking-wider text-amber-700 flex items-center gap-2">
-                                    <i data-lucide="zap" class="w-4 h-4 text-amber-500"></i> In-House Hardening
-                                </span>
-                                <i data-lucide="arrow-up-right"
-                                    class="w-5 h-5 text-slate-400 lg:group-hover:text-amber-500 lg:group-hover:translate-x-1 lg:group-hover:-translate-y-1 transition-all duration-300"></i>
+                                <!-- Right Empty Column for symmetry on desktop -->
+                                <div class="hidden lg:block w-1/2 lg:pl-14"></div>
                             </div>
                         </div>
 
                         <!-- Item 2: Tooth Grinding Facility -->
-                        <div
-                            class="group relative rounded-3xl bg-white border border-slate-200 p-8 sm:p-10 transition-all duration-500 shadow-sm lg:hover:border-blue-400 lg:hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.15)] lg:hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between">
-                            <!-- Background Subtle Light Layer -->
-                            <div
-                                class="absolute -top-24 -right-24 w-48 h-48 bg-blue-500/5 rounded-full blur-3xl lg:group-hover:bg-blue-500/15 transition-all duration-700 pointer-events-none">
-                            </div>
-                            <div
-                                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500">
-                            </div>
+                        <div class="relative mb-14 lg:mb-20 group">
+                            <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-0">
+                                <!-- Left Empty Column for symmetry on desktop -->
+                                <div class="hidden lg:block w-1/2 lg:pr-14"></div>
 
-                            <div>
-                                <!-- Top Bar / Badge & Step -->
-                                <div class="flex items-center justify-between gap-4 mb-6">
-                                    <div
-                                        class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-200/80 text-blue-600 flex items-center justify-center shrink-0 shadow-sm lg:group-hover:scale-110 lg:group-hover:-rotate-3 transition-transform duration-500">
-                                        <i data-lucide="disc" class="w-7 h-7"></i>
-                                    </div>
-                                    <span
-                                        class="text-xs font-mono font-bold text-blue-700 tracking-wider px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200/60">PHASE
-                                        02</span>
+                                <!-- Glowing Center Icon Node -->
+                                <div
+                                    class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-blue-500 text-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 z-10">
+                                    <i data-lucide="cog" class="w-6 h-6"></i>
                                 </div>
 
-                                <!-- Text Content -->
-                                <h3
-                                    class="text-xl sm:text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                                    Tooth Grinding Facility
-                                </h3>
-                                <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
-                                    <strong class="font-bold text-slate-900">Tooth Grinding Facility</strong> up to
-                                    <strong class="text-amber-500 font-bold">DIN Class 5</strong> accuracy for
-                                    high-precision gears.
-                                </p>
-                            </div>
-
-                            <!-- Bottom Feature Tag -->
-                            <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
-                                <span
-                                    class="text-xs font-bold uppercase tracking-wider text-blue-700 flex items-center gap-2">
-                                    <i data-lucide="shield-check" class="w-4 h-4 text-blue-500"></i> DIN Class 5
-                                    Accuracy
-                                </span>
-                                <i data-lucide="arrow-up-right"
-                                    class="w-5 h-5 text-slate-400 lg:group-hover:text-blue-500 lg:group-hover:translate-x-1 lg:group-hover:-translate-y-1 transition-all duration-300"></i>
+                                <!-- Right Column (Desktop Left-aligned) -->
+                                <div class="w-full lg:w-1/2 lg:pl-14 pl-10 lg:pl-0">
+                                    <div
+                                        class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200/80 mb-3 shadow-xs">
+                                        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-500"></i> High
+                                        Precision Accuracy
+                                    </div>
+                                    <h3
+                                        class="text-xl sm:text-2xl font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                                        Tooth Grinding Facility
+                                    </h3>
+                                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                                        <strong class="font-bold text-slate-900">Tooth Grinding Facility</strong> up to
+                                        <strong class="text-amber-500 font-bold">DIN Class 5</strong> accuracy for
+                                        high-precision gears.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Item 3: CNC Cylindrical Grinding Expansion -->
-                        <div
-                            class="group relative rounded-3xl bg-white border border-slate-200 p-8 sm:p-10 transition-all duration-500 shadow-sm lg:hover:border-indigo-400 lg:hover:shadow-[0_20px_40px_-15px_rgba(99,102,241,0.15)] lg:hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between">
-                            <!-- Background Subtle Light Layer -->
-                            <div
-                                class="absolute -top-24 -right-24 w-48 h-48 bg-indigo-500/5 rounded-full blur-3xl lg:group-hover:bg-indigo-500/15 transition-all duration-700 pointer-events-none">
-                            </div>
-                            <div
-                                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500">
-                            </div>
-
-                            <div>
-                                <!-- Top Bar / Badge & Step -->
-                                <div class="flex items-center justify-between gap-4 mb-6">
+                        <div class="relative mb-14 lg:mb-20 group">
+                            <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-0">
+                                <!-- Left Column (Desktop Right-aligned) -->
+                                <div class="w-full lg:w-1/2 lg:pr-14 lg:text-right pl-10 lg:pl-0">
                                     <div
-                                        class="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-200/80 text-indigo-600 flex items-center justify-center shrink-0 shadow-sm lg:group-hover:scale-110 lg:group-hover:rotate-3 transition-transform duration-500">
-                                        <i data-lucide="cpu" class="w-7 h-7"></i>
+                                        class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200/80 mb-3 shadow-xs">
+                                        <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-500"></i> Metso OEM
+                                        Requirements
                                     </div>
-                                    <span
-                                        class="text-xs font-mono font-bold text-indigo-700 tracking-wider px-3.5 py-1 rounded-full bg-indigo-50 border border-indigo-200/60">PHASE
-                                        03</span>
+                                    <h3
+                                        class="text-xl sm:text-2xl font-black text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors duration-300">
+                                        CNC Cylindrical Grinding Expansion
+                                    </h3>
+                                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                                        <strong class="font-bold text-slate-900">CNC Cylindrical Grinding
+                                            Expansion</strong>
+                                        as per Metso requirements and future volumes.
+                                    </p>
                                 </div>
 
-                                <!-- Text Content -->
-                                <h3
-                                    class="text-xl sm:text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                                    CNC Cylindrical Grinding Expansion
-                                </h3>
-                                <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
-                                    <strong class="font-bold text-slate-900">CNC Cylindrical Grinding Expansion</strong>
-                                    as per Metso requirements and future volumes.
-                                </p>
-                            </div>
+                                <!-- Glowing Center Icon Node -->
+                                <div
+                                    class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-indigo-500 text-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 z-10">
+                                    <i data-lucide="cpu" class="w-6 h-6"></i>
+                                </div>
 
-                            <!-- Bottom Feature Tag -->
-                            <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
-                                <span
-                                    class="text-xs font-bold uppercase tracking-wider text-indigo-700 flex items-center gap-2">
-                                    <i data-lucide="layers" class="w-4 h-4 text-indigo-500"></i> Metso Standards &amp;
-                                    Volume
-                                </span>
-                                <i data-lucide="arrow-up-right"
-                                    class="w-5 h-5 text-slate-400 lg:group-hover:text-indigo-500 lg:group-hover:translate-x-1 lg:group-hover:-translate-y-1 transition-all duration-300"></i>
+                                <!-- Right Empty Column for symmetry on desktop -->
+                                <div class="hidden lg:block w-1/2 lg:pl-14"></div>
                             </div>
                         </div>
 
-                        <!-- Item 4: Capacity enhancement -->
-                        <div
-                            class="group relative rounded-3xl bg-white border border-slate-200 p-8 sm:p-10 transition-all duration-500 shadow-sm lg:hover:border-emerald-400 lg:hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.15)] lg:hover:-translate-y-1.5 overflow-hidden flex flex-col justify-between">
-                            <!-- Background Subtle Light Layer -->
-                            <div
-                                class="absolute -top-24 -right-24 w-48 h-48 bg-emerald-500/5 rounded-full blur-3xl lg:group-hover:bg-emerald-500/15 transition-all duration-700 pointer-events-none">
-                            </div>
-                            <div
-                                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-emerald-500 to-transparent lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500">
-                            </div>
+                        <!-- Item 4: Capacity Enhancement -->
+                        <div class="relative group">
+                            <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-0">
+                                <!-- Left Empty Column for symmetry on desktop -->
+                                <div class="hidden lg:block w-1/2 lg:pr-14"></div>
 
-                            <div>
-                                <!-- Top Bar / Badge & Step -->
-                                <div class="flex items-center justify-between gap-4 mb-6">
-                                    <div
-                                        class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200/80 text-emerald-600 flex items-center justify-center shrink-0 shadow-sm lg:group-hover:scale-110 lg:group-hover:-rotate-3 transition-transform duration-500">
-                                        <i data-lucide="globe" class="w-7 h-7"></i>
-                                    </div>
-                                    <span
-                                        class="text-xs font-mono font-bold text-emerald-700 tracking-wider px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200/60">PHASE
-                                        04</span>
+                                <!-- Glowing Center Icon Node -->
+                                <div
+                                    class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-emerald-500 text-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 z-10">
+                                    <i data-lucide="globe" class="w-6 h-6"></i>
                                 </div>
 
-                                <!-- Text Content -->
-                                <h3
-                                    class="text-xl sm:text-2xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">
-                                    Capacity Enhancement
-                                </h3>
-                                <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
-                                    <strong class="font-bold text-slate-900">Capacity enhancement</strong> to support
-                                    global OEM quality standards and export demand.
-                                </p>
-                            </div>
-
-                            <!-- Bottom Feature Tag -->
-                            <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
-                                <span
-                                    class="text-xs font-bold uppercase tracking-wider text-emerald-700 flex items-center gap-2">
-                                    <i data-lucide="trending-up" class="w-4 h-4 text-emerald-500"></i> Global OEM
-                                    Quality Standards
-                                </span>
-                                <i data-lucide="arrow-up-right"
-                                    class="w-5 h-5 text-slate-400 lg:group-hover:text-emerald-500 lg:group-hover:translate-x-1 lg:group-hover:-translate-y-1 transition-all duration-300"></i>
+                                <!-- Right Column (Desktop Left-aligned) -->
+                                <div class="w-full lg:w-1/2 lg:pl-14 pl-10 lg:pl-0">
+                                    <div
+                                        class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/80 mb-3 shadow-xs">
+                                        <i data-lucide="trending-up" class="w-3.5 h-3.5 text-emerald-500"></i> Global
+                                        Export Demand
+                                    </div>
+                                    <h3
+                                        class="text-xl sm:text-2xl font-black text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors duration-300">
+                                        Capacity Enhancement
+                                    </h3>
+                                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                                        <strong class="font-bold text-slate-900">Capacity enhancement</strong> to
+                                        support
+                                        global OEM quality standards and export demand.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
@@ -2612,34 +2553,36 @@
                 <div class="md:col-span-12 lg:col-span-3">
                     <div class="flex items-center justify-between mb-3">
                         <h4 class="font-bold text-white tracking-widest text-base flex items-center gap-2">
-                            <div class="w-7 h-7 rounded-lg bg-[#0064e0] text-white flex items-center justify-center shrink-0">
+                            <div
+                                class="w-7 h-7 rounded-lg bg-[#0064e0] text-white flex items-center justify-center shrink-0">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 320 512">
-                                    <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+                                    <path
+                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
                                 </svg>
                             </div>
                             <span>Facebook Feed</span>
                         </h4>
-                        <a href="https://www.facebook.com/share/1FG8ucRU8y/" target="_blank" rel="noopener" class="px-2.5 py-1 bg-[#0064e0] hover:bg-[#0052b8] text-white rounded-lg text-[11px] font-bold transition-all shadow-sm">
+                        <a href="https://www.facebook.com/share/1FG8ucRU8y/" target="_blank" rel="noopener"
+                            class="px-2.5 py-1 bg-[#0064e0] hover:bg-[#0052b8] text-white rounded-lg text-[11px] font-bold transition-all shadow-sm">
                             Follow Page
                         </a>
                     </div>
-                    
+
                     <!-- Official Facebook Page Feed Embed -->
-                    <div class="relative w-full rounded-2xl border border-white/10 bg-slate-900 shadow-2xl overflow-hidden p-1.5 text-center">
-                        <iframe 
-                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnatioanlgears&tabs=timeline&width=500&height=270&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false" 
-                            width="100%" 
-                            height="270" 
-                            style="border:none;overflow:hidden;border-radius:10px;background:#ffffff;" 
-                            scrolling="yes" 
-                            frameborder="0" 
-                            allowfullscreen="true" 
+                    <div
+                        class="relative w-full rounded-2xl border border-white/10 bg-slate-900 shadow-2xl overflow-hidden p-1.5 text-center">
+                        <iframe
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnatioanlgears&tabs=timeline&width=500&height=270&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false"
+                            width="100%" height="270"
+                            style="border:none;overflow:hidden;border-radius:10px;background:#ffffff;" scrolling="yes"
+                            frameborder="0" allowfullscreen="true"
                             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
                         </iframe>
 
                         <!-- Direct Page Link Footer -->
                         <div class="mt-1.5 pt-1.5 border-t border-white/10 text-center">
-                            <a href="https://www.facebook.com/natioanlgears" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-1.5 text-[11px] font-bold text-amber-400 hover:text-amber-300 transition-colors">
+                            <a href="https://www.facebook.com/natioanlgears" target="_blank" rel="noopener"
+                                class="inline-flex items-center justify-center gap-1.5 text-[11px] font-bold text-amber-400 hover:text-amber-300 transition-colors">
                                 <span>Open Official Facebook Page</span>
                                 <i data-lucide="external-link" class="w-3 h-3"></i>
                             </a>
