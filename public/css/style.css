@@ -30,6 +30,11 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1 !important;
 }
 
+.faceBook_scroll ._2p3a{
+    min-width: 100% !important;
+    width: 100% !important;
+}
+
         @keyframes scan {
             0% {
                 top: 0;
@@ -355,3 +360,5 @@ h1, h2, h3, h4, h5, h6 {
             color: #002045;
             box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
         }
+
+

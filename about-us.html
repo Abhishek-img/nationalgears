@@ -465,11 +465,13 @@
             <div class="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                     <div class="lg:col-span-6 grid grid-rows-2 gap-6 h-full min-h-[22rem]">
-                        <div class="relative h-full rounded-[2rem] overflow-hidden group shadow-lg min-h-[12rem]">
-                            <img src="./public/images/working2.webp" alt="National Gears Workshop Operations"
+                        <div class="relative h-full rounded-[2rem] overflow-hidden group shadow-lg min-h-[12rem] cursor-pointer"
+                            onclick="openImageZoom('./public/images/factoryClients.webp', 'National Gears OEM Client Delegation & Plant Operations')">
+                            <img src="./public/images/factoryClients.webp"
+                                alt="National Gears OEM Client Delegation Visit"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-105" />
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-60 lg:group-hover:opacity-40 transition-opacity duration-500">
+                                class="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-40 lg:group-hover:opacity-20 transition-opacity duration-500">
                             </div>
                         </div>
                         <div
@@ -864,6 +866,64 @@
             </div>
         </section>
 
+        <!-- OEM Client Relations & Facility Delegations Feature Banner -->
+        <section class="py-12 lg:py-16 bg-white border-b border-slate-200/80">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="bg-slate-900 rounded-3xl p-6 sm:p-10 text-white border border-slate-800 shadow-2xl relative overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-5">
+                            <div
+                                class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-black uppercase tracking-widest">
+                                <span>Trusted OEM Partnerships & Plant Audits</span>
+                            </div>
+                            <h2
+                                class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
+                                Client Delegations & <span class="text-amber-400">Facility Audits</span>
+                            </h2>
+                            <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+                                We regularly host OEM client delegations, international quality auditors, and industry
+                                leaders at our 50,000 sq. ft. manufacturing hub in Alwar. Transparent operations, live
+                                CMM metrology demonstrations, and complete heat traceability ensure 100% confidence for
+                                global partners.
+                            </p>
+                            <div class="flex flex-wrap items-center gap-4 pt-2">
+                                <div
+                                    class="px-4 py-2.5 bg-slate-800/80 rounded-xl border border-slate-700 text-xs font-bold text-slate-200">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 inline mr-1.5"></i>
+                                    OEM Approved Plant
+                                </div>
+                                <div
+                                    class="px-4 py-2.5 bg-slate-800/80 rounded-xl border border-slate-700 text-xs font-bold text-slate-200">
+                                    <i data-lucide="shield-check" class="w-4 h-4 text-amber-400 inline mr-1.5"></i> ISO
+                                    9001:2015 Audited
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-5">
+                            <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-slate-950 shadow-2xl group cursor-pointer"
+                                onclick="openImageZoom('./public/images/foreginClients.webp', 'International OEM Client Delegation & Facility Audit Visit')">
+                                <div class="aspect-[4/3] w-full overflow-hidden relative">
+                                    <img src="./public/images/foreginClients.webp"
+                                        alt="International OEM Client Delegation Facility Audit"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                    <div class="absolute inset-0 bg-slate-950/20"></div>
+                                </div>
+                                <div
+                                    class="absolute bottom-3 left-3 right-3 p-3 bg-slate-950/90 rounded-xl border border-white/10 backdrop-blur-md flex items-center justify-between text-xs">
+                                    <span class="font-bold text-amber-400 flex items-center gap-1.5">
+                                        <i data-lucide="zoom-in" class="w-4 h-4"></i> Click to Zoom Delegation Photo
+                                    </span>
+                                    <span class="text-slate-400 font-medium">Alwar Plant Hub</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
 
         <!-- Future Expansion Plan Section (Creative Modern Non-Card & Non-Numbered Design) -->
@@ -926,7 +986,7 @@
 
                             <!-- Glowing Center Icon Node -->
                             <div
-                                class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-amber-500 text-amber-500 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 z-10">
+                                class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-amber-500 text-amber-500 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 z-10">
                                 <i data-lucide="flame" class="w-6 h-6"></i>
                             </div>
 
@@ -943,7 +1003,7 @@
 
                             <!-- Glowing Center Icon Node -->
                             <div
-                                class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-blue-500 text-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 z-10">
+                                class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-blue-500 text-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 z-10">
                                 <i data-lucide="cog" class="w-6 h-6"></i>
                             </div>
 
@@ -951,7 +1011,8 @@
                             <div class="w-full lg:w-1/2 lg:pl-14 pl-10 lg:pl-0">
                                 <div
                                     class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200/80 mb-3 shadow-xs">
-                                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-500"></i> High Precision Accuracy
+                                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-500"></i> High Precision
+                                    Accuracy
                                 </div>
                                 <h3
                                     class="text-xl sm:text-2xl font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
@@ -973,7 +1034,8 @@
                             <div class="w-full lg:w-1/2 lg:pr-14 lg:text-right pl-10 lg:pl-0">
                                 <div
                                     class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200/80 mb-3 shadow-xs">
-                                    <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-500"></i> Metso OEM Requirements
+                                    <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-500"></i> Metso OEM
+                                    Requirements
                                 </div>
                                 <h3
                                     class="text-xl sm:text-2xl font-black text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors duration-300">
@@ -987,7 +1049,7 @@
 
                             <!-- Glowing Center Icon Node -->
                             <div
-                                class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-indigo-500 text-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 z-10">
+                                class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-indigo-500 text-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 z-10">
                                 <i data-lucide="cpu" class="w-6 h-6"></i>
                             </div>
 
@@ -1004,7 +1066,7 @@
 
                             <!-- Glowing Center Icon Node -->
                             <div
-                                class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-emerald-500 text-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 z-10">
+                                class="absolute left-0 lg:left-1/2 top-0 lg:top-1/2 lg:-translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-emerald-500 text-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 z-10">
                                 <i data-lucide="globe" class="w-6 h-6"></i>
                             </div>
 
@@ -1012,7 +1074,8 @@
                             <div class="w-full lg:w-1/2 lg:pl-14 pl-10 lg:pl-0">
                                 <div
                                     class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/80 mb-3 shadow-xs">
-                                    <i data-lucide="trending-up" class="w-3.5 h-3.5 text-emerald-500"></i> Global Export Demand
+                                    <i data-lucide="trending-up" class="w-3.5 h-3.5 text-emerald-500"></i> Global Export
+                                    Demand
                                 </div>
                                 <h3
                                     class="text-xl sm:text-2xl font-black text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors duration-300">
@@ -1691,7 +1754,7 @@
 
 
         <!-- Creative Standardized Subpage CTA Section -->
-        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 my-14">
+        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 md:my-14 my-8">
             <div
                 class="relative bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl overflow-hidden">
                 <!-- Solid Amber Accent Left Bar -->
@@ -1776,7 +1839,7 @@
                             delivered with integrity.
                         </p>
                         <div class="flex gap-4">
-                            <a class="w-10 h-10 rounded-lg bg-amber-500 text-white lg:bg-white/5 lg:border lg:border-white/10 flex items-center justify-center lg:text-slate-400 hover:lg:bg-[#0064e0] hover:lg:text-white transition-all duration-300 hover:lg:-translate-y-1"
+                            <a class="w-10 h-10 rounded-lg bg-[#0064e0] text-white lg:bg-white/5 lg:border lg:border-white/10 flex items-center justify-center lg:text-slate-400 hover:lg:bg-[#0064e0] hover:lg:text-white transition-all duration-300 hover:lg:-translate-y-1"
                                 href="#">
                                 <svg class="size-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path
