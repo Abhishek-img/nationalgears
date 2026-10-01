@@ -100,7 +100,7 @@
             <!-- Brand Logo (BIGGER SIZE) -->
             <a href="index.html" class="flex items-center cursor-pointer group shrink-0 py-1">
                 <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo" title="National Gears"
-                    class="h-16 sm:h-20 md:h-22 lg:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105 filter drop-shadow-sm">
+                    class="h-16 sm:h-20 md:h-22 lg:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105 filter drop-shadow-sm" loading="eager" fetchpriority="high">
             </a>
 
             <!-- Desktop Navigation Links -->
@@ -212,7 +212,7 @@
         <div class="flex items-center justify-between py-4 border-b border-slate-100 mb-4">
             <a href="index.html" class="flex items-center">
                 <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo" title="National Gears"
-                    class="h-12 w-auto object-contain">
+                    class="h-12 w-auto object-contain" loading="eager" fetchpriority="high">
             </a>
             <button onclick="toggleMobileMenu(false)"
                 class="p-2 text-slate-400 hover:text-primary bg-slate-100 rounded-full cursor-pointer transition-colors">
@@ -357,7 +357,7 @@
                             class="relative rounded-3xl overflow-hidden border border-slate-200 bg-slate-900 shadow-xl group">
                             <div class="aspect-[4/3] w-full overflow-hidden relative">
                                 <img src="./public/images/allGears.webp" alt="Precision Gear Range Portfolio"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" title="Precision Gear Range Portfolio" loading="lazy" fetchpriority="auto">
                                 <div class="absolute inset-0 bg-slate-950/40"></div>
                             </div>
 
@@ -417,7 +417,7 @@
                         <div class="relative aspect-[4/3] overflow-hidden bg-slate-900 cursor-pointer"
                             onclick="openImageZoom('./public/images/helicalGearsShaft.webp', 'Helical Shaft & Pinion Gears')">
                             <img src="./public/images/helicalGearsShaft.webp" alt="Helical Shaft and Gears"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" title="Helical Shaft and Gears" loading="lazy" fetchpriority="auto">
                             <span
                                 class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-xl text-xs font-bold border border-white/10">
                                 NG-HL01
@@ -465,7 +465,7 @@
                         <div class="relative aspect-[4/3] overflow-hidden bg-slate-900 cursor-pointer"
                             onclick="openImageZoom('./public/images/helicalGear3.webp', 'Double Helical Herringbone Gears')">
                             <img src="./public/images/helicalGear3.webp" alt="Double Helical Herringbone Gears"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" title="Double Helical Herringbone Gears" loading="lazy" fetchpriority="auto">
                             <span
                                 class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-xl text-xs font-bold border border-white/10">
                                 NG-HL02
@@ -512,7 +512,7 @@
                         <div class="relative aspect-[4/3] overflow-hidden bg-slate-900 cursor-pointer"
                             onclick="openImageZoom('./public/images/bevelGearAssembly.webp', 'Spiral Bevel Gears')">
                             <img src="./public/images/bevelGearAssembly.webp" alt="Bevel Gears"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" title="Bevel Gears" loading="lazy" fetchpriority="auto">
                             <span
                                 class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-xl text-xs font-bold border border-white/10">
                                 NG-BV03
@@ -559,7 +559,7 @@
                         <div class="relative aspect-[4/3] overflow-hidden bg-slate-900 cursor-pointer"
                             onclick="openImageZoom('./public/images/helicalGearAssembly2.webp', 'Helical Gear Assembly')">
                             <img src="./public/images/helicalGearAssembly2.webp" alt="Helical Gear Assembly"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" title="Helical Gear Assembly" loading="lazy" fetchpriority="auto">
                             <span
                                 class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-xl text-xs font-bold border border-white/10">
                                 NG-HL04
@@ -607,7 +607,7 @@
                         <div class="relative aspect-[4/3] overflow-hidden bg-slate-900 cursor-pointer"
                             onclick="openImageZoom('./public/images/bevelPinionGear.webp', 'Bevel Pinion Shaft')">
                             <img src="./public/images/bevelPinionGear.webp" alt="Bevel Pinion Shaft"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" title="Bevel Pinion Shaft" loading="lazy" fetchpriority="auto">
                             <span
                                 class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-xl text-xs font-bold border border-white/10">
                                 NG-BV05
@@ -654,7 +654,7 @@
                         <div class="relative aspect-[4/3] overflow-hidden bg-slate-900 cursor-pointer"
                             onclick="openImageZoom('./public/images/helicalGears8.webp', 'Heavy Industrial Helical Gears')">
                             <img src="./public/images/helicalGears8.webp" alt="Heavy Duty Helical Gears"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" title="Heavy Duty Helical Gears" loading="lazy" fetchpriority="auto">
                             <span
                                 class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3 py-1 rounded-xl text-xs font-bold border border-white/10">
                                 NG-HL06
@@ -937,7 +937,7 @@
                     <a href="index.html" class="flex items-center gap-3 mb-6 group cursor-pointer w-fit">
                         <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo"
                             title="National Gears"
-                            class="h-16 sm:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105">
+                            class="h-16 sm:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105" loading="eager" fetchpriority="high">
                     </a>
                     <p class="font-light text-slate-400 mb-8 leading-relaxed max-w-sm">
                         Setting the standard in high-precision gear manufacturing since 1996. Engineered for

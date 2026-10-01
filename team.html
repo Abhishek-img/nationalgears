@@ -98,7 +98,7 @@
             <!-- Brand Logo (BIGGER SIZE) -->
             <a href="index.html" class="flex items-center cursor-pointer group shrink-0 py-1">
                 <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo" title="National Gears"
-                    class="h-16 sm:h-20 md:h-22 lg:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105 filter drop-shadow-sm">
+                    class="h-16 sm:h-20 md:h-22 lg:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105 filter drop-shadow-sm" loading="eager" fetchpriority="high">
             </a>
 
             <!-- Desktop Navigation Links -->
@@ -210,7 +210,7 @@
         <div class="flex items-center justify-between py-4 border-b border-slate-100 mb-4">
             <a href="index.html" class="flex items-center">
                 <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo" title="National Gears"
-                    class="h-12 w-auto object-contain">
+                    class="h-12 w-auto object-contain" loading="eager" fetchpriority="high">
             </a>
             <button onclick="toggleMobileMenu(false)"
                 class="p-2 text-slate-400 hover:text-primary bg-slate-100 rounded-full cursor-pointer transition-colors">
@@ -324,7 +324,7 @@
                         <div
                             class="w-32 h-32 rounded-3xl overflow-hidden shrink-0 grayscale lg:group-hover:grayscale-0 transition-all">
                             <img src="./public/images/ownersCompany.webp" alt="Senior Specialist"
-                                class="w-full h-full object-cover">
+                                class="w-full h-full object-cover" title="Senior Specialist" loading="lazy" fetchpriority="auto">
                         </div>
                         <div class="flex-1">
                             <div class="flex justify-between items-start mb-4">
@@ -355,7 +355,7 @@
                         <div
                             class="w-32 h-32 rounded-3xl overflow-hidden shrink-0 grayscale lg:group-hover:grayscale-0 transition-all">
                             <img src="./public/images/vivek2.webp" alt="Lead Programmer"
-                                class="w-full h-full object-cover">
+                                class="w-full h-full object-cover" title="Lead Programmer" loading="lazy" fetchpriority="auto">
                         </div>
                         <div class="flex-1">
                             <div class="flex justify-between items-start mb-4">
@@ -395,7 +395,7 @@
                             class="relative aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-4 shadow-sm bg-slate-900 cursor-pointer"
                             onclick="openImageZoom('./public/images/factoryAllTeam.webp', 'National Gears Entire Plant Operations Team')">
                             <img src="./public/images/factoryAllTeam.webp" alt="Factory Production Team"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" title="Factory Production Team" loading="lazy" fetchpriority="auto">
                         </div>
                         <div class="text-center space-y-1">
                             <h3 class="text-lg font-black text-slate-900 tracking-tight">Plant Operations Roster</h3>
@@ -409,7 +409,7 @@
                             class="relative aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-4 shadow-sm bg-slate-900 cursor-pointer"
                             onclick="openImageZoom('./public/images/factoryAllTeam2.webp', 'Precision Machining & Gear Cutting Crew')">
                             <img src="./public/images/factoryAllTeam2.webp" alt="Machining Team"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" title="Machining Team" loading="lazy" fetchpriority="auto">
                         </div>
                         <div class="text-center space-y-1">
                             <h3 class="text-lg font-black text-slate-900 tracking-tight">Machining Specialists</h3>
@@ -423,7 +423,7 @@
                             class="relative aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-4 shadow-sm bg-slate-900 cursor-pointer"
                             onclick="openImageZoom('./public/images/factoryTeamAll3.webp', 'Technical & Quality Assurance Staff')">
                             <img src="./public/images/factoryTeamAll3.webp" alt="Technical Staff"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" title="Technical Staff" loading="lazy" fetchpriority="auto">
                         </div>
                         <div class="text-center space-y-1">
                             <h3 class="text-lg font-black text-slate-900 tracking-tight">QA & Metrology Team</h3>
@@ -437,7 +437,7 @@
                             class="relative aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-4 shadow-sm bg-slate-900 cursor-pointer"
                             onclick="openImageZoom('./public/images/birthdayCelebration.webp', 'Team Culture & Birthday Celebrations')">
                             <img src="./public/images/birthdayCelebration.webp" alt="Team Birthday Celebration"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" title="Team Birthday Celebration" loading="lazy" fetchpriority="auto">
                         </div>
                         <div class="text-center space-y-1">
                             <h3 class="text-lg font-black text-slate-900 tracking-tight">Workplace Culture</h3>
@@ -529,7 +529,7 @@
                     <a href="index.html" class="flex items-center gap-3 mb-6 group cursor-pointer w-fit">
                         <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo"
                             title="National Gears"
-                            class="h-16 sm:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105">
+                            class="h-16 sm:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105" loading="eager" fetchpriority="high">
                     </a>
                     <p class="font-light text-slate-400 mb-8 leading-relaxed max-w-sm">
                         Setting the standard in high-precision gear manufacturing since 1996. Engineered for

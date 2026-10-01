@@ -241,52 +241,6 @@ h1, h2, h3, h4, h5, h6 {
             animation-delay: 1s;
         }
 
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .glow-blue {
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-        }
-
-        .glow-amber {
-            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
-        }
-
-        .technical-grid {
-            background-image: radial-gradient(circle at 0.0625rem 0.0625rem, rgba(0, 32, 69, 0.05) 0.0625rem, transparent 0);
-            background-size: 2.5rem 2.5rem;
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(0.75rem);
-            border: 0.0625rem solid rgba(255, 255, 255, 0.3);
-        }
-
-        .glow-hover:hover {
-            box-shadow: 0 0 1.875rem rgba(245, 158, 11, 0.15);
-        }
-
-        .product-tab {
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .product-tab.active {
-            color: white !important;
-        }
-
-        #tab-indicator {
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            background: linear-gradient(135deg, #002045 0%, #1e40af 100%);
-        }
-
-        .product-panel {
-            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
         /* Creative Swiper Navigation Buttons */
         .swiper-nav-btn {
             width: 3.25rem;

@@ -98,7 +98,8 @@
             <!-- Brand Logo (BIGGER SIZE) -->
             <a href="index.html" class="flex items-center cursor-pointer group shrink-0 py-1">
                 <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo" title="National Gears"
-                    class="h-16 sm:h-20 md:h-22 lg:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105 filter drop-shadow-sm">
+                    class="h-16 sm:h-20 md:h-22 lg:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105 filter drop-shadow-sm"
+                    loading="eager" fetchpriority="high">
             </a>
 
             <!-- Desktop Navigation Links -->
@@ -210,7 +211,7 @@
         <div class="flex items-center justify-between py-4 border-b border-slate-100 mb-4">
             <a href="index.html" class="flex items-center">
                 <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo" title="National Gears"
-                    class="h-12 w-auto object-contain">
+                    class="h-12 w-auto object-contain" loading="eager" fetchpriority="high">
             </a>
             <button onclick="toggleMobileMenu(false)"
                 class="p-2 text-slate-400 hover:text-primary bg-slate-100 rounded-full cursor-pointer transition-colors">
@@ -319,7 +320,8 @@
                             <div
                                 class="aspect-[4/5] rounded-[2rem] overflow-hidden bg-slate-800 border border-white/10 shadow-2xl">
                                 <img src="./public/images/rameshChandGupta.webp" alt="Late Mr. Ramesh Chand Gupta"
-                                    class="w-full h-full object-cover">
+                                    class="w-full h-full object-cover" title="Late Mr. Ramesh Chand Gupta"
+                                    loading="lazy" fetchpriority="auto">
                             </div>
                         </div>
                         <div class="lg:col-span-8">
@@ -363,7 +365,8 @@
                             <div
                                 class="aspect-[4/5] rounded-[2rem] overflow-hidden bg-slate-800 border border-white/10 shadow-2xl">
                                 <img src="./public/images/msMithleshGupta.webp" alt="Mrs. Mithlesh Gupta"
-                                    class="w-full h-full object-cover">
+                                    class="w-full h-full object-cover" title="Mrs. Mithlesh Gupta" loading="lazy"
+                                    fetchpriority="auto">
                             </div>
                         </div>
                         <div class="lg:col-span-8">
@@ -392,49 +395,127 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-12 gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-6">
+                <!-- Mr. Vikas Gupta Card -->
                 <div
-                    class="bg-white rounded-3xl flex flex-col gap-y-6 p-8 border border-slate-100 shadow-sm transition-all duration-500 group">
-                    <div class="flex items-center gap-6">
-                        <div
-                            class="w-24 h-24 rounded-2xl overflow-hidden bg-slate-100 border border-slate-100 lg:group-hover:scale-105 transition-transform">
-                            <img src="./public/images/vikashGupta.webp" alt="Mr. Vikas Gupta"
-                                class="w-full h-full object-cover object-top">
+                    class="bg-slate-900 rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-800 shadow-xl lg:hover:shadow-2xl lg:hover:border-amber-500/40 lg:hover:-translate-y-2 transition-all duration-500 group flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-6">
+                        <!-- Top Header Section: Image + Title -->
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                            <!-- Photo Container with Solid Border & Icon Badge -->
+                            <div class="relative shrink-0">
+                                <div
+                                    class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden p-1 bg-amber-500 shadow-xl group-hover:scale-105 transition-transform duration-500">
+                                    <img src="./public/images/vikashGupta.webp" alt="Mr. Vikas Gupta"
+                                        class="w-full h-full object-cover object-top rounded-xl" title="Mr. Vikas Gupta"
+                                        loading="lazy" fetchpriority="auto">
+                                </div>
+
+                            </div>
+
+                            <!-- Name & Role -->
+                            <div class="space-y-2">
+                                <div
+                                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-black uppercase tracking-widest">
+                                    <span>Finance & Strategy</span>
+                                </div>
+                                <h3
+                                    class="text-2xl sm:text-3xl font-black text-white tracking-tight group-hover:text-amber-400 transition-colors">
+                                    Mr. Vikas Gupta
+                                </h3>
+                                <p class="text-blue-200 font-medium text-sm sm:text-base">
+                                    Director - Finance
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <h3
-                                class="xl:text-3xl lg:text-3xl md:text-2xl text-xl font-black text-slate-900 tracking-tight">
-                                Mr. Vikas Gupta</h3>
-                            <p class="text-primary font-bold md:text-sm text-xs tracking-widest mt-1">
-                                Director - Finance
-                            </p>
+
+                        <!-- Description -->
+                        <p
+                            class="text-slate-300 text-sm sm:text-base font-light leading-relaxed border-t border-slate-800/80 pt-5">
+                            Oversees strategic expansion and financial planning at National Gears, ensuring sustainable
+                            growth, technological investments, and global market partnerships.
+                        </p>
+
+                        <!-- Key Pillars / Focus Tags -->
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700/60 text-slate-300 text-xs font-semibold flex items-center gap-1.5">
+                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400"></i> Strategic
+                                Expansion
+                            </span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700/60 text-slate-300 text-xs font-semibold flex items-center gap-1.5">
+                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400"></i> Financial
+                                Planning
+                            </span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700/60 text-slate-300 text-xs font-semibold flex items-center gap-1.5">
+                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400"></i> Global Market
+                                Alliances
+                            </span>
                         </div>
                     </div>
-                    <p class="text-slate-500 lg:text-base md:text-base text-sm font-light leading-relaxed">
-                        Oversees strategic expansion and financial planning at National Gears, ensuring sustainable
-                        growth, technological investments, and global market partnerships.
-                    </p>
                 </div>
+
+                <!-- Mr. Vivek Gupta Card -->
                 <div
-                    class="bg-white rounded-3xl flex flex-col gap-y-6 p-8 border border-slate-100 shadow-sm transition-all duration-500 group">
-                    <div class="flex items-center gap-6">
-                        <div
-                            class="w-24 h-24 rounded-2xl overflow-hidden bg-slate-100 border border-slate-100 lg:group-hover:scale-105 transition-transform">
-                            <img src="./public/images/vivekGupta.webp" alt="Mr. Vivek Gupta"
-                                class="w-full h-full object-cover object-top">
+                    class="bg-slate-900 rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-800 shadow-xl lg:hover:shadow-2xl lg:hover:border-amber-500/40 lg:hover:-translate-y-2 transition-all duration-500 group flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-6">
+                        <!-- Top Header Section: Image + Title -->
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                            <!-- Photo Container with Solid Border & Icon Badge -->
+                            <div class="relative shrink-0">
+                                <div
+                                    class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden p-1 bg-amber-500 shadow-xl group-hover:scale-105 transition-transform duration-500">
+                                    <img src="./public/images/vivekGupta.webp" alt="Mr. Vivek Gupta"
+                                        class="w-full h-full object-cover object-top rounded-xl" title="Mr. Vivek Gupta"
+                                        loading="lazy" fetchpriority="auto">
+                                </div>
+
+                            </div>
+
+                            <!-- Name & Role -->
+                            <div class="space-y-2">
+                                <div
+                                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-black uppercase tracking-widest">
+                                    <span>Operations & CNC</span>
+                                </div>
+                                <h3
+                                    class="text-2xl sm:text-3xl font-black text-white tracking-tight group-hover:text-amber-400 transition-colors">
+                                    Mr. Vivek Gupta
+                                </h3>
+                                <p class="text-blue-200 font-medium text-sm sm:text-base">
+                                    Director - Operations
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <h3
-                                class="xl:text-3xl lg:text-3xl md:text-2xl text-xl font-black text-slate-900 tracking-tight">
-                                Mr. Vivek Gupta</h3>
-                            <p class="text-primary font-bold md:text-sm text-xs tracking-widest mt-1">Director
-                                - Operations</p>
+
+                        <!-- Description -->
+                        <p
+                            class="text-slate-300 text-sm sm:text-base font-light leading-relaxed border-t border-slate-800/80 pt-5">
+                            Oversees the day-to-day manufacturing operations at National Gears, ensuring that our CNC
+                            gear
+                            cutting and heat treatment processes run with sub-micron precision.
+                        </p>
+
+                        <!-- Key Pillars / Focus Tags -->
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700/60 text-slate-300 text-xs font-semibold flex items-center gap-1.5">
+                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400"></i> CNC Gear Cutting
+                            </span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700/60 text-slate-300 text-xs font-semibold flex items-center gap-1.5">
+                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400"></i> Heat Treatment
+                                Ops
+                            </span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700/60 text-slate-300 text-xs font-semibold flex items-center gap-1.5">
+                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400"></i> Sub-Micron
+                                Precision
+                            </span>
                         </div>
                     </div>
-                    <p class="text-slate-500 lg:text-base md:text-base text-sm font-light leading-relaxed">
-                        Oversees the day-to-day manufacturing operations at National Gears, ensuring that our CNC gear
-                        cutting and heat treatment processes run with sub-micron precision.
-                    </p>
                 </div>
             </div>
         </section>
@@ -778,7 +859,8 @@
                         <a href="index.html" class="flex items-center gap-3 mb-6 group cursor-pointer w-fit">
                             <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo"
                                 title="National Gears"
-                                class="h-16 sm:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105">
+                                class="h-16 sm:h-24 w-auto object-contain transition-transform duration-300 lg:group-hover:scale-105"
+                                loading="eager" fetchpriority="high">
                         </a>
                         <p class="font-light text-slate-400 mb-8 leading-relaxed max-w-sm">
                             Setting the standard in high-precision gear manufacturing since 1996. Engineered for
