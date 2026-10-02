@@ -30,9 +30,21 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1 !important;
 }
 
-.faceBook_scroll ._2p3a{
-    min-width: 100% !important;
+.faceBook_scroll {
     width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.faceBook_scroll iframe {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    border: 0 !important;
+    overflow: hidden !important;
 }
 
         @keyframes scan {

@@ -49,8 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
-    // Render Contact Popup
-    renderContactPopup();
 
     // Initialize Global Image Zoom Lightbox
     initImageZoomListeners();
@@ -390,98 +388,12 @@ function toggleMobileMenu(show) {
     }
 }
 
-function renderContactPopup() {
-    if (document.getElementById('contact-popup-root')) return;
-    const popupRoot = document.createElement('div');
-    popupRoot.id = 'contact-popup-root';
-    document.body.appendChild(popupRoot);
-
-    popupRoot.innerHTML = `
-    <div id="contact-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-500">
-        <!-- Backdrop -->
-        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-md" onclick="toggleContactModal(false)"></div>
-        
-        <!-- Modal Content -->
-        <div class="relative w-full max-w-xl bg-white rounded-[2.5rem] shadow-2xl overflow-hidden transform scale-95 transition-all duration-500 group">
-            <div class="absolute top-0 right-0 p-8 z-10">
-                <button onclick="toggleContactModal(false)" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            
-            <div class="p-10 md:p-14">
-                <div class="mb-10">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 text-amber-500 rounded-lg text-[0.625rem] font-black tracking-widest mb-4 border border-amber-500/10">
-                        Connect With Us
-                    </div>
-                    <h2 class="text-4xl font-black text-slate-900 tracking-tighter leading-none">Get A <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Technical Quote</span></h2>
-                </div>
-                
-                <form class="space-y-6" onsubmit="event.preventDefault(); alert('Inquiry sent successfully!'); toggleContactModal(false);">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                            <label class="text-xs font-black text-slate-400 ml-1">Full Name</label>
-                            <input type="text" required placeholder="John Doe" class="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 text-sm font-bold text-slate-900 focus:outline-none focus:border-primary/20 focus:bg-white transition-all">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-xs font-black text-slate-400 ml-1">Email Address</label>
-                            <input type="email" required placeholder="john@company.com" class="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 text-sm font-bold text-slate-900 focus:outline-none focus:border-primary/20 focus:bg-white transition-all">
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-2">
-                        <label class="text-xs font-black text-slate-400 ml-1">Requirement Type</label>
-                        <div class="relative">
-                            <select class="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 text-sm font-bold text-slate-900 focus:outline-none focus:border-primary/20 focus:bg-white appearance-none cursor-pointer">
-                                <option>Spur Gears</option>
-                                <option>Helical Gears</option>
-                                <option>Worm Gears</option>
-                                <option>Custom Engineering</option>
-                            </select>
-                            <i data-lucide="chevron-down" class="absolute right-6 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-2">
-                        <label class="text-xs font-black text-slate-400 ml-1">Your Message</label>
-                        <textarea rows="4" required placeholder="Describe your technical specifications..." class="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 text-sm font-bold text-slate-900 focus:outline-none focus:border-primary/20 focus:bg-white transition-all resize-none"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="w-full bg-primary text-white py-5 rounded-2xl font-black text-sm tracking-[0.2em] shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
-                        Send Inquiry
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-    `;
-
-    // Re-initialize icons for popup
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
-}
-
 function toggleContactModal(show) {
-    const modal = document.getElementById('contact-modal');
-    if (!modal) return;
-    const content = modal.querySelector('.relative');
-    if (show) {
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        if (content) {
-            content.classList.remove('scale-95');
-            content.classList.add('scale-100');
-        }
-        document.body.style.overflow = 'hidden';
-    } else {
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        if (content) {
-            content.classList.remove('scale-100');
-            content.classList.add('scale-95');
-        }
-        document.body.style.overflow = 'auto';
+    if (show !== false) {
+        window.location.href = 'contact.html';
     }
 }
+
 
 function toggleMobileSubmenu(button) {
     if (!button) return;
@@ -663,7 +575,6 @@ function initImageZoomListeners() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeImageZoom();
-            toggleContactModal(false);
         }
     });
 }
