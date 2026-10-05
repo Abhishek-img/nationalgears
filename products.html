@@ -480,9 +480,13 @@
                             class="filter-btn shrink-0 px-6 py-2.5 rounded-full font-bold text-xs tracking-wider transition-all duration-300 bg-amber-500 text-white shadow-lg shadow-amber-500/20">
                             All Range
                         </button>
-                        <button onclick="filterProducts('spur-helical', this)"
+                        <button onclick="filterProducts('spur', this)"
                             class="filter-btn shrink-0 px-6 py-2.5 rounded-full font-bold text-xs tracking-wider transition-all duration-300 bg-slate-100 text-slate-700 hover:bg-slate-200">
-                            Spur &amp; Helical Gears
+                            Spur Gears
+                        </button>
+                        <button onclick="filterProducts('helical', this)"
+                            class="filter-btn shrink-0 px-6 py-2.5 rounded-full font-bold text-xs tracking-wider transition-all duration-300 bg-slate-100 text-slate-700 hover:bg-slate-200">
+                            Helical Gears
                         </button>
                         <button onclick="filterProducts('shafts', this)"
                             class="filter-btn shrink-0 px-6 py-2.5 rounded-full font-bold text-xs tracking-wider transition-all duration-300 bg-slate-100 text-slate-700 hover:bg-slate-200">
@@ -505,7 +509,7 @@
                     <div class="product-card-item group bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-500 flex flex-col justify-between"
                         data-category="spur">
                         <div>
-                            <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <a href="spur-gears.html" class="relative aspect-[4/3] overflow-hidden bg-slate-100 block">
                                 <img src="./public/images/spurGears.webp" alt="Precision Spur Gears"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                     title="Precision Spur Gears" loading="lazy" fetchpriority="auto">
@@ -513,13 +517,15 @@
                                     class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-amber-400 text-[0.625rem] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-white/10">
                                     Spur Gears
                                 </span>
-                            </div>
+                            </a>
 
                             <div class="p-6 sm:p-7">
-                                <h3
-                                    class="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-500 transition-colors">
-                                    Precision Industrial Spur Gears
-                                </h3>
+                                <a href="spur-gears.html" class="block">
+                                    <h3
+                                        class="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-500 transition-colors">
+                                        Precision Industrial Spur Gears
+                                    </h3>
+                                </a>
                                 <p class="text-slate-600 text-sm font-normal leading-relaxed mb-6">
                                     Straight-tooth spur gears engineered for quiet power transmission, minimal backlash,
                                     and high fatigue resistance in heavy-duty machinery.
@@ -555,7 +561,7 @@
                     <div class="product-card-item group bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-500 flex flex-col justify-between"
                         data-category="helical">
                         <div>
-                            <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <a href="gear-types.html" class="relative aspect-[4/3] overflow-hidden bg-slate-100 block">
                                 <img src="./public/images/helicalGearsShaft.webp" alt="Helical Gears Gear Sets"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                     title="Helical Gears Gear Sets" loading="lazy" fetchpriority="auto">
@@ -563,13 +569,15 @@
                                     class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-blue-400 text-[0.625rem] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-white/10">
                                     Helical Gears
                                 </span>
-                            </div>
+                            </a>
 
                             <div class="p-6 sm:p-7">
-                                <h3
-                                    class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                                    Helical Gear Sets
-                                </h3>
+                                <a href="gear-types.html" class="block">
+                                    <h3
+                                        class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                        Helical Gear Sets
+                                    </h3>
+                                </a>
                                 <p class="text-slate-600 text-sm font-normal leading-relaxed mb-6">
                                     Angled-tooth helical gears and precision gear sets designed for high-speed performance,
                                     smooth mesh engagement, and heavy torque transmission.
@@ -605,7 +613,7 @@
                     <div class="product-card-item group bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-indigo-400 transition-all duration-500 flex flex-col justify-between"
                         data-category="shafts">
                         <div>
-                            <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <a href="gears-and-shafts.html" class="relative aspect-[4/3] overflow-hidden bg-slate-100 block">
                                 <img src="./public/images/precisionMachinedTransmissionShafts.webp"
                                     alt="Precision Gear Shafts"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -614,13 +622,15 @@
                                     class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-indigo-400 text-[0.625rem] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-white/10">
                                     Gear Shafts
                                 </span>
-                            </div>
+                            </a>
 
                             <div class="p-6 sm:p-7">
-                                <h3
-                                    class="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                                    Precision Spline & Pinion Shafts
-                                </h3>
+                                <a href="gears-and-shafts.html" class="block">
+                                    <h3
+                                        class="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                                        Precision Spline & Pinion Shafts
+                                    </h3>
+                                </a>
                                 <p class="text-slate-600 text-sm font-normal leading-relaxed mb-6">
                                     Multi-spline shafts, integral pinion shafts, and worm gear shafts manufactured with
                                     sub-micron shaft concentricity and high bending strength.
@@ -656,7 +666,7 @@
                     <div class="product-card-item group bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-emerald-400 transition-all duration-500 flex flex-col justify-between"
                         data-category="hydraulic">
                         <div>
-                            <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <a href="hydraulic-gears.html" class="relative aspect-[4/3] overflow-hidden bg-slate-100 block">
                                 <img src="./public/images/industrialPumpGearExportQuality.webp"
                                     alt="Hydraulic Pump Gears"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -665,13 +675,15 @@
                                     class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-emerald-400 text-[0.625rem] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-white/10">
                                     Hydraulic Range
                                 </span>
-                            </div>
+                            </a>
 
                             <div class="p-6 sm:p-7">
-                                <h3
-                                    class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">
-                                    Hydraulic Pump Gear Assemblies
-                                </h3>
+                                <a href="hydraulic-gears.html" class="block">
+                                    <h3
+                                        class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">
+                                        Hydraulic Pump Gear Assemblies
+                                    </h3>
+                                </a>
                                 <p class="text-slate-600 text-sm font-normal leading-relaxed mb-6">
                                     Specialized high-pressure gear sets for tractor hydraulic pumps, earthmoving
                                     machinery, and industrial fluid power systems.
@@ -707,7 +719,7 @@
                     <div class="product-card-item group bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-500 flex flex-col justify-between"
                         data-category="custom">
                         <div>
-                            <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <a href="expertise.html" class="relative aspect-[4/3] overflow-hidden bg-slate-100 block">
                                 <img src="./public/images/InternalSplineGear.webp" alt="Internal Ring & Spline Gears"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                     title="Internal Ring & Spline Gears" loading="lazy" fetchpriority="auto">
@@ -715,13 +727,15 @@
                                     class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-amber-400 text-[0.625rem] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-white/10">
                                     Custom Components
                                 </span>
-                            </div>
+                            </a>
 
                             <div class="p-6 sm:p-7">
-                                <h3
-                                    class="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-500 transition-colors">
-                                    Internal Ring & Spline Sleeves
-                                </h3>
+                                <a href="expertise.html" class="block">
+                                    <h3
+                                        class="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-500 transition-colors">
+                                        Internal Ring & Spline Sleeves
+                                    </h3>
+                                </a>
                                 <p class="text-slate-600 text-sm font-normal leading-relaxed mb-6">
                                     Broached internal spline rings, coupling sleeves, and planetary ring gear units
                                     engineered for tight tolerances and high torque distribution.
@@ -757,7 +771,7 @@
                     <div class="product-card-item group bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-purple-400 transition-all duration-500 flex flex-col justify-between"
                         data-category="custom">
                         <div>
-                            <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                            <div onclick="toggleContactModal(true)" class="relative aspect-[4/3] overflow-hidden bg-slate-100 cursor-pointer">
                                 <img src="./public/images/allGears.webp" alt="Custom OEM Gear Prototypes"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                     title="Custom OEM Gear Prototypes" loading="lazy" fetchpriority="auto">
@@ -768,10 +782,12 @@
                             </div>
 
                             <div class="p-6 sm:p-7">
-                                <h3
-                                    class="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-600 transition-colors">
-                                    Turnkey OEM Gear Prototyping
-                                </h3>
+                                <button onclick="toggleContactModal(true)" class="block text-left w-full cursor-pointer">
+                                    <h3
+                                        class="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-600 transition-colors">
+                                        Turnkey OEM Gear Prototyping
+                                    </h3>
+                                </button>
                                 <p class="text-slate-600 text-sm font-normal leading-relaxed mb-6">
                                     Reverse engineering and custom gear manufacturing tailored to your exact 2D/3D CAD
                                     blueprints, sample parts, and operational loads.
