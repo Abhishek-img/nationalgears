@@ -45,6 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize Lucide icons globally
+    // Initialize AOS animation library
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-in-out'
+        });
+    }
+
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }

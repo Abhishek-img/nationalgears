@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./public/css/style.css">
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="font-['Google_Sans'] bg-slate-50 overflow-x-hidden">
@@ -295,7 +297,7 @@
 
     <main class="bg-slate-50 min-h-screen">
         <!-- Hero Section -->
-        <section class="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 overflow-hidden">
+        <section data-aos="fade-up" class="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 overflow-hidden">
             <div class="absolute inset-0 z-0 pointer-events-none">
                 <div class="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-slate-200/50 to-transparent">
                 </div>
@@ -340,23 +342,25 @@
             </div>
 
             <!-- Filter Buttons Bar -->
-            <div class="relative z-10 flex flex-wrap justify-center items-center gap-3 max-w-3xl mx-auto mb-12">
-                <button onclick="filterGallery('all')" id="filter-btn-all"
-                    class="gallery-filter-btn active px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 bg-primary text-white shadow-md shadow-primary/20">
-                    All Showcase
-                </button>
-                <button onclick="filterGallery('factory')" id="filter-btn-factory"
-                    class="gallery-filter-btn px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">
-                    Factory & Infrastructure
-                </button>
-                <button onclick="filterGallery('products')" id="filter-btn-products"
-                    class="gallery-filter-btn px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">
-                    Precision Products
-                </button>
-                <button onclick="filterGallery('events')" id="filter-btn-events"
-                    class="gallery-filter-btn px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">
-                    Events & Team
-                </button>
+            <div class="w-full overflow-x-auto overflow-y-hidden mb-12 py-2 touch-pan-x [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] relative z-10">
+                <div class="flex items-center gap-3 w-max min-w-full px-4 justify-start md:justify-center">
+                    <button onclick="filterGallery('all')" id="filter-btn-all"
+                        class="gallery-filter-btn shrink-0 active px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 bg-primary text-white shadow-md shadow-primary/20">
+                        All Showcase
+                    </button>
+                    <button onclick="filterGallery('factory')" id="filter-btn-factory"
+                        class="gallery-filter-btn shrink-0 px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">
+                        Factory &amp; Infrastructure
+                    </button>
+                    <button onclick="filterGallery('products')" id="filter-btn-products"
+                        class="gallery-filter-btn shrink-0 px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">
+                        Precision Products
+                    </button>
+                    <button onclick="filterGallery('events')" id="filter-btn-events"
+                        class="gallery-filter-btn shrink-0 px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">
+                        Events &amp; Team
+                    </button>
+                </div>
             </div>
 
             <!-- Filterable Gallery Grid -->
@@ -1218,7 +1222,7 @@
         </section>
 
         <!-- Section: Exhibition Pictures Feb 2025 (Creative Showcase Grid) -->
-        <section id="exhibition-2025"
+        <section data-aos="fade-up" id="exhibition-2025"
             class="py-16 lg:py-24 bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
             <!-- Subtle Background Tech Glow -->
             <div class="absolute -top-40 -right-40 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none">
@@ -1434,7 +1438,7 @@
         </section>
 
         <!-- Featured Highlights Carousel Section -->
-        <section class="py-16 bg-white border-t border-slate-200/80">
+        <section data-aos="fade-up" class="py-16 bg-white border-t border-slate-200/80">
             <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
                     <div>
@@ -1572,7 +1576,7 @@
 
 
         <!-- Creative Standardized Subpage CTA Section -->
-        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 my-14">
+        <section data-aos="fade-up" class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 my-14">
             <div
                 class="relative bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl overflow-hidden">
                 <!-- Solid Amber Accent Left Bar -->
@@ -1787,6 +1791,8 @@
         </div>
     </footer>
 
+        <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./public/js/main.js"></script>
 
 

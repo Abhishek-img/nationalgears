@@ -12,6 +12,8 @@
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="./public/css/style.css">
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="font-['Google_Sans'] bg-slate-50 overflow-x-hidden">
@@ -293,7 +295,7 @@
     </div>
 
     <main class="w-full relative">
-        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 md:py-8 py-4">
+        <section data-aos="fade-up" class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 md:py-8 py-4">
             <div class="text-center md:pb-16 pb-8">
                 <div
                     class="inline-flex items-center gap-3 px-4 py-2 bg-primary/5 border border-primary/10 rounded-full text-primary text-[0.625rem] font-black tracking-[0.3em] mb-4">
@@ -524,7 +526,7 @@
 
 
         <!-- Creative Standardized Subpage CTA Section -->
-        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 my-14">
+        <section data-aos="fade-up" class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 my-14">
             <div
                 class="relative bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl overflow-hidden">
                 <!-- Solid Amber Accent Left Bar -->
@@ -592,7 +594,7 @@
         </section>
 
         <!-- Section: Group Business Ventures (Creative Non-Card Timeline Track) -->
-        <section id="other-businesses"
+        <section data-aos="fade-up" id="other-businesses"
             class="py-16 lg:py-24 bg-white border-t border-slate-200/80 relative overflow-hidden">
             <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -995,7 +997,9 @@
             </div>
         </footer>
 
-        <script src="./public/js/main.js"></script>
+            <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./public/js/main.js"></script>
 </body>
 
 </html>
