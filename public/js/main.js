@@ -627,9 +627,9 @@ window.specProductsData = [
     },
     {
         num: "#06",
-        tag: "Spiral & Straight",
-        title: "Bevel Gears",
-        img: "./public/images/bevelGearAssembly.webp"
+        tag: "Precision Angular",
+        title: "Helical Gear Sets",
+        img: "./public/images/helicalGearsShaft.webp"
     },
     {
         num: "#07",
