@@ -597,15 +597,15 @@ function initImageZoomListeners() {
 window.specProductsData = [
     {
         num: "#01",
-        tag: "High Pressure",
-        title: "Hydraulic Pump Gears",
-        img: "./public/images/industrialPumpGear.webp"
-    },
-    {
-        num: "#02",
         tag: "Precision Ground",
         title: "Spur Gears",
         img: "./public/images/spurGears.webp"
+    },
+    {
+        num: "#02",
+        tag: "High Pressure",
+        title: "Hydraulic Pump Gears",
+        img: "./public/images/industrialPumpGear.webp"
     },
     {
         num: "#03",
@@ -664,22 +664,25 @@ window.selectSpecProduct = function(idx) {
     if (imgEl) {
         imgEl.src = data.img;
         imgEl.alt = data.title;
+        imgEl.title = data.title;
     }
 
     const btns = document.querySelectorAll('.spec-tab-btn');
     btns.forEach((btn, i) => {
+        const numSpan = btn.querySelector('.w-8.h-8');
+        const icon = btn.querySelector('svg, i');
         if (i === idx) {
-            btn.className = 'spec-tab-btn active cursor-pointer p-4 rounded-2xl border border-amber-500 bg-amber-50/60 transition-all flex items-center justify-between group shadow-sm';
-            const numSpan = btn.querySelector('.w-8.h-8');
+            btn.className = 'spec-tab-btn active shrink-0 min-w-[16.25rem] sm:min-w-[17.5rem] lg:min-w-0 lg:w-full snap-start cursor-pointer p-3.5 sm:p-4 rounded-2xl border border-amber-500 bg-amber-50/60 transition-all flex items-center justify-between group shadow-sm';
             if (numSpan) numSpan.className = 'w-8 h-8 rounded-xl bg-amber-500 text-white flex items-center justify-center font-black text-xs shrink-0';
-            const icon = btn.querySelector('i');
-            if (icon) icon.className = 'w-5 h-5 text-amber-600';
+            if (icon) {
+                icon.className = 'size-5 md:inline-flex hidden text-amber-600 shrink-0';
+            }
         } else {
-            btn.className = 'spec-tab-btn cursor-pointer p-4 rounded-2xl border border-slate-200/80 bg-white hover:border-amber-400 hover:bg-slate-50 transition-all flex items-center justify-between group';
-            const numSpan = btn.querySelector('.w-8.h-8');
-            if (numSpan) numSpan.className = 'w-8 h-8 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center font-black text-xs shrink-0 group-hover:bg-amber-500 group-hover:text-white transition-colors';
-            const icon = btn.querySelector('i');
-            if (icon) icon.className = 'w-5 h-5 text-slate-400 group-hover:text-amber-600 transition-colors';
+            btn.className = 'spec-tab-btn shrink-0 min-w-[16.25rem] sm:min-w-[17.5rem] lg:min-w-0 lg:w-full snap-start cursor-pointer p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 bg-white lg:hover:border-amber-400 lg:hover:bg-slate-50 transition-all flex items-center justify-between group';
+            if (numSpan) numSpan.className = 'w-8 h-8 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center font-black text-xs shrink-0 lg:group-hover:bg-amber-500 lg:group-hover:text-white transition-colors';
+            if (icon) {
+                icon.className = 'size-5 md:inline-flex hidden text-slate-400 lg:group-hover:text-amber-600 transition-colors shrink-0';
+            }
         }
     });
 };
