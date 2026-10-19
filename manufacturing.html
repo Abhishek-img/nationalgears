@@ -944,37 +944,508 @@
 
 
         <!-- Section: Manufacturing Capabilities & Machine Fleet Inventory -->
-        <section data-aos="fade-up" id="machinery" class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
+        <section data-aos="fade-up" id="machinery" class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
 
-            <!-- Section Header & Fleet Summary Banner -->
-            <div class="py-6 mb-8 border-b border-slate-200">
-                <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <!-- Section Header & Fleet Summary Banner Card -->
+            <div
+                class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 rounded-[2.5rem] p-6 sm:p-10 lg:p-12 text-white border border-slate-700/80 shadow-2xl relative overflow-hidden mb-12">
+                <!-- Ambient Glow Effects -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none">
+                </div>
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:20px_20px] opacity-30 pointer-events-none">
+                </div>
+
+                <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
                     <!-- Title & Overview -->
-                    <div class="space-y-3 text-center lg:text-left max-w-3xl">
+                    <div class="space-y-4 text-center lg:text-left max-w-3xl">
                         <div
-                            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-700 text-xs font-black uppercase tracking-widest border border-amber-500/20">
-                            <span>Plant Machine Fleet & Equipment Inventory</span>
+                            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/20 text-amber-300 text-xs font-black uppercase tracking-widest border border-amber-400/30">
+                            <i data-lucide="cpu" class="w-4 h-4 text-amber-400"></i>
+                            <span>Plant Machine Fleet &amp; Equipment Inventory</span>
                         </div>
-                        <h2
-                            class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-                            Manufacturing <span class="text-amber-500">Capabilities</span> & Machine Fleet
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                            Manufacturing <span class="text-amber-400">Capabilities</span> &amp; Machine Fleet
                         </h2>
-                        <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
+                        <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
                             State-of-the-art heavy production equipment at our specialized manufacturing plant in Alwar
-                            including CNC gear hobbing, high-speed turning, gear shaving, broaching & 3D metrology.
+                            including CNC gear hobbing, high-speed turning, gear shaving, broaching, cylindrical
+                            grinding &amp; 3D metrology across 3 dedicated production facilities.
                         </p>
+
+                        <!-- Highlights Tags -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-2 text-xs">
+                            <span
+                                class="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-slate-200 font-medium">DIN
+                                Class 3-5 Tolerances</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-slate-200 font-medium">0.5
+                                to 12 Module Capacity</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-slate-200 font-medium">100%
+                                In-House Tooling</span>
+                        </div>
                     </div>
 
-                    <!-- Total Unit Stat Badge -->
+                    <!-- Total Unit Stat Badge & Fleet Quick Numbers -->
                     <div
-                        class="shrink-0 flex flex-row sm:flex-col items-center justify-center bg-slate-900 text-white rounded-2xl p-5 border border-slate-800 shadow-xl gap-4 sm:gap-1 text-center min-w-[12.5rem]">
-                        <span class="text-3xl sm:text-4xl font-black text-amber-400">40+</span>
-                        <span class="text-[0.6875rem] font-bold uppercase tracking-widest text-slate-300">Total
-                            Machinery
-                            NOS</span>
-                        <span class="text-[0.625rem] text-amber-500/80 font-medium">3 Production Plants</span>
+                        class="shrink-0 flex flex-col items-center justify-center bg-slate-950/80 rounded-3xl p-6 border border-slate-700/80 shadow-2xl text-center min-w-[14rem] backdrop-blur-md">
+                        <div class="text-4xl sm:text-5xl font-black text-amber-400 tracking-tight mb-1">40+</div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-slate-200 mb-1">Total Machinery NOS
+                        </div>
+                        <div
+                            class="text-[0.6875rem] text-emerald-400 font-extrabold uppercase tracking-wider flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            3 Active Production Plants
+                        </div>
+                        <div class="w-full border-t border-slate-800 my-3"></div>
+                        <div class="grid grid-cols-2 gap-3 w-full text-center text-xs">
+                            <div>
+                                <span class="block text-slate-400 text-[0.625rem] font-bold uppercase">CNC
+                                    Centers</span>
+                                <span class="text-white font-black text-sm">25+ Units</span>
+                            </div>
+                            <div>
+                                <span class="block text-slate-400 text-[0.625rem] font-bold uppercase">Tool Room</span>
+                                <span class="text-white font-black text-sm">Dedicated</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- 10 Machine Capabilities Interactive Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+                <!-- Machine 1: CNC Gear Hobbing (2 NOS) -->
+                <div
+                    class="group bg-white rounded-3xl p-5 border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 relative cursor-pointer"
+                            onclick="openImageZoom('./public/images/factoryMachine1.webp', 'CNC Gear Hobbing Machine Line - 2 NOS', '0.5 to 12 Module Capacity')">
+                            <img src="./public/images/factoryMachine1.webp" alt="CNC Gear Hobbing Machine"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                title="CNC Gear Hobbing Machine" loading="lazy" fetchpriority="auto">
+                            <div
+                                class="absolute top-3 right-3 px-3 py-1 rounded-xl bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md">
+                                2 NOS
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 px-3 py-1 rounded-xl bg-slate-950/80 text-white text-[0.625rem] font-bold backdrop-blur-md flex items-center gap-1.5">
+                                <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-primary transition-colors">
+                                    CNC Gear Hobbing</h3>
+                                <span
+                                    class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">2
+                                    Units</span>
+                            </div>
+                            <p class="text-slate-500 text-xs font-light leading-relaxed">
+                                Precision CNC gear hobbing machines engineered for high-accuracy spur and helical gear
+                                cutting up to 12 Module capacity.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
+                        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-500"></i> DIN Class 5 Standards</span>
+                        <span class="text-amber-700 font-extrabold">0.5 - 12 Module</span>
+                    </div>
+                </div>
+
+                <!-- Machine 2: Gear Shaving (6 NOS) -->
+                <div
+                    class="group bg-white rounded-3xl p-5 border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 relative cursor-pointer"
+                            onclick="openImageZoom('./public/images/factoryMachine2.webp', 'High Speed Gear Shaving Machine - 6 NOS', 'Tooth Flank Finishing')">
+                            <img src="./public/images/factoryMachine2.webp" alt="Gear Shaving Machine"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                title="Gear Shaving Machine" loading="lazy" fetchpriority="auto">
+                            <div
+                                class="absolute top-3 right-3 px-3 py-1 rounded-xl bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md">
+                                6 NOS
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 px-3 py-1 rounded-xl bg-slate-950/80 text-white text-[0.625rem] font-bold backdrop-blur-md flex items-center gap-1.5">
+                                <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-primary transition-colors">
+                                    Gear Shaving</h3>
+                                <span
+                                    class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">6
+                                    Units</span>
+                            </div>
+                            <p class="text-slate-500 text-xs font-light leading-relaxed">
+                                High-speed gear shaving machine line for ultra-smooth gear tooth surface finish and
+                                pre-heat treatment noise reduction.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
+                        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-500"></i> Quiet Operation</span>
+                        <span class="text-amber-700 font-extrabold">Ultra-Fine Profile</span>
+                    </div>
+                </div>
+
+                <!-- Machine 3: Broaching (2 NOS) -->
+                <div
+                    class="group bg-white rounded-3xl p-5 border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 relative cursor-pointer"
+                            onclick="openImageZoom('./public/images/factoryMachine3.webp', 'Vertical Broaching Machine Fleet - 2 NOS', 'Internal Splines & Keyways')">
+                            <img src="./public/images/factoryMachine3.webp" alt="Broaching Machine"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                title="Broaching Machine" loading="lazy" fetchpriority="auto">
+                            <div
+                                class="absolute top-3 right-3 px-3 py-1 rounded-xl bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md">
+                                2 NOS
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 px-3 py-1 rounded-xl bg-slate-950/80 text-white text-[0.625rem] font-bold backdrop-blur-md flex items-center gap-1.5">
+                                <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-primary transition-colors">
+                                    Broaching</h3>
+                                <span
+                                    class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">2
+                                    Units</span>
+                            </div>
+                            <p class="text-slate-500 text-xs font-light leading-relaxed">
+                                Heavy vertical broaching machines designed for precision internal spline cutting,
+                                keyways, and complex internal gear profiles.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
+                        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-500"></i> Vertical Stroke</span>
+                        <span class="text-amber-700 font-extrabold">Internal Splines</span>
+                    </div>
+                </div>
+
+                <!-- Machine 4: CNC Turning (10 NOS) -->
+                <div
+                    class="group bg-white rounded-3xl p-5 border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 relative cursor-pointer"
+                            onclick="openImageZoom('./public/images/factoryMachine4.webp', 'Automated CNC Turning Center - 10 NOS', 'Blank Concentricity & Accuracy')">
+                            <img src="./public/images/factoryMachine4.webp" alt="CNC Turning"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                title="CNC Turning" loading="lazy" fetchpriority="auto">
+                            <div
+                                class="absolute top-3 right-3 px-3 py-1 rounded-xl bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md">
+                                10 NOS
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 px-3 py-1 rounded-xl bg-slate-950/80 text-white text-[0.625rem] font-bold backdrop-blur-md flex items-center gap-1.5">
+                                <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-primary transition-colors">
+                                    CNC Turning</h3>
+                                <span
+                                    class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">10
+                                    Units</span>
+                            </div>
+                            <p class="text-slate-500 text-xs font-light leading-relaxed">
+                                Fleet of 10 automated CNC turning centers ensuring sub-micron blank concentricity, exact
+                                step diameters, and smooth finishes.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
+                        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-500"></i> Sub-Micron Lathes</span>
+                        <span class="text-amber-700 font-extrabold">&lt; 0.005mm Tolerance</span>
+                    </div>
+                </div>
+
+                <!-- Machine 5: VMC (3 NOS) -->
+                <div
+                    class="group bg-white rounded-3xl p-5 border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 relative cursor-pointer"
+                            onclick="openImageZoom('./public/images/working4.webp', 'VMC Machining - 3 NOS', 'Multi-Axis Precision Milling')">
+                            <img src="./public/images/working4.webp" alt="VMC Machining"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                title="VMC Machining" loading="lazy" fetchpriority="auto">
+                            <div
+                                class="absolute top-3 right-3 px-3 py-1 rounded-xl bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md">
+                                3 NOS
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 px-3 py-1 rounded-xl bg-slate-950/80 text-white text-[0.625rem] font-bold backdrop-blur-md flex items-center gap-1.5">
+                                <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-primary transition-colors">
+                                    VMC (Vertical Machining Center)</h3>
+                                <span
+                                    class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">3
+                                    Units</span>
+                            </div>
+                            <p class="text-slate-500 text-xs font-light leading-relaxed">
+                                3 Vertical Machining Centers providing multi-axis drilling, precision milling,
+                                counter-boring &amp; complex pocketing for gearboxes.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
+                        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-500"></i> Multi-Axis Milling</span>
+                        <span class="text-amber-700 font-extrabold">3D Machining</span>
+                    </div>
+                </div>
+
+                <!-- Machine 6: Cylindrical Grinding (10 NOS) -->
+                <div
+                    class="group bg-white rounded-3xl p-5 border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 relative cursor-pointer"
+                            onclick="openImageZoom('./public/images/working.webp', 'Cylindrical Grinding - 10 NOS', 'Ra 0.2 µm Mirror Finish')">
+                            <img src="./public/images/working.webp" alt="Cylindrical Grinding"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                title="Cylindrical Grinding" loading="lazy" fetchpriority="auto">
+                            <div
+                                class="absolute top-3 right-3 px-3 py-1 rounded-xl bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md">
+                                10 NOS
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 px-3 py-1 rounded-xl bg-slate-950/80 text-white text-[0.625rem] font-bold backdrop-blur-md flex items-center gap-1.5">
+                                <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-primary transition-colors">
+                                    Cylindrical Grinding</h3>
+                                <span
+                                    class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">10
+                                    Units</span>
+                            </div>
+                            <p class="text-slate-500 text-xs font-light leading-relaxed">
+                                Robust fleet of 10 cylindrical grinding machines executing OD &amp; ID shaft journal
+                                finishing with mirror surface quality.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
+                        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-500"></i> OD &amp; ID Finishing</span>
+                        <span class="text-amber-700 font-extrabold">Ra 0.2 µm Finish</span>
+                    </div>
+                </div>
+
+                <!-- Machine 7: Gear Shaper (2 NOS) -->
+                <div
+                    class="group bg-white rounded-3xl p-5 border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 relative cursor-pointer"
+                            onclick="openImageZoom('./public/images/gearsMachine.webp', 'Gear Shaper - 2 NOS', 'Internal Ring Gears & Shoulders')">
+                            <img src="./public/images/gearsMachine.webp" alt="Gear Shaper"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                title="Gear Shaper" loading="lazy" fetchpriority="auto">
+                            <div
+                                class="absolute top-3 right-3 px-3 py-1 rounded-xl bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md">
+                                2 NOS
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 px-3 py-1 rounded-xl bg-slate-950/80 text-white text-[0.625rem] font-bold backdrop-blur-md flex items-center gap-1.5">
+                                <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-primary transition-colors">
+                                    Gear Shaper</h3>
+                                <span
+                                    class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">2
+                                    Units</span>
+                            </div>
+                            <p class="text-slate-500 text-xs font-light leading-relaxed">
+                                Dedicated gear shaping machinery for cutting internal gear teeth, internal ring gears,
+                                and shoulder gears where hobbing is restricted.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
+                        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-500"></i> Internal Ring Gears</span>
+                        <span class="text-amber-700 font-extrabold">Shoulder Gears</span>
+                    </div>
+                </div>
+
+                <!-- Machine 8: Key Way SPM (3 NOS) -->
+                <div
+                    class="group bg-white rounded-3xl p-5 border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 relative cursor-pointer"
+                            onclick="openImageZoom('./public/images/store3.webp', 'Key Way SPM - 3 NOS', 'Automated Keyway Slotting')">
+                            <img src="./public/images/store3.webp" alt="Key Way SPM"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                title="Key Way SPM" loading="lazy" fetchpriority="auto">
+                            <div
+                                class="absolute top-3 right-3 px-3 py-1 rounded-xl bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md">
+                                3 NOS
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 px-3 py-1 rounded-xl bg-slate-950/80 text-white text-[0.625rem] font-bold backdrop-blur-md flex items-center gap-1.5">
+                                <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-primary transition-colors">
+                                    Key Way SPM</h3>
+                                <span
+                                    class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">3
+                                    Units</span>
+                            </div>
+                            <p class="text-slate-500 text-xs font-light leading-relaxed">
+                                Special Purpose Machines (SPM) dedicated to automated internal keyway slotting with
+                                tight keyway depth &amp; width tolerances.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
+                        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-500"></i> Automated Slotting</span>
+                        <span class="text-amber-700 font-extrabold">Precision Keyways</span>
+                    </div>
+                </div>
+
+                <!-- Machine 9: Woodruff SPM (2 NOS) -->
+                <div
+                    class="group bg-white rounded-3xl p-5 border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 relative cursor-pointer"
+                            onclick="openImageZoom('./public/images/store4.webp', 'Woodruff SPM - 2 NOS', 'High-Speed Shaft Keyways')">
+                            <img src="./public/images/store4.webp" alt="Woodruff SPM"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                title="Woodruff SPM" loading="lazy" fetchpriority="auto">
+                            <div
+                                class="absolute top-3 right-3 px-3 py-1 rounded-xl bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md">
+                                2 NOS
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 px-3 py-1 rounded-xl bg-slate-950/80 text-white text-[0.625rem] font-bold backdrop-blur-md flex items-center gap-1.5">
+                                <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3
+                                    class="text-xl font-black text-slate-900 group-hover:text-primary transition-colors">
+                                    Woodruff SPM</h3>
+                                <span
+                                    class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">2
+                                    Units</span>
+                            </div>
+                            <p class="text-slate-500 text-xs font-light leading-relaxed">
+                                Special Purpose Woodruff key milling machines tailored for high-speed transmission shaft
+                                woodruff keyway milling.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
+                        <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-500"></i> Woodruff Key Slotting</span>
+                        <span class="text-amber-700 font-extrabold">Shaft Keyways</span>
+                    </div>
+                </div>
+
+                <!-- Machine 10: Tool Room (Dedicated Facility) -->
+                <div
+                    class="group bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden sm:col-span-2 lg:col-span-3">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+                        <div class="lg:col-span-5 aspect-[16/9] lg:aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 relative cursor-pointer"
+                            onclick="openImageZoom('./public/images/factoryStore2.webp', 'In-House Tool Room Facility', 'Tool & Die Maintenance')">
+                            <img src="./public/images/factoryStore2.webp" alt="In-House Tool Room Facility"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                title="In-House Tool Room Facility" loading="lazy" fetchpriority="auto">
+                            <div
+                                class="absolute top-3 right-3 px-3 py-1 rounded-xl bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md">
+                                Dedicated Facility
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 px-3 py-1 rounded-xl bg-slate-950/80 text-white text-[0.625rem] font-bold backdrop-blur-md flex items-center gap-1.5">
+                                <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-7 space-y-4">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 text-white text-[0.625rem] font-bold uppercase tracking-wider">
+                                <span>In-House Maintenance &amp; Tooling</span>
+                            </div>
+                            <h3
+                                class="text-2xl sm:text-3xl font-black text-slate-900 group-hover:text-primary transition-colors">
+                                In-House Tool Room &amp; Die Maintenance Facility
+                            </h3>
+                            <p class="text-slate-600 text-sm font-light leading-relaxed">
+                                Complete in-house tool room equipped with surface grinders, tool &amp; cutter grinders,
+                                jig
+                                boring fixtures, and die maintenance equipment to build custom gear tooling &amp;
+                                holding
+                                fixtures with zero production downtime.
+                            </p>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-100">
+                                    <span class="text-slate-400 block text-[0.625rem] font-bold uppercase">Jigs &amp;
+                                        Fixtures</span>
+                                    <span class="font-bold text-slate-900 text-xs sm:text-sm">Custom Setup</span>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-100">
+                                    <span
+                                        class="text-slate-400 block text-[0.625rem] font-bold uppercase">Maintenance</span>
+                                    <span class="font-bold text-slate-900 text-xs sm:text-sm">Zero Downtime</span>
+                                </div>
+                                <div
+                                    class="p-3 bg-slate-50 rounded-2xl border border-slate-100 col-span-2 sm:col-span-1">
+                                    <span class="text-slate-400 block text-[0.625rem] font-bold uppercase">Tooling
+                                        Quality</span>
+                                    <span class="font-bold text-slate-900 text-xs sm:text-sm">100% In-House</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 

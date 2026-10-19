@@ -7,8 +7,10 @@
 
     <!-- SEO Meta Tags -->
     <title>Contact Us | National Gears - Get Custom Gear Quote</title>
-    <meta name="description" content="Get in touch with National Gears technical sales team for custom gear manufacturing inquiries, technical drawing reviews, and 24-hour quotation support.">
-    <meta name="keywords" content="Contact National Gears, Gear RFQ, Custom Gear Quote, Engineering Inquiry, Alwar Manufacturing Plant">
+    <meta name="description"
+        content="Get in touch with National Gears technical sales team for custom gear manufacturing inquiries, technical drawing reviews, and 24-hour quotation support.">
+    <meta name="keywords"
+        content="Contact National Gears, Gear RFQ, Custom Gear Quote, Engineering Inquiry, Alwar Manufacturing Plant">
     <meta name="author" content="National Gears">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.nationalgears.com/contact.html">
@@ -17,14 +19,16 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.nationalgears.com/contact.html">
     <meta property="og:title" content="Contact Us | National Gears - Get Custom Gear Quote">
-    <meta property="og:description" content="Get in touch with National Gears technical sales team for custom gear manufacturing inquiries, technical drawing reviews, and 24-hour quotation support.">
+    <meta property="og:description"
+        content="Get in touch with National Gears technical sales team for custom gear manufacturing inquiries, technical drawing reviews, and 24-hour quotation support.">
     <meta property="og:image" content="https://www.nationalgears.com/public/images/nationalGearFavicon.webp">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.nationalgears.com/contact.html">
     <meta name="twitter:title" content="Contact Us | National Gears - Get Custom Gear Quote">
-    <meta name="twitter:description" content="Get in touch with National Gears technical sales team for custom gear manufacturing inquiries, technical drawing reviews, and 24-hour quotation support.">
+    <meta name="twitter:description"
+        content="Get in touch with National Gears technical sales team for custom gear manufacturing inquiries, technical drawing reviews, and 24-hour quotation support.">
     <meta name="twitter:image" content="https://www.nationalgears.com/public/images/nationalGearFavicon.webp">
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="./public/images/nationalGearFavicon.webp">
@@ -223,7 +227,9 @@
 
             <!-- CTA & Mobile Toggle -->
             <div class="flex items-center gap-4">
-                <a href="./public/pdf/nationalGear2026.pdf" target="_blank" rel="noopener" class="hidden sm:flex bg-gradient-to-r from-amber-500 to-amber-600 lg:hover:from-amber-400 lg:hover:to-amber-500 text-white px-7 py-3 h-12 items-center justify-center rounded-xl font-bold text-xs tracking-wider shadow-lg shadow-amber-500/25 transition-all lg:hover:-translate-y-0.5 active:scale-95 gap-2"><i data-lucide="download" class="w-4.5 h-4.5"></i>Brochure</a>
+                <a href="./public/pdf/nationalGear2026.pdf" target="_blank" rel="noopener"
+                    class="hidden sm:flex bg-gradient-to-r from-amber-500 to-amber-600 lg:hover:from-amber-400 lg:hover:to-amber-500 text-white px-7 py-3 h-12 items-center justify-center rounded-xl font-bold text-xs tracking-wider shadow-lg shadow-amber-500/25 transition-all lg:hover:-translate-y-0.5 active:scale-95 gap-2"><i
+                        data-lucide="download" class="w-4.5 h-4.5"></i>Brochure</a>
 
                 <button onclick="toggleMobileMenu(true)"
                     class="lg:hidden p-2.5 text-slate-700 lg:hover:text-primary lg:hover:bg-slate-100 rounded-xl transition-all cursor-pointer">
@@ -344,8 +350,8 @@
 
                     <!-- Direct Directions Link Button -->
                     <div class="flex flex-wrap items-center gap-3">
-                        <a href="https://maps.google.com/?q=F-634+NORTH+EXTENTION,+MIA+,+ALWAR+301030" target="_blank"
-                            rel="noopener"
+                        <a href="https://maps.google.com/?q=National+Gears,+F-634+North+Extension,+MIA,+Alwar+301030"
+                            target="_blank" rel="noopener"
                             class="px-4 py-2.5 rounded-xl bg-amber-500 text-slate-950 text-xs font-bold transition-all lg:hover:bg-amber-400 flex items-center gap-2 shadow-md">
                             <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
                             <span>Get Directions to MIA Alwar Plant</span>
@@ -355,11 +361,37 @@
 
                 <!-- Google Maps Embed Container -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                    <!-- Left: Google Map Iframe -->
+                    <!-- Left: Google Map Iframe with Pinned Address Overlay -->
                     <div
-                        class="lg:col-span-8 rounded-2xl overflow-hidden border border-slate-200 shadow-inner min-h-[23.75rem] sm:min-h-[27.5rem] bg-slate-100 relative">
+                        class="lg:col-span-8 rounded-2xl overflow-hidden border border-slate-200 shadow-inner min-h-[23.75rem] sm:min-h-[27.5rem] bg-slate-100 relative group">
+
+                        <!-- Pinned Address Card Overlay on Map -->
+                        <div
+                            class="absolute top-4 left-4 z-10 max-w-[18rem] sm:max-w-sm bg-slate-950/90 backdrop-blur-md text-white p-3.5 sm:p-4 rounded-2xl border border-slate-700/80 shadow-2xl flex items-start gap-3 pointer-events-auto">
+                            <div
+                                class="w-9 h-9 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/30">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div class="space-y-1 min-w-0">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs font-black text-amber-400 uppercase tracking-wider">National
+                                        Gears Plant</span>
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                </div>
+                                <p class="text-xs text-slate-200 font-medium leading-tight">
+                                    F-634 NORTH EXTENTION, MIA, ALWAR 301030
+                                </p>
+                                <a href="https://maps.google.com/?q=National+Gears,+F-634+North+Extension,+MIA,+Alwar+301030"
+                                    target="_blank" rel="noopener"
+                                    class="inline-flex items-center gap-1.5 text-[0.6875rem] font-bold text-amber-400 lg:hover:text-amber-300 transition-colors pt-0.5">
+                                    <span>Open Pin in Google Maps</span>
+                                    <i data-lucide="external-link" class="w-3 h-3"></i>
+                                </a>
+                            </div>
+                        </div>
+
                         <iframe
-                            src="https://maps.google.com/maps?q=F-634+NORTH+EXTENTION,+MIA+,+ALWAR+301030&output=embed"
+                            src="https://maps.google.com/maps?q=National+Gears,+F-634+North+Extension,+MIA,+Alwar+301030&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             width="100%" height="100%" style="border:0; min-height:23.75rem;" allowfullscreen=""
                             loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
                     </div>
@@ -403,13 +435,18 @@
                             <img src="./public/images/factory.webp" alt="National Gears Manufacturing Facility Alwar"
                                 class="w-full h-full object-cover lg:group-hover:scale-105 transition-transform duration-700"
                                 title="National Gears Manufacturing Facility Alwar" loading="lazy" fetchpriority="auto">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent">
+                            </div>
                             <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white">
                                 <div>
-                                    <span class="text-[0.625rem] font-black uppercase tracking-wider text-amber-400 block">Facility Overview</span>
+                                    <span
+                                        class="text-[0.625rem] font-black uppercase tracking-wider text-amber-400 block">Facility
+                                        Overview</span>
                                     <h5 class="text-xs font-bold text-white drop-shadow">50,000 SQ FT Primary Plant</h5>
                                 </div>
-                                <span class="w-7 h-7 rounded-lg bg-white/20 backdrop-blur-md flex items-center justify-center text-white lg:group-hover:bg-amber-500 lg:group-hover:text-slate-950 transition-colors">
+                                <span
+                                    class="w-7 h-7 rounded-lg bg-white/20 backdrop-blur-md flex items-center justify-center text-white lg:group-hover:bg-amber-500 lg:group-hover:text-slate-950 transition-colors">
                                     <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
                                 </span>
                             </div>
@@ -495,7 +532,7 @@
                                 <i data-lucide="clock" class="w-5 h-5"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white text-base">Operating Hours</h4>
+                                <h4 class="font-bold text-white text-base">Office Timing</h4>
                                 <p class="text-slate-400 text-xs">Mon – Sat: 9:00 AM – 7:00 PM IST</p>
                             </div>
                         </div>
@@ -717,7 +754,6 @@
                             </svg>
                         </a>
                         <a class="w-10 h-10 rounded-lg bg-[#0A66C2] text-white lg:bg-white/5 lg:border lg:border-white/10 flex items-center justify-center lg:text-slate-400 lg:hover:bg-[#0A66C2] lg:hover:text-white transition-all duration-300 lg:hover:-translate-y-1"
-                           
                             rel="noopener" target="_blank" href="https://www.linkedin.com/in/vivek-gupta-7199b4117">
                             <svg class="size-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path

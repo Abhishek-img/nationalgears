@@ -134,6 +134,24 @@ function enableDragToScroll() {
 function initSwipers() {
     if (typeof Swiper === 'undefined') return;
 
+    if (document.querySelector(".overviewSwiper")) {
+        new Swiper(".overviewSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            pagination: {
+                el: ".overview-pagination",
+                clickable: true,
+            },
+        });
+    }
+
     if (document.querySelector(".clientLogosSwiper")) {
         new Swiper(".clientLogosSwiper", {
             slidesPerView: 2,
@@ -695,3 +713,26 @@ window.zoomActiveSpecImage = function() {
         openImageZoom(img.src, title, 'National Gears Specialized Line');
     }
 };
+
+function selectDelegationImage(btn, src) {
+    const mainImg = document.getElementById('delegation-hero-img');
+    if (mainImg) {
+        mainImg.style.opacity = '0.3';
+        mainImg.style.transform = 'scale(0.98)';
+        setTimeout(() => {
+            mainImg.src = src;
+            mainImg.style.opacity = '1';
+            mainImg.style.transform = 'scale(1)';
+        }, 150);
+    }
+
+    document.querySelectorAll('.delegation-thumb-btn').forEach(b => {
+        b.classList.remove('border-amber-400', 'ring-2', 'ring-amber-400/40', 'opacity-100');
+        b.classList.add('border-white/20', 'opacity-70');
+    });
+
+    if (btn) {
+        btn.classList.remove('border-white/20', 'opacity-70');
+        btn.classList.add('border-amber-400', 'ring-2', 'ring-amber-400/40', 'opacity-100');
+    }
+}

@@ -35,29 +35,6 @@
     <link rel="shortcut icon" type="image/webp" href="./public/images/nationalGearFavicon.webp">
     <link rel="apple-touch-icon" href="./public/images/nationalGearFavicon.webp">
 
-    <!-- SEO Meta Tags -->
-
-
-
-
-
-
-    <!-- Open Graph / Facebook -->
-
-
-
-
-
-
-    <!-- Twitter -->
-
-
-
-
-
-
-    <!-- Canonical Link -->
-
 
     <!-- Google Fonts: Google Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -256,7 +233,9 @@
 
             <!-- CTA & Mobile Toggle -->
             <div class="flex items-center gap-4">
-                <a href="./public/pdf/nationalGear2026.pdf" target="_blank" rel="noopener" class="hidden sm:flex bg-gradient-to-r from-amber-500 to-amber-600 lg:hover:from-amber-400 lg:hover:to-amber-500 text-white px-7 py-3 h-12 items-center justify-center rounded-xl font-bold text-xs tracking-wider shadow-lg shadow-amber-500/25 transition-all lg:hover:-translate-y-0.5 active:scale-95 gap-2"><i data-lucide="download" class="w-4.5 h-4.5"></i>Brochure</a>
+                <a href="./public/pdf/nationalGear2026.pdf" target="_blank" rel="noopener"
+                    class="hidden sm:flex bg-gradient-to-r from-amber-500 to-amber-600 lg:hover:from-amber-400 lg:hover:to-amber-500 text-white px-7 py-3 h-12 items-center justify-center rounded-xl font-bold text-xs tracking-wider shadow-lg shadow-amber-500/25 transition-all lg:hover:-translate-y-0.5 active:scale-95 gap-2"><i
+                        data-lucide="download" class="w-4.5 h-4.5"></i>Brochure</a>
 
                 <button onclick="toggleMobileMenu(true)"
                     class="lg:hidden p-2.5 text-slate-700 lg:hover:text-primary lg:hover:bg-slate-100 rounded-xl transition-all cursor-pointer">
@@ -494,20 +473,105 @@
 
             <div class="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                    <div class="lg:col-span-6 grid grid-rows-2 gap-6 h-full min-h-[22rem]">
-                        <div class="relative h-full rounded-[2rem] overflow-hidden group shadow-lg min-h-[12rem] cursor-pointer"
-                            onclick="openImageZoom('./public/images/foreignClientFactory2026.webp', 'National Gears OEM Client Delegation & Plant Operations')">
-                            <img src="./public/images/foreignClientFactory2026.webp"
-                                alt="National Gears OEM Client Delegation Visit"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-105"
-                                title="National Gears OEM Client Delegation Visit" loading="lazy"
-                                fetchpriority="auto">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-40 lg:group-hover:opacity-20 transition-opacity duration-500">
+                    <div class="lg:col-span-6 flex flex-col gap-6 h-full justify-between">
+                        <!-- Swiper Image Slider -->
+                        <div
+                            class="relative w-full rounded-[2rem] overflow-hidden group shadow-lg h-44 sm:h-48 md:h-52 bg-slate-900">
+                            <div class="swiper overviewSwiper w-full h-full">
+                                <div class="swiper-wrapper h-full">
+                                    <!-- Slide 1 -->
+                                    <div class="swiper-slide h-full relative cursor-pointer overflow-hidden"
+                                        onclick="openImageZoom('./public/images/foreignClientFactory2026.webp', 'National Gears OEM Client Delegation & Plant Operations')">
+                                        <img src="./public/images/foreignClientFactory2026.webp"
+                                            alt="National Gears OEM Client Delegation Visit"
+                                            class="size-full object-top object-cover transition-transform duration-700 lg:group-hover:scale-105"
+                                            title="National Gears OEM Client Delegation Visit" loading="lazy"
+                                            fetchpriority="auto">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-50 lg:group-hover:opacity-30 transition-opacity duration-500 pointer-events-none">
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 2 -->
+                                    <div class="swiper-slide h-full relative cursor-pointer overflow-hidden"
+                                        onclick="openImageZoom('./public/images/foreignClientFactory20262.webp', 'Shop Floor Tour & Machinery Inspection')">
+                                        <img src="./public/images/foreignClientFactory20262.webp"
+                                            alt="Shop Floor Tour & Machinery Inspection"
+                                            class="size-full object-top object-cover transition-transform duration-700 lg:group-hover:scale-105"
+                                            title="Shop Floor Tour & Machinery Inspection" loading="lazy"
+                                            fetchpriority="auto">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-50 lg:group-hover:opacity-30 transition-opacity duration-500 pointer-events-none">
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 3 -->
+                                    <div class="swiper-slide h-full relative cursor-pointer overflow-hidden"
+                                        onclick="openImageZoom('./public/images/foreignClientFactory20263.webp', 'High Precision CNC Gear Manufacturing Tour')">
+                                        <img src="./public/images/foreignClientFactory20263.webp"
+                                            alt="High Precision CNC Gear Manufacturing Tour"
+                                            class="size-full object-top object-cover transition-transform duration-700 lg:group-hover:scale-105"
+                                            title="High Precision CNC Gear Manufacturing Tour" loading="lazy"
+                                            fetchpriority="auto">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-50 lg:group-hover:opacity-30 transition-opacity duration-500 pointer-events-none">
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 4 -->
+                                    <div class="swiper-slide h-full relative cursor-pointer overflow-hidden"
+                                        onclick="openImageZoom('./public/images/foreignClientFactory20264.webp', 'Advanced Metrology & Facility Audit')">
+                                        <img src="./public/images/foreignClientFactory20264.webp"
+                                            alt="Advanced Metrology & Facility Audit"
+                                            class="size-full object-top object-cover transition-transform duration-700 lg:group-hover:scale-105"
+                                            title="Advanced Metrology & Facility Audit" loading="lazy"
+                                            fetchpriority="auto">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-50 lg:group-hover:opacity-30 transition-opacity duration-500 pointer-events-none">
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 5 -->
+                                    <div class="swiper-slide h-full relative cursor-pointer overflow-hidden"
+                                        onclick="openImageZoom('./public/images/foreignClient2026.webp', 'International Client Strategic Partnership Visit')">
+                                        <img src="./public/images/foreignClient2026.webp"
+                                            alt="International Client Strategic Partnership Visit"
+                                            class="size-full object-top object-cover transition-transform duration-700 lg:group-hover:scale-105"
+                                            title="International Client Strategic Partnership Visit" loading="lazy"
+                                            fetchpriority="auto">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-50 lg:group-hover:opacity-30 transition-opacity duration-500 pointer-events-none">
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 6 -->
+                                    <div class="swiper-slide h-full relative cursor-pointer overflow-hidden"
+                                        onclick="openImageZoom('./public/images/foreignClient20262.webp', 'Client Delegation Discussion & Technical Collaboration')">
+                                        <img src="./public/images/foreignClient20262.webp"
+                                            alt="Client Delegation Discussion & Technical Collaboration"
+                                            class="size-full object-top object-cover transition-transform duration-700 lg:group-hover:scale-105"
+                                            title="Client Delegation Discussion & Technical Collaboration"
+                                            loading="lazy" fetchpriority="auto">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-50 lg:group-hover:opacity-30 transition-opacity duration-500 pointer-events-none">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Floating Badge -->
+                                <div
+                                    class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-amber-400 text-[0.625rem] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-white/10 z-10 pointer-events-none">
+                                    Plant Tour & Client Visits
+                                </div>
+
+                                <!-- Pagination Dots -->
+                                <div
+                                    class="swiper-pagination overview-pagination !bottom-3 !left-0 !right-0 flex justify-center items-center gap-1.5 z-20 [&_.swiper-pagination-bullet]:!bg-white [&_.swiper-pagination-bullet]:!opacity-60 [&_.swiper-pagination-bullet]:transition-all [&_.swiper-pagination-bullet]:duration-300 [&_.swiper-pagination-bullet-active]:!bg-amber-500 [&_.swiper-pagination-bullet-active]:!opacity-100 [&_.swiper-pagination-bullet-active]:!w-6 [&_.swiper-pagination-bullet-active]:!rounded-full">
+                                </div>
                             </div>
                         </div>
                         <div
-                            class="bg-primary p-6 md:p-8 rounded-2xl flex flex-col justify-center relative overflow-hidden group shadow-lg">
+                            class="bg-primary p-6 md:p-8 rounded-2xl flex flex-col justify-center relative overflow-hidden group shadow-lg flex-1">
                             <div
                                 class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSAyMCAwIEwgMCAwIDAgMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMC41Ii8+PC9zdmc+')] opacity-[0.05] lg:group-hover:scale-110 transition-transform duration-700">
                             </div>
@@ -943,7 +1007,7 @@
                                 <div class="aspect-[16/10] w-full overflow-hidden relative">
                                     <img id="delegation-hero-img" src="./public/images/foreignClient2026.webp"
                                         alt="International OEM Client Delegation Facility Audit"
-                                        class="w-full h-full object-cover lg:group-hover:scale-105 transition-transform duration-700"
+                                        class="w-full h-full object-cover transition-all duration-300 lg:group-hover:scale-105"
                                         title="International OEM Client Delegation Facility Audit" loading="lazy"
                                         fetchpriority="auto">
                                     <div class="absolute inset-0 bg-slate-950/20"></div>
@@ -957,18 +1021,38 @@
                                 </div>
                             </div>
                             <!-- Mini Thumbnails for Client Visits -->
-                            <div class="grid grid-cols-4 gap-2">
-                                <button type="button" onclick="const h = document.getElementById('delegation-hero-img'); if (h) h.src='./public/images/foreignClient2026.webp';" class="rounded-xl overflow-hidden border border-white/20 lg:hover:border-amber-400 transition-all aspect-[16/10] bg-slate-900 group cursor-pointer">
-                                    <img src="./public/images/foreignClient2026.webp" alt="Client Delegation 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                            <div class="grid grid-cols-4 gap-2.5">
+                                <button type="button"
+                                    onclick="selectDelegationImage(this, './public/images/foreignClient2026.webp')"
+                                    class="delegation-thumb-btn rounded-xl overflow-hidden border-2 border-amber-400 ring-2 ring-amber-400/40 transition-all duration-300 aspect-[16/10] bg-slate-900 group cursor-pointer shadow-md opacity-100 lg:hover:opacity-100 lg:hover:scale-[1.03] active:scale-95"
+                                    title="Client Delegation 1">
+                                    <img src="./public/images/foreignClient2026.webp" alt="Client Delegation 1"
+                                        class="w-full h-full object-cover lg:group-hover:scale-110 transition-transform duration-500 pointer-events-none"
+                                        loading="lazy">
                                 </button>
-                                <button type="button" onclick="const h = document.getElementById('delegation-hero-img'); if (h) h.src='./public/images/foreignClient20262.webp';" class="rounded-xl overflow-hidden border border-white/20 lg:hover:border-amber-400 transition-all aspect-[16/10] bg-slate-900 group cursor-pointer">
-                                    <img src="./public/images/foreignClient20262.webp" alt="Client Delegation 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                                <button type="button"
+                                    onclick="selectDelegationImage(this, './public/images/foreignClient20262.webp')"
+                                    class="delegation-thumb-btn rounded-xl overflow-hidden border-2 border-white/20 transition-all duration-300 aspect-[16/10] bg-slate-900 group cursor-pointer shadow-md opacity-70 lg:hover:opacity-100 lg:hover:border-amber-400/80 lg:hover:scale-[1.03] active:scale-95"
+                                    title="Client Delegation 2">
+                                    <img src="./public/images/foreignClient20262.webp" alt="Client Delegation 2"
+                                        class="w-full h-full object-cover lg:group-hover:scale-110 transition-transform duration-500 pointer-events-none"
+                                        loading="lazy">
                                 </button>
-                                <button type="button" onclick="const h = document.getElementById('delegation-hero-img'); if (h) h.src='./public/images/foreignClientFactory20262.webp';" class="rounded-xl overflow-hidden border border-white/20 lg:hover:border-amber-400 transition-all aspect-[16/10] bg-slate-900 group cursor-pointer">
-                                    <img src="./public/images/foreignClientFactory20262.webp" alt="Shop Floor Tour" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                                <button type="button"
+                                    onclick="selectDelegationImage(this, './public/images/foreignClientFactory20262.webp')"
+                                    class="delegation-thumb-btn rounded-xl overflow-hidden border-2 border-white/20 transition-all duration-300 aspect-[16/10] bg-slate-900 group cursor-pointer shadow-md opacity-70 lg:hover:opacity-100 lg:hover:border-amber-400/80 lg:hover:scale-[1.03] active:scale-95"
+                                    title="Shop Floor Tour">
+                                    <img src="./public/images/foreignClientFactory20262.webp" alt="Shop Floor Tour"
+                                        class="w-full h-full object-cover lg:group-hover:scale-110 transition-transform duration-500 pointer-events-none"
+                                        loading="lazy">
                                 </button>
-                                <button type="button" onclick="const h = document.getElementById('delegation-hero-img'); if (h) h.src='./public/images/foreignClientFactory20263.webp';" class="rounded-xl overflow-hidden border border-white/20 lg:hover:border-amber-400 transition-all aspect-[16/10] bg-slate-900 group cursor-pointer">
-                                    <img src="./public/images/foreignClientFactory20263.webp" alt="CNC Wing Tour" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                                <button type="button"
+                                    onclick="selectDelegationImage(this, './public/images/foreignClientFactory20263.webp')"
+                                    class="delegation-thumb-btn rounded-xl overflow-hidden border-2 border-white/20 transition-all duration-300 aspect-[16/10] bg-slate-900 group cursor-pointer shadow-md opacity-70 lg:hover:opacity-100 lg:hover:border-amber-400/80 lg:hover:scale-[1.03] active:scale-95"
+                                    title="CNC Wing Tour">
+                                    <img src="./public/images/foreignClientFactory20263.webp" alt="CNC Wing Tour"
+                                        class="w-full h-full object-cover lg:group-hover:scale-110 transition-transform duration-500 pointer-events-none"
+                                        loading="lazy">
                                 </button>
                             </div>
                         </div>
@@ -1923,16 +2007,14 @@
                         </p>
                         <div class="flex gap-4">
                             <a class="w-10 h-10 rounded-lg bg-[#0064e0] text-white lg:bg-white/5 lg:border lg:border-white/10 flex items-center justify-center lg:text-slate-400 lg:hover:bg-[#0064e0] lg:hover:text-white transition-all duration-300 lg:hover:-translate-y-1"
-                               
-                            rel="noopener" target="_blank" href="https://www.facebook.com/share/1FG8ucRU8y/">
+                                rel="noopener" target="_blank" href="https://www.facebook.com/share/1FG8ucRU8y/">
                                 <svg class="size-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                                 </svg>
                             </a>
                             <a class="w-10 h-10 rounded-lg bg-[#0A66C2] text-white lg:bg-white/5 lg:border lg:border-white/10 flex items-center justify-center lg:text-slate-400 lg:hover:bg-[#0A66C2] lg:hover:text-white transition-all duration-300 lg:hover:-translate-y-1"
-                               
-                            rel="noopener" target="_blank" href="https://www.linkedin.com/in/vivek-gupta-7199b4117">
+                                rel="noopener" target="_blank" href="https://www.linkedin.com/in/vivek-gupta-7199b4117">
                                 <svg class="size-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.205 24 24 23.227 24 22.271V1.729C24 .774 23.205 0 22.225 0z" />
@@ -2055,6 +2137,52 @@
 
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+
+            function selectDelegationImage(btn, src) {
+                const mainImg = document.getElementById('delegation-hero-img');
+                if (mainImg) {
+                    mainImg.style.opacity = '0.3';
+                    mainImg.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        mainImg.src = src;
+                        mainImg.style.opacity = '1';
+                        mainImg.style.transform = 'scale(1)';
+                    }, 150);
+                }
+
+                document.querySelectorAll('.delegation-thumb-btn').forEach(b => {
+                    b.classList.remove('border-amber-400', 'ring-2', 'ring-amber-400/40', 'opacity-100');
+                    b.classList.add('border-white/20', 'opacity-70');
+                });
+
+                if (btn) {
+                    btn.classList.remove('border-white/20', 'opacity-70');
+                    btn.classList.add('border-amber-400', 'ring-2', 'ring-amber-400/40', 'opacity-100');
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                if (typeof Swiper !== 'undefined' && document.querySelector('.overviewSwiper') && !document.querySelector('.overviewSwiper').swiper) {
+                    new Swiper('.overviewSwiper', {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        loop: true,
+                        speed: 800,
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        },
+                        pagination: {
+                            el: '.overview-pagination',
+                            clickable: true,
+                        },
+                    });
+                }
+            });
+        </script>
 
 
         <!-- Global Scripts -->
