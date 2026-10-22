@@ -489,14 +489,14 @@ function renderImageZoomModal() {
             </div>
             
             <!-- Image Viewing Area -->
-            <div class="relative flex-1 bg-slate-950 flex items-center justify-center p-4 sm:p-8 overflow-hidden min-h-[250px] sm:min-h-[350px]">
+            <div class="relative flex-1 bg-slate-950 flex items-center justify-center p-4 sm:p-8 overflow-hidden min-h-[15.625rem] sm:min-h-[21.875rem]">
                 <img id="image-zoom-img" src="" alt="Zoomed View" class="max-h-[70vh] max-w-full object-contain rounded-2xl shadow-2xl border border-slate-800 transition-all duration-300">
             </div>
 
             <!-- Footer Caption Bar -->
             <div class="px-6 py-3.5 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 shrink-0">
                 <span id="image-zoom-caption" class="font-bold text-slate-200 truncate max-w-md"></span>
-                <span class="hidden sm:inline-flex items-center gap-1.5 text-[11px] text-slate-500 font-medium bg-slate-800 px-3 py-1 rounded-full">
+                <span class="hidden sm:inline-flex items-center gap-1.5 text-[0.6875rem] text-slate-500 font-medium bg-slate-800 px-3 py-1 rounded-full">
                     <i data-lucide="info" class="w-3 h-3 text-amber-500"></i> Click outside or press ESC to exit
                 </span>
             </div>
