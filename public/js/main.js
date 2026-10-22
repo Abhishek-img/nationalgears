@@ -134,6 +134,24 @@ function enableDragToScroll() {
 function initSwipers() {
     if (typeof Swiper === 'undefined') return;
 
+    if (document.querySelector(".overviewSwiper")) {
+        new Swiper(".overviewSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            pagination: {
+                el: ".overview-pagination",
+                clickable: true,
+            },
+        });
+    }
+
     if (document.querySelector(".clientLogosSwiper")) {
         new Swiper(".clientLogosSwiper", {
             slidesPerView: 2,
@@ -471,14 +489,14 @@ function renderImageZoomModal() {
             </div>
             
             <!-- Image Viewing Area -->
-            <div class="relative flex-1 bg-slate-950 flex items-center justify-center p-4 sm:p-8 overflow-hidden min-h-[250px] sm:min-h-[350px]">
+            <div class="relative flex-1 bg-slate-950 flex items-center justify-center p-4 sm:p-8 overflow-hidden min-h-[15.625rem] sm:min-h-[21.875rem]">
                 <img id="image-zoom-img" src="" alt="Zoomed View" class="max-h-[70vh] max-w-full object-contain rounded-2xl shadow-2xl border border-slate-800 transition-all duration-300">
             </div>
 
             <!-- Footer Caption Bar -->
             <div class="px-6 py-3.5 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 shrink-0">
                 <span id="image-zoom-caption" class="font-bold text-slate-200 truncate max-w-md"></span>
-                <span class="hidden sm:inline-flex items-center gap-1.5 text-[11px] text-slate-500 font-medium bg-slate-800 px-3 py-1 rounded-full">
+                <span class="hidden sm:inline-flex items-center gap-1.5 text-[0.6875rem] text-slate-500 font-medium bg-slate-800 px-3 py-1 rounded-full">
                     <i data-lucide="info" class="w-3 h-3 text-amber-500"></i> Click outside or press ESC to exit
                 </span>
             </div>
@@ -597,15 +615,15 @@ function initImageZoomListeners() {
 window.specProductsData = [
     {
         num: "#01",
-        tag: "High Pressure",
-        title: "Hydraulic Pump Gears",
-        img: "./public/images/industrialPumpGear.webp"
-    },
-    {
-        num: "#02",
         tag: "Precision Ground",
         title: "Spur Gears",
         img: "./public/images/spurGears.webp"
+    },
+    {
+        num: "#02",
+        tag: "High Pressure",
+        title: "Hydraulic Pump Gears",
+        img: "./public/images/industrialPumpGear.webp"
     },
     {
         num: "#03",
@@ -664,22 +682,25 @@ window.selectSpecProduct = function(idx) {
     if (imgEl) {
         imgEl.src = data.img;
         imgEl.alt = data.title;
+        imgEl.title = data.title;
     }
 
     const btns = document.querySelectorAll('.spec-tab-btn');
     btns.forEach((btn, i) => {
+        const numSpan = btn.querySelector('.w-8.h-8');
+        const icon = btn.querySelector('svg, i');
         if (i === idx) {
-            btn.className = 'spec-tab-btn active cursor-pointer p-4 rounded-2xl border border-amber-500 bg-amber-50/60 transition-all flex items-center justify-between group shadow-sm';
-            const numSpan = btn.querySelector('.w-8.h-8');
+            btn.className = 'spec-tab-btn active shrink-0 min-w-[16.25rem] sm:min-w-[17.5rem] lg:min-w-0 lg:w-full snap-start cursor-pointer p-3.5 sm:p-4 rounded-2xl border border-amber-500 bg-amber-50/60 transition-all flex items-center justify-between group shadow-sm';
             if (numSpan) numSpan.className = 'w-8 h-8 rounded-xl bg-amber-500 text-white flex items-center justify-center font-black text-xs shrink-0';
-            const icon = btn.querySelector('i');
-            if (icon) icon.className = 'w-5 h-5 text-amber-600';
+            if (icon) {
+                icon.className = 'size-5 md:inline-flex hidden text-amber-600 shrink-0';
+            }
         } else {
-            btn.className = 'spec-tab-btn cursor-pointer p-4 rounded-2xl border border-slate-200/80 bg-white hover:border-amber-400 hover:bg-slate-50 transition-all flex items-center justify-between group';
-            const numSpan = btn.querySelector('.w-8.h-8');
-            if (numSpan) numSpan.className = 'w-8 h-8 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center font-black text-xs shrink-0 group-hover:bg-amber-500 group-hover:text-white transition-colors';
-            const icon = btn.querySelector('i');
-            if (icon) icon.className = 'w-5 h-5 text-slate-400 group-hover:text-amber-600 transition-colors';
+            btn.className = 'spec-tab-btn shrink-0 min-w-[16.25rem] sm:min-w-[17.5rem] lg:min-w-0 lg:w-full snap-start cursor-pointer p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 bg-white lg:hover:border-amber-400 lg:hover:bg-slate-50 transition-all flex items-center justify-between group';
+            if (numSpan) numSpan.className = 'w-8 h-8 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center font-black text-xs shrink-0 lg:group-hover:bg-amber-500 lg:group-hover:text-white transition-colors';
+            if (icon) {
+                icon.className = 'size-5 md:inline-flex hidden text-slate-400 lg:group-hover:text-amber-600 transition-colors shrink-0';
+            }
         }
     });
 };
@@ -692,3 +713,26 @@ window.zoomActiveSpecImage = function() {
         openImageZoom(img.src, title, 'National Gears Specialized Line');
     }
 };
+
+function selectDelegationImage(btn, src) {
+    const mainImg = document.getElementById('delegation-hero-img');
+    if (mainImg) {
+        mainImg.style.opacity = '0.3';
+        mainImg.style.transform = 'scale(0.98)';
+        setTimeout(() => {
+            mainImg.src = src;
+            mainImg.style.opacity = '1';
+            mainImg.style.transform = 'scale(1)';
+        }, 150);
+    }
+
+    document.querySelectorAll('.delegation-thumb-btn').forEach(b => {
+        b.classList.remove('border-amber-400', 'ring-2', 'ring-amber-400/40', 'opacity-100');
+        b.classList.add('border-white/20', 'opacity-70');
+    });
+
+    if (btn) {
+        btn.classList.remove('border-white/20', 'opacity-70');
+        btn.classList.add('border-amber-400', 'ring-2', 'ring-amber-400/40', 'opacity-100');
+    }
+}
