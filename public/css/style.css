@@ -373,6 +373,15 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
 
+        .fb-post-card p {
+            display: block !important;
+            overflow: visible !important;
+            -webkit-line-clamp: unset !important;
+            line-clamp: unset !important;
+            box-orient: unset !important;
+            -webkit-box-orient: unset !important;
+        }
+
         .fb-post-card {
             box-shadow: 0 0.25rem 0.75rem -0.125rem rgba(0, 0, 0, 0.25);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
