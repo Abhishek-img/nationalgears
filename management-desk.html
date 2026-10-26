@@ -790,10 +790,42 @@
             </div>
         </section>
 
-        <!-- Section: Group Business Ventures & Institutions (Structured by Executive Overview) -->
+        <!-- Section: National Gears & Other Businesses (Slide Matched Executive Showcase) -->
         <section data-aos="fade-up" id="other-businesses"
-            class="py-16 lg:py-24 bg-slate-50/70 border-t border-slate-200/80 relative overflow-hidden">
-            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+            class="py-16 lg:py-24 bg-gradient-to-b from-slate-50/80 via-white to-slate-50/50 border-t border-slate-200/80 relative overflow-hidden">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10 sm:space-y-12">
+
+                <!-- Section Header with Logo (Slide Top Bar) -->
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-200/80">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 text-amber-700 text-[0.6875rem] font-black tracking-widest uppercase border border-amber-500/20 mb-3">
+                            <i data-lucide="building-2" class="w-3.5 h-3.5 text-amber-600"></i>
+                            <span>Group Ecosystem & Enterprise Portfolio</span>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-tight">
+                            <span class="text-red-600">NATIONAL</span> <span class="text-slate-900">GEARS</span> <span class="text-slate-800">&amp; OTHER BUSINESSES</span>
+                        </h2>
+                        <p class="text-slate-600 text-sm sm:text-base font-medium mt-2 max-w-2xl">
+                            Diversified strengths across manufacturing, engineering, healthcare and education.
+                        </p>
+                        <!-- Yellow Accent Line Under Header -->
+                        <div class="w-24 h-1.5 bg-amber-500 rounded-full mt-3.5 shadow-sm"></div>
+                    </div>
+
+                    <!-- Right Side: Circular National Gears Brand Medallion -->
+                    <div class="hidden sm:flex items-center gap-4 shrink-0 bg-white p-3 rounded-2xl border border-slate-200/80 shadow-sm">
+                        <div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center p-2 overflow-hidden shadow-inner group">
+                            <img src="./public/images/nationalGearsLogo.webp" alt="National Gears Logo"
+                                class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                                loading="lazy">
+                        </div>
+                        <div class="text-left pr-2">
+                            <span class="block text-xs font-black tracking-wider text-slate-900 uppercase">NATIONAL GEARS</span>
+                            <span class="block text-[0.6875rem] text-amber-600 font-bold tracking-widest uppercase">GEARED FOR LIFE</span>
+                            <span class="block text-[0.625rem] text-slate-400 font-medium">Since 1995 • Alwar</span>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- TOP ROW: Core Business Card + Featured Institutions Card -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
@@ -801,22 +833,28 @@
                     <!-- Left: Core Business Card (National Gears) -->
                     <div
                         class="lg:col-span-4 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl flex flex-col justify-between relative overflow-hidden group">
-                        <!-- Ambient Glow -->
+                        <!-- Ambient Radial Glow -->
                         <div
-                            class="absolute -top-12 -right-12 w-48 h-48 bg-amber-500/10 rounded-full blur-2xl pointer-events-none">
+                            class="absolute -top-12 -right-12 w-48 h-48 bg-amber-500/15 rounded-full blur-3xl pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute -bottom-10 -left-10 w-40 h-40 bg-red-500/10 rounded-full blur-3xl pointer-events-none">
                         </div>
 
-                        <div>
-                            <!-- Core Business Badge -->
+                        <!-- Subtle Watermark Gear -->
+                        <i data-lucide="cog" class="w-40 h-40 absolute -right-8 -bottom-8 text-slate-800/40 pointer-events-none group-hover:rotate-45 transition-transform duration-700"></i>
+
+                        <div class="relative z-10">
+                            <!-- Amber Badge: CORE BUSINESS -->
                             <div
-                                class="inline-flex flex-col px-4 py-2 rounded-xl bg-amber-500 text-slate-950 font-black tracking-wider uppercase shadow-md mb-6">
-                                <span class="text-[0.625rem] leading-none opacity-90">CORE</span>
-                                <span class="text-xs leading-none mt-0.5">BUSINESS</span>
+                                class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs tracking-wider uppercase shadow-md mb-6">
+                                <i data-lucide="award" class="w-3.5 h-3.5 text-slate-950"></i>
+                                <span>CORE BUSINESS</span>
                             </div>
 
                             <!-- National Gears Heading -->
                             <h3 class="text-3xl sm:text-4xl font-black tracking-tight mb-3">
-                                <span class="text-red-500">National</span> <span class="text-slate-300">Gears</span>
+                                <span class="text-red-500">National</span> <span class="text-slate-100">Gears</span>
                             </h3>
 
                             <!-- Description -->
@@ -827,22 +865,27 @@
 
                         <!-- Bottom Tag -->
                         <div
-                            class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
-                            <span class="font-medium">Primary Flagship Plant</span>
+                            class="relative z-10 pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                            <span class="font-medium flex items-center gap-1.5">
+                                <i data-lucide="factory" class="w-3.5 h-3.5 text-amber-500"></i> Primary Flagship Plant
+                            </span>
                             <span class="text-amber-400 font-bold">MIA, Alwar</span>
                         </div>
                     </div>
 
                     <!-- Right: Featured Institutions Card (Hopewell Colleges & Hospital) -->
                     <div
-                        class="lg:col-span-8 bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm flex flex-col justify-between relative overflow-hidden">
+                        class="lg:col-span-8 bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between relative overflow-hidden">
                         <div>
                             <div class="flex items-center justify-between mb-5">
-                                <h4 class="text-base sm:text-lg font-black text-slate-900 tracking-tight">
-                                    Featured Institutions
-                                </h4>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-amber-500"></div>
+                                    <h4 class="text-base sm:text-lg font-black text-slate-900 tracking-tight">
+                                        Featured Institutions
+                                    </h4>
+                                </div>
                                 <span
-                                    class="text-[0.6875rem] font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">
+                                    class="text-[0.6875rem] font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
                                     Healthcare &amp; Education
                                 </span>
                             </div>
@@ -850,7 +893,7 @@
                             <div class="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
                                 <!-- Photo 1: HOPEWELL GROUP OF COLLEGES -->
                                 <div class="sm:col-span-4 space-y-2 group cursor-pointer"
-                                    onclick="if(typeof openImageZoom === 'function') openImageZoom('./public/images/hopewellCollege.webp', 'Hopewell Group of Colleges', 'Higher Education & Medical Academies')">
+                                    onclick="if(typeof openImageZoom === 'function') openImageZoom('./public/images/hopewellCollegeImg4.webp', 'Hopewell Group of Colleges', 'Higher Education & Medical Academies')">
                                     <div
                                         class="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-sm relative">
                                         <img src="./public/images/hopewellCollegeImg4.webp"
@@ -859,16 +902,20 @@
                                         <div
                                             class="absolute inset-0 bg-slate-900/10 group-hover:opacity-0 transition-opacity">
                                         </div>
+                                        <div
+                                            class="absolute bottom-2 right-2 bg-slate-900/70 text-white p-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
+                                        </div>
                                     </div>
                                     <span
-                                        class="block text-center text-[0.6875rem] font-black tracking-wider text-slate-800 uppercase">
+                                        class="block text-center text-[0.6875rem] font-black tracking-wider text-slate-800 uppercase group-hover:text-amber-600 transition-colors">
                                         HOPEWELL GROUP OF COLLEGES
                                     </span>
                                 </div>
 
                                 <!-- Photo 2: HOPEWELL HOSPITAL -->
                                 <div class="sm:col-span-4 space-y-2 group cursor-pointer"
-                                    onclick="if(typeof openImageZoom === 'function') openImageZoom('./public/images/hopewellHospital.webp', 'Hopewell Hospital & Research Centre', '100 Bedded Multi-Speciality Hospital')">
+                                    onclick="if(typeof openImageZoom === 'function') openImageZoom('./public/images/hopwellHospitalImg.webp', 'Hopewell Hospital & Research Centre', '100 Bedded Multi-Speciality Hospital')">
                                     <div
                                         class="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-sm relative">
                                         <img src="./public/images/hopwellHospitalImg.webp" alt="Hopewell Hospital"
@@ -876,46 +923,56 @@
                                         <div
                                             class="absolute inset-0 bg-slate-900/10 group-hover:opacity-0 transition-opacity">
                                         </div>
+                                        <div
+                                            class="absolute bottom-2 right-2 bg-slate-900/70 text-white p-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
+                                        </div>
                                     </div>
                                     <span
-                                        class="block text-center text-[0.6875rem] font-black tracking-wider text-slate-800 uppercase">
+                                        class="block text-center text-[0.6875rem] font-black tracking-wider text-slate-800 uppercase group-hover:text-amber-600 transition-colors">
                                         HOPEWELL HOSPITAL
                                     </span>
                                 </div>
 
                                 <!-- Bullet Points -->
                                 <div
-                                    class="sm:col-span-4 space-y-3 text-xs text-slate-600 font-medium pl-0 sm:pl-4 border-t sm:border-t-0 sm:border-l border-slate-200 pt-4 sm:pt-0">
-                                    <p class="flex items-start gap-2">
-                                        <span class="text-amber-500 font-black text-base leading-none">•</span>
-                                        <span>Natural visuals added for education &amp; healthcare businesses</span>
+                                    class="sm:col-span-4 space-y-3.5 text-xs text-slate-600 font-medium pl-0 sm:pl-4 border-t sm:border-t-0 sm:border-l border-slate-200 pt-4 sm:pt-0">
+                                    <p class="flex items-start gap-2.5">
+                                        <span class="w-2 h-2 rounded-full bg-amber-500 mt-1 shrink-0"></span>
+                                        <span class="leading-relaxed">Natural visuals added for education &amp; healthcare businesses</span>
                                     </p>
-                                    <p class="flex items-start gap-2">
-                                        <span class="text-amber-500 font-black text-base leading-none">•</span>
-                                        <span>Professional customer-facing summary slide</span>
+                                    <p class="flex items-start gap-2.5">
+                                        <span class="w-2 h-2 rounded-full bg-amber-500 mt-1 shrink-0"></span>
+                                        <span class="leading-relaxed">Professional customer-facing summary slide</span>
+                                    </p>
+                                    <p class="flex items-start gap-2.5 text-slate-500 text-[0.6875rem]">
+                                        <span class="w-2 h-2 rounded-full bg-blue-500 mt-1 shrink-0"></span>
+                                        <span class="leading-relaxed">Click any photo for high-resolution inspection</span>
                                     </p>
                                 </div>
                             </div>
                         </div>
 
                         <div
-                            class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                            <span>Serving Society Through Quality Education &amp; Healthcare</span>
-                            <span class="text-slate-400 font-semibold">Alwar, Rajasthan</span>
+                            class="pt-4 mt-5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                            <span class="font-medium">Serving Society Through Quality Education &amp; Healthcare</span>
+                            <span class="text-amber-600 font-bold flex items-center gap-1">
+                                <i data-lucide="map-pin" class="w-3 h-3 text-amber-500"></i> Alwar, Rajasthan
+                            </span>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- BOTTOM SECTION: Heading + 7 Cards -->
-                <div class="space-y-6 pt-4">
+                <!-- MIDDLE / BOTTOM SECTION: Heading + 7 Cards -->
+                <div class="space-y-6 pt-2">
 
-                    <!-- Section Heading: OUR OTHER BUSINESSES -->
-                    <div class="flex items-center gap-3">
-                        <h3 class="text-xl sm:text-2xl font-black text-slate-900 tracking-wider uppercase">
+                    <!-- Section Subheading: OUR OTHER BUSINESSES -->
+                    <div class="flex items-center gap-4">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-black text-slate-900 tracking-wider uppercase">
                             OUR OTHER BUSINESSES
                         </h3>
-                        <div class="flex-1 h-px bg-slate-200"></div>
+                        <div class="flex-1 h-0.5 bg-gradient-to-r from-slate-200 via-amber-500/30 to-transparent"></div>
                     </div>
 
                     <!-- Row 1: Cards 01 to 04 -->
@@ -923,22 +980,22 @@
 
                         <!-- Card 01: COLLEGE OF NURSING -->
                         <div
-                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-amber-400/60 transition-all duration-300 overflow-hidden flex flex-col justify-between">
-                            <div class="bg-sky-50/70 px-4 py-3 border-b border-sky-100/70 flex items-center gap-3">
+                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-400/80 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+                            <div class="bg-gradient-to-r from-teal-50/80 via-emerald-50/50 to-white px-4 py-3.5 border-b border-emerald-100/70 flex items-center gap-3">
                                 <span
-                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm">
+                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
                                     01
                                 </span>
                                 <h4
-                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug">
+                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug group-hover:text-amber-600 transition-colors">
                                     COLLEGE OF NURSING
                                 </h4>
                             </div>
-                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-2">
+                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-3">
                                 <p class="text-xs text-slate-500 font-medium">
                                     Nursing College
                                 </p>
-                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase">
+                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase bg-amber-50/60 px-2.5 py-1 rounded-md border border-amber-200/50 w-fit">
                                     B.SC NURSING
                                 </div>
                             </div>
@@ -946,22 +1003,22 @@
 
                         <!-- Card 02: SCHOOL OF NURSING -->
                         <div
-                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-amber-400/60 transition-all duration-300 overflow-hidden flex flex-col justify-between">
-                            <div class="bg-sky-50/70 px-4 py-3 border-b border-sky-100/70 flex items-center gap-3">
+                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-400/80 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+                            <div class="bg-gradient-to-r from-teal-50/80 via-emerald-50/50 to-white px-4 py-3.5 border-b border-emerald-100/70 flex items-center gap-3">
                                 <span
-                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm">
+                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
                                     02
                                 </span>
                                 <h4
-                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug">
+                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug group-hover:text-amber-600 transition-colors">
                                     SCHOOL OF NURSING
                                 </h4>
                             </div>
-                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-2">
+                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-3">
                                 <p class="text-xs text-slate-500 font-medium">
                                     Nursing School
                                 </p>
-                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase">
+                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase bg-amber-50/60 px-2.5 py-1 rounded-md border border-amber-200/50 w-fit">
                                     GENERAL NURSING AND MIDWIFERY
                                 </div>
                             </div>
@@ -969,22 +1026,22 @@
 
                         <!-- Card 03: HOPEWELL PHARMACY COLLEGE -->
                         <div
-                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-amber-400/60 transition-all duration-300 overflow-hidden flex flex-col justify-between">
-                            <div class="bg-sky-50/70 px-4 py-3 border-b border-sky-100/70 flex items-center gap-3">
+                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-400/80 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+                            <div class="bg-gradient-to-r from-teal-50/80 via-emerald-50/50 to-white px-4 py-3.5 border-b border-emerald-100/70 flex items-center gap-3">
                                 <span
-                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm">
+                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
                                     03
                                 </span>
                                 <h4
-                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug">
+                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug group-hover:text-amber-600 transition-colors">
                                     HOPEWELL PHARMACY COLLEGE
                                 </h4>
                             </div>
-                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-2">
+                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-3">
                                 <p class="text-xs text-slate-500 font-medium">
                                     Pharmacy College
                                 </p>
-                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase">
+                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase bg-amber-50/60 px-2.5 py-1 rounded-md border border-amber-200/50 w-fit">
                                     B. PHARMA, D. PHARMA
                                 </div>
                             </div>
@@ -992,50 +1049,50 @@
 
                         <!-- Card 04: HOPEWELL HOSPITAL & RESEARCH CENTRE -->
                         <div
-                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-amber-400/60 transition-all duration-300 overflow-hidden flex flex-col justify-between">
-                            <div class="bg-sky-50/70 px-4 py-3 border-b border-sky-100/70 flex items-center gap-3">
+                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-400/80 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+                            <div class="bg-gradient-to-r from-sky-50/80 via-blue-50/50 to-white px-4 py-3.5 border-b border-sky-100/70 flex items-center gap-3">
                                 <span
-                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm">
+                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-colors">
                                     04
                                 </span>
                                 <h4
-                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug">
+                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug group-hover:text-blue-600 transition-colors">
                                     HOPEWELL HOSPITAL &amp; RESEARCH CENTRE
                                 </h4>
                             </div>
-                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-2">
+                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-3">
                                 <p class="text-xs text-slate-500 font-medium">
                                     Hospital
                                 </p>
-                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase">
-                                    100 BEDDED MULTY SPECIALITY HOSPITAL
+                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase bg-amber-50/60 px-2.5 py-1 rounded-md border border-amber-200/50 w-fit">
+                                    100 BEDED MULTY SPECIALITY HOSPITAL
                                 </div>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- Row 2: Cards 05 to 07 -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-5xl mx-auto pt-2">
+                    <!-- Row 2: Cards 05 to 07 (3 Columns, Centered) -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto pt-1">
 
                         <!-- Card 05: PERFECT SOLUTION -->
                         <div
-                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-amber-400/60 transition-all duration-300 overflow-hidden flex flex-col justify-between">
-                            <div class="bg-sky-50/70 px-4 py-3 border-b border-sky-100/70 flex items-center gap-3">
+                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-400/80 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+                            <div class="bg-gradient-to-r from-purple-50/80 via-slate-50 to-white px-4 py-3.5 border-b border-purple-100/70 flex items-center gap-3">
                                 <span
-                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm">
+                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
                                     05
                                 </span>
                                 <h4
-                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug">
+                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug group-hover:text-amber-600 transition-colors">
                                     PERFECT SOLUTION
                                 </h4>
                             </div>
-                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-2">
-                                <p class="text-xs text-slate-500 font-medium leading-relaxed">
-                                    We are here to improve your manufacturing imagination
+                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-3">
+                                <p class="text-xs text-slate-600 font-medium italic leading-relaxed">
+                                    "We are here to improve your manufacturing imagination"
                                 </p>
-                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase">
+                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase bg-amber-50/60 px-2.5 py-1 rounded-md border border-amber-200/50 w-fit">
                                     TOOLING SOLUTION &bull; ALWAR
                                 </div>
                             </div>
@@ -1043,22 +1100,22 @@
 
                         <!-- Card 06: HOPEWELL AYURVEDIC NURSING COLLEGE -->
                         <div
-                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-amber-400/60 transition-all duration-300 overflow-hidden flex flex-col justify-between">
-                            <div class="bg-sky-50/70 px-4 py-3 border-b border-sky-100/70 flex items-center gap-3">
+                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-400/80 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+                            <div class="bg-gradient-to-r from-emerald-50/80 via-teal-50/50 to-white px-4 py-3.5 border-b border-emerald-100/70 flex items-center gap-3">
                                 <span
-                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm">
+                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                                     06
                                 </span>
                                 <h4
-                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug">
+                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug group-hover:text-emerald-700 transition-colors">
                                     HOPEWELL AYURVEDIC NURSING COLLEGE
                                 </h4>
                             </div>
-                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-2">
+                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-3">
                                 <p class="text-xs text-slate-500 font-medium">
                                     AYURVEDIC NURSING
                                 </p>
-                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase">
+                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase bg-amber-50/60 px-2.5 py-1 rounded-md border border-amber-200/50 w-fit">
                                     D A N &amp; P
                                 </div>
                             </div>
@@ -1066,22 +1123,22 @@
 
                         <!-- Card 07: BALDI PRECISION INDUSTRIES -->
                         <div
-                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-amber-400/60 transition-all duration-300 overflow-hidden flex flex-col justify-between">
-                            <div class="bg-sky-50/70 px-4 py-3 border-b border-sky-100/70 flex items-center gap-3">
+                            class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-400/80 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+                            <div class="bg-gradient-to-r from-amber-50/80 via-orange-50/50 to-white px-4 py-3.5 border-b border-amber-100/70 flex items-center gap-3">
                                 <span
-                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm">
+                                    class="w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-black flex items-center justify-center shrink-0 shadow-sm group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
                                     07
                                 </span>
                                 <h4
-                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug">
+                                    class="text-xs sm:text-[0.8125rem] font-black text-slate-900 tracking-tight uppercase leading-snug group-hover:text-amber-600 transition-colors">
                                     BALDI PRECISION INDUSTRIES
                                 </h4>
                             </div>
-                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-2">
+                            <div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-h-[5.5rem] space-y-3">
                                 <p class="text-xs text-slate-500 font-medium">
                                     FOR FABRICATION AND HEAT TREATMENT
                                 </p>
-                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase">
+                                <div class="text-xs font-black text-amber-600 tracking-wider uppercase bg-amber-50/60 px-2.5 py-1 rounded-md border border-amber-200/50 w-fit">
                                     MANUFACTURING EXPANSION
                                 </div>
                             </div>
@@ -1089,6 +1146,23 @@
 
                     </div>
 
+                </div>
+
+                <!-- Bottom Banner Strip (Screenshot Footer) -->
+                <div
+                    class="bg-slate-900 text-white rounded-2xl py-4 px-6 sm:px-8 border border-slate-800 shadow-xl flex flex-wrap items-center justify-center text-center gap-2 sm:gap-4 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-transparent to-red-500/10 pointer-events-none"></div>
+                    <span class="text-xs sm:text-sm font-black tracking-widest uppercase text-slate-100">
+                        ONE GROUP
+                    </span>
+                    <span class="text-amber-400 font-black text-base">&bull;</span>
+                    <span class="text-xs sm:text-sm font-black tracking-widest uppercase text-slate-100">
+                        MULTIPLE INDUSTRIES
+                    </span>
+                    <span class="text-amber-400 font-black text-base">&bull;</span>
+                    <span class="text-xs sm:text-sm font-black tracking-widest uppercase text-amber-400">
+                        SHARED COMMITMENT TO EXCELLENCE
+                    </span>
                 </div>
 
             </div>
